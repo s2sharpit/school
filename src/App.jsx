@@ -17,7 +17,7 @@ export default () => {
   // const [count, setCount] = useState(0)
 
   return (
-    <HashRouter>
+    <HashRouter hashType="none">
       <Header />
       <div className="drop-shadow-none bg-blue-50 flex flex-col lg:flex-row justify-between p-10 gap-14">
         <div className="order-2 lg:order-none flex flex-col sm:flex-row lg:flex-col gap-14 mx-auto">
