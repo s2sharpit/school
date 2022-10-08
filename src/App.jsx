@@ -25,13 +25,13 @@ export default () => {
           {barData.map((barD, index) => <LeftBar key={index} data={barD} />)}
         </div>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/academics" element={<Academics />} />
-          <Route path="/admission" element={<Admission />} />
-          <Route path="/infrastructure" element={<Infrastructure />} />
-          <Route path="/faculty" element={<Faculty />} />
-          <Route path="/gallery" element={<Gallery />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/school" element={<Home />} />
+          <Route path="/school/academics" element={<Academics />} />
+          <Route path="/school/admission" element={<Admission />} />
+          <Route path="/school/infrastructure" element={<Infrastructure />} />
+          <Route path="/school/faculty" element={<Faculty />} />
+          <Route path="/school/gallery" element={<Gallery />} />
+          <Route path="/school/contact" element={<Contact />} />
         </Routes>
       </div>
       <Footer />

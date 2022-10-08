@@ -56,7 +56,7 @@ export default function Nav() {
     const navigate = useNavigate();
 
     const handleSearch = () => {
-        navigate("/");
+        navigate("/school");
     }
 
     return (

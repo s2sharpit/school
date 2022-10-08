@@ -5,7 +5,7 @@ export default (props) => {
     const navigate = useNavigate();
 
     const handleSearch = () => {
-        navigate("/" + `${props.data.li}`);
+        navigate("/school/" + `${props.data.li}`);
     }
 
     return (
