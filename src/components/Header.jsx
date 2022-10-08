@@ -7,7 +7,7 @@ export default function Header() {
             <div className="">
             <Nav />
             </div>
-            <div className="relative min-h-[23vh] sm:min-h-[40vh] lg:min-h-screen bg-[linear-gradient(#0000001a,#00000080,#0000001a),url('/img/schoolPhoto1.jpg')] bg-no-repeat bg-contain sm:bg-cover bg-fixed">
+            <div className="relative min-h-[23vh] sm:min-h-[40vh] lg:min-h-screen bg-black/40 bg-blend-multiply bg-[url('/img/schoolPhoto1.jpg')] bg-cente bg-no-repeat bg-contain lg:bg-cover bg-fixed">
                 {/* <video autoPlay loop muted src="/schoolVideo.mp4" className="fixed"></video> */}
                 <div className="hidden lg:block fixed font-semibold top-1/4 text-center w-full my-16 text-white space-y-2 bg-black/40backdrop-blur-md">
                     <h1 className="text-7xl mx-24">B. S. Senior Secondary School</h1>
