@@ -30,11 +30,11 @@
 
 
     .navLi {
-        @apply w-full text-center py-4 hover:underline transition duration-300;
+        @apply w-full text-center py-4 hover:bg-blue-600 rounded-md transition duration-300;
     }
 
     .liLink:hover .ulLink {
-        @apply block;
+        @apply block scale-100;
     }
 
     .liLink:hover .spLink {

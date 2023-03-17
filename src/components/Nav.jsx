@@ -47,6 +47,7 @@ export default function Nav() {
         };
 
         document.addEventListener('click', closeNav);
+        // document.getElementById("check").addEventListener('click', setIsOpen(true));
 
         return () => document.removeEventListener('click', closeNav);
     })
@@ -68,7 +69,8 @@ export default function Nav() {
             <div ref={navRef} onClick={() => setIsOpen(prev => !prev)} className={"menu-btn flex z-10 md:hidden absolute top-0 right-0 justify-center items-center p-6 " + (isOpen && 'open')}>
                 <div className="ham"></div>
             </div>
-            <ul className={"overflow-y-scroll md:overflow-hidden text-lg md:text-base right-0 md:translate-x-0 absolute md:relative md:flex h-screen md:h-fit py-10 rounded-b-3xl duration-300 transition-all text-white bg-blue-600 md:bg-transparent w-48 md:w-auto lg:w-3/5 text-center justify-between lg:px-10 md:py-2 space-y-5 md:space-y-0 " + (!isOpen && 'translate-x-48')}>
+
+            <ul id="check" className={"overflow-y-scroll md:overflow-hidden text-lg md:text-base right-0 absolute md:static md:flex h-[calc(100vh-50px)] md:h-max duration-300 transition-all text-white bg-blue-600 md:bg-transparent w-48 md:w-auto lg:w-3/5 text-center justify-between lg:px-10  space-y-5 md:space-y-0  md:mr-0 " + (!isOpen && '-mr-48')}>
                 {navData.map((nData, index) => <List key={index} data={nData} />)}
             </ul>
 

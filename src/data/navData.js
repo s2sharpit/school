@@ -1,8 +1,10 @@
 export default [
-    {li: "Academics"},
-    {li: "Infrastructure"},
-    {li: "Admission"},
-    {li: "Faculty"},
-    {li: "Gallery"},
-    {li: "Contact"},
+    { li: "About" },
+    {
+        li: "Academics",
+        nested: ["Facilities", "Activities"]
+    },
+    { li: "Admission" },
+    { li: "Gallery" },
+    { li: "Contact" },
 ]

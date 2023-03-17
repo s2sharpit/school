@@ -3,7 +3,7 @@ import Nav from "./Nav";
 export default function Header() {
     return (
 
-        <header className="min-h-[23vh] sm:min-h-[40vh] lg:min-h-screen">
+        <header className="">
             <div className="">
             <Nav />
             </div>
@@ -14,7 +14,6 @@ export default function Header() {
                     <h4 className="text-5xl">Salempur Khadar, Yamuna Nagar</h4>
                     {/* <i className="text-2xl font-semibold">Affiliated to CBSE, New Delhi upto 10+2 level <br />
                         Affiliation No. 531917 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; School No. 41917</i> */}
-                    {/* <h1 className="text-6xl">B. S. Senior Secondary School</h1> */}
                 </div>
             </div>
         </header>
