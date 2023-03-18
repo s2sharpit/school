@@ -17,7 +17,7 @@ const aboutSchool = [
     {
         title: "Principal's Message",
         img: "principal.jpeg",
-        content: "B. S. Senior Secondary School aims at nurturing holisric development of its students towards enriching the quality of life in every aspect of well being. A co-educational, day-boarding school aiming for highest standards of academic achivement, intellectual growth, ethical awareness and behaviour, sportsmanship and other good qualities to the students has already acquired name and fame within a short span of time.",
+        content: "B. S. Senior Secondary School aims at nurturing holistic development of its students towards enriching the quality of life in every aspect of well being. A co-educational, day-boarding school aiming for highest standards of academic achivement, intellectual growth, ethical awareness and behaviour, sportsmanship and other good qualities to the students has already acquired name and fame within a short span of time.",
     },
     // {
     //     title: "",
