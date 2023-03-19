@@ -1,11 +1,14 @@
 const navData = [
-    { li: "about" },
+    { li: "admission" },
+    {
+        li: "infrastructure",
+        nested: ["library_&_labs", "sports_firstAid_transport",]
+    },
     {
         li: "academics",
-        nested: ["facilities", "activities"]
+        nested: ["fee_structure", "student_strength", "parent_teacher_meeting",]
     },
-    { li: "admission" },
-    { li: "contact" },
+    { li: "faculty" },
 ]
 
 export default navData;

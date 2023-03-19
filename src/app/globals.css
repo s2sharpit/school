@@ -3,13 +3,11 @@
 @tailwind utilities;
 
 @layer base {
-
   :root {
-  
     /*========== Colors ==========*/
     /*Color mode hex #RRGGBB */
-    
-    --title-color: 	#333333;
+
+    --title-color: #333333;
     --title-color-dark: #000;
     --text-color: #666666;
     --body-color: #fafafa;
@@ -19,7 +17,7 @@
     --scrollBar-color: #f0f0f0;
   }
 
-  [data-theme='dark'] {
+  [data-theme="dark"] {
     --title-color: #d9d9d9;
     --title-color-dark: #fff;
     --text-color: #999999;
@@ -36,27 +34,29 @@
     overflow-x: hidden;
   }
 
-    ::-webkit-scrollbar {
-      width: 0.7rem;
-      background: var(--scrollBar-color);
-      border-left: 1px solid rgba(var(--border-color), 0.05);
-    }
+  ::-webkit-scrollbar {
+    width: 0.7rem;
+    background: var(--scrollBar-color);
+    border-left: 1px solid rgba(var(--border-color), 0.05);
+  }
 
   ::-webkit-scrollbar-thumb {
     background: var(--bg-color);
     border-radius: 0.3rem;
   }
-
 }
 
 @layer components {
-
   html {
     @apply scroll-smooth;
   }
 
   section {
-    @apply pt-8 sm:pt-24 pb-8;
+    @apply w-full mt-10 mb-8 text-justify shadow-header rounded-md p-4 h-fit;
+  }
+
+  section ul {
+    @apply list-disc pl-5 list-outside;
   }
 
   .title {
@@ -67,11 +67,39 @@
     @apply block mb-16 text-text-color text-center;
   }
 
+  h3 {
+    @apply text-2xl font-semibold mb-1 text-blue-700;
+  }
+
   b {
     @apply font-semibold text-title-color;
   }
 
+  .ham,
+  .ham::before,
+  .ham::after {
+    @apply w-7 h-0.5 bg-black rounded-sm transition-all delay-150;
+  }
+  .ham::before {
+    @apply content-[""] absolute -my-2;
+    transition: transform 0.15s ease-in, margin 0.15s ease-out 0.15s;
+  }
+  .ham::after {
+    @apply content-[""] absolute my-2;
+    transition: transform 0.15s ease-in, margin 0.15s ease-out 0.15s;
+  }
+  .menu-btn.open .ham {
+    @apply bg-transparent transition-all;
+  }
+  .menu-btn.open .ham::before {
+    @apply m-0 rotate-45;
+    transition: margin 0.15s ease-in, transform 0.15s ease-out 0.15s;
+  }
+  .menu-btn.open .ham::after {
+    @apply m-0 -rotate-45;
+    transition: margin 0.15s ease-in, transform 0.2s ease-out 0.15s;
+  }
 }
 .swiper {
-  padding: 1rem;
+  padding: 0 1rem;
 }

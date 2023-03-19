@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="bg-container-color border-t border-t-border-color/10">
+        <footer id="contact" className="bg-container-color border-t border-t-border-color/10">
             <div className="flex flex-wrap justify-center">
                 <figure className="hidden sm:block max-w-60 p-10">
                     <Image src="/img/Logo.png" alt="Logo" width={400} height={400} className="w-full" />

@@ -22,8 +22,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} bg-body-color`}>
         <Header />
-        <div className="flex flex-col lg:flex-row justify-between py-10 px-20 gap-16">
-          <div className="order-2 lg:order-none flex flex-col sm:flex-row lg:flex-col gap-14 mx-auto">
+        <div className="flex flex-col lg:flex-row justify-between px-8 md:px-12 lg:px-20 gap-4 lg:gap-16 pb-8">
+          <div className="order-2 lg:order-none flex flex-col lg:py-10 sm:flex-row lg:flex-col gap-14 mx-auto">
             {/* <img src="/img/Logo.png" alt="school logo" className="m-auto" /> */}
             {barData.map((data: any, index: number) => <LeftBar key={index} data={data} />)}
           </div>

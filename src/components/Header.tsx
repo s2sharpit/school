@@ -18,47 +18,46 @@ export default function Header() {
                     {/* <h1 className="text-2xl font-bold">Discover the Dynamic Learning Experience at B. S. Sen. Sec. School</h1> */}
                     <p className="">An affiliated school from CBSE, New Delhi situated in Salempur Khadar, Yamunanagar.</p>
                 </div>
-                <Image className="rounded-tl-[5rem] shadow-header" src={'/img/school.jpg'} width={600} height={600} alt="schooPic" />
+                <Image className="rounded-tl-[5rem] shadow-header w-1/2 h-fit" src={'/img/school.jpg'} width={900} height={900} alt="schooPic" />
             </div>
             <div className="absolute -bottom-28 w-full px-20">
                 <div className="h-52 rounded-lg backdrop-blur-sm shadow-header pt-4">
-
-                <Swiper className="h-full"
-                    loop={true}
-                    modules={[Autoplay, Navigation, Pagination, A11y]}
-                    spaceBetween={0}
-                    slidesPerView={1}
-                    slidesPerGroup={1}
-                    autoplay={{
-                        delay: 2500,
-                        disableOnInteraction: false,
-                    }}
-                    navigation
-                    pagination={{ clickable: true }}
-                    onSwiper={(swiper) => console.log(swiper)}
-                    onSlideChange={() => console.log('slide change')}
-                    breakpoints={{
-                        640: {
-                            slidesPerView: 4,
-                            // slidesPerGroup: 2,
-                        },
-                        769: {
-                            slidesPerView: 6,
-                            // slidesPerGroup: 2,
-                        },
-                    }}
+                    <Swiper className="h-full"
+                        loop={true}
+                        modules={[Autoplay, Navigation, Pagination, A11y]}
+                        spaceBetween={0}
+                        slidesPerView={1}
+                        slidesPerGroup={1}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                        }}
+                        navigation
+                        pagination={{ clickable: true }}
+                        onSwiper={(swiper) => console.log(swiper)}
+                        onSlideChange={() => console.log('slide change')}
+                        breakpoints={{
+                            640: {
+                                slidesPerView: 4,
+                                // slidesPerGroup: 2,
+                            },
+                            769: {
+                                slidesPerView: 6,
+                                // slidesPerGroup: 2,
+                            },
+                        }}
                     >
-                    
-                    {imgData.map((data: any, index: number) =>
-                        <SwiperSlide key={index}>
-                            <div className="flex flex-col items-center">
-                                <Image src={"/achievers/topper_" + (index + 1) + ".jpeg"} alt="" width={120} height={120} className="rounded-lg  bg-white" />
-                                <span className="text-center">{data.name}<br />{data.session}</span>
-                            </div>
-                        </SwiperSlide>
-                    )}
-                </Swiper>
-                    </div>
+
+                        {imgData.map((data: any, index: number) =>
+                            <SwiperSlide key={index}>
+                                <div className="flex flex-col items-center">
+                                    <Image src={"/achievers/topper_" + (index + 1) + ".jpeg"} alt="" width={120} height={120} className="rounded-lg  bg-white" />
+                                    <span className="text-center">{data.name}<br />{data.session}</span>
+                                </div>
+                            </SwiperSlide>
+                        )}
+                    </Swiper>
+                </div>
             </div>
         </header>
     )

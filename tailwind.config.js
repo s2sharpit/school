@@ -25,7 +25,7 @@ module.exports = {
         },
       },
       boxShadow: {
-        header: '0 -1px 4px rgba(0, 0, 0, 0.15)',
+        header: '0 0 4px rgba(0, 0, 0, 0.15)',
       },
     },
   },

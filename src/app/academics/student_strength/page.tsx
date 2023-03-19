@@ -1,0 +1,77 @@
+export default function StudentStrength() {
+    return (
+        <section className="">
+            <table className="table table-striped w-full">
+    <thead>
+      <tr>
+        <th>Sr No</th>
+        <th>Class</th>
+        <th>No of Students</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>1st</td>
+        <td>65</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>2nd</td>
+        <td>64</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>3rd</td>
+        <td>51</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>4th</td>
+        <td>57</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>5th</td>
+        <td>53</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>6th</td>
+        <td>45</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>7th</td>
+        <td>49</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>8th</td>
+        <td>29</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>9th</td>
+        <td>50</td>
+      </tr>
+      <tr>
+        <td>10</td>
+        <td>10th</td>
+        <td>47</td>
+      </tr>
+      <tr>
+        <td>11</td>
+        <td>11th</td>
+        <td>40</td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>12th</td>
+        <td>25</td>
+      </tr>
+    </tbody>
+  </table>
+        </section>
+    )
+}
