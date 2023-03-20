@@ -102,6 +102,20 @@
     @apply m-0 -rotate-45;
     transition: margin 0.15s ease-in, transform 0.2s ease-out 0.15s;
   }
+
+  table,
+  th,
+  td {
+    @apply border-collapse text-center py-1 px-5;
+  }
+
+  tr:nth-child(even) {
+    @apply bg-gray-200;
+  }
+
+  thead th {
+    @apply bg-neutral-500 text-white;
+  }
 }
 
 .swiper {
@@ -112,5 +126,3 @@ header .swiper-button-next,
 header .swiper-button-prev {
   font-size: 4px !important;
 }
-
-

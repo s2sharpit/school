@@ -1,7 +1,8 @@
 export default function FeeStructure() {
     return (
-        <section className="">
-            <table className="table table-striped w-full ">
+        <section>
+            <h3>Fee Structure</h3>
+            <table className="border-2 rounded-3xl">
                 <thead>
                     <tr>
                         <th>Sr No</th>

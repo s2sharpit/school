@@ -38,7 +38,7 @@ export default function Navbar() {
                         </Link>
                         {data.nested &&
                             <div className={`md:scale-0 group-hover:scale-100 group-hover:block md:hidden md:absolute text-left bg-container-color shadow-header md:pt10 w-40 rounded-md transition-all duration-700 mx-auto md:-translate-x-1/4`}>
-                                {(data.nested).map((d, i) => <Link key={i} href={"/" + data.li + "/" + d} className="block capitalize w-full text-center py-4 px-2 hover:bg-body-color rounded-md transition duration-300">{d}</Link>)}
+                                {(data.nested).map((d, i) => <Link key={i} href={"/" + data.li + "/" + d.ls} className="block capitalize w-full text-center py-4 px-2 hover:bg-body-color rounded-md transition duration-300">{d.name}</Link>)}
                             </div>
                         }
                     </li>
