@@ -29,7 +29,7 @@ const navData = [
                 ls: "ptm",
             },]
     },
-    { li: "faculty" },
+    // { li: "faculty" },
 ]
 
 export default navData;

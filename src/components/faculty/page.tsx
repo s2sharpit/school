@@ -1,38 +1,38 @@
-export default function Faculty() {
+function Faculty() {
   return (
     <section>
       <table className="text-sm">
         <thead>
           <tr>
-            <th>SR NO</th>
-            <th>NAME</th>
-            <th>DESIGNATION</th>
-            <th>QUALIFICATION</th>
+            <th>Sr No</th>
+            <th>Name</th>
+            <th>Destination</th>
+            <th>Qualification</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td>1</td>
-            <td>SHASHI BALA</td>
-            <td>PRINCIPAL</td>
-            <td>M.A, B.ED</td>
+            <td>Shashi Bala</td>
+            <td>Principal</td>
+            <td>M.A, B.Ed</td>
           </tr>
           <tr>
             <td>2</td>
-            <td>RAJINDER KAUR</td>
-            <td>PGT PUNJABI</td>
-            <td>M.A, B.ED</td>
+            <td>Rajinder Kaur</td>
+            <td>PGT Punjabi</td>
+            <td>M.A, B.Ed</td>
           </tr>
           <tr>
             <td>3</td>
-            <td>NIRMALA SAINI</td>
-            <td>PGT HINDI</td>
-            <td>M.A, B.ED</td>
+            <td>Nirmala Saini</td>
+            <td>PGT Hindi</td>
+            <td>M.A, B.Ed</td>
           </tr>
           <tr>
             <td>4</td>
-            <td>SANJIT KAUR</td>
-            <td>PGT ENGLISH</td>
+            <td>Sanjit Kaur</td>
+            <td>PGT English</td>
             <td>M.A, B.ED</td>
           </tr>
           <tr>
