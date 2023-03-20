@@ -80,10 +80,12 @@
   .ham::after {
     @apply w-7 h-0.5 bg-black rounded-sm transition-all delay-150;
   }
+
   .ham::before {
     @apply content-[""] absolute -my-2;
     transition: transform 0.15s ease-in, margin 0.15s ease-out 0.15s;
   }
+
   .ham::after {
     @apply content-[""] absolute my-2;
     transition: transform 0.15s ease-in, margin 0.15s ease-out 0.15s;
@@ -91,6 +93,7 @@
   .menu-btn.open .ham {
     @apply bg-transparent transition-all;
   }
+
   .menu-btn.open .ham::before {
     @apply m-0 rotate-45;
     transition: margin 0.15s ease-in, transform 0.15s ease-out 0.15s;
@@ -100,6 +103,14 @@
     transition: margin 0.15s ease-in, transform 0.2s ease-out 0.15s;
   }
 }
+
 .swiper {
   padding: 0 1rem;
 }
+
+header .swiper-button-next,
+header .swiper-button-prev {
+  font-size: 4px !important;
+}
+
+

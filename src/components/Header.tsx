@@ -2,10 +2,14 @@
 import Image from "next/image";
 import Navbar from "./Navbar";
 import imgData from "../data/imgData";
-import { Navigation, Pagination, Autoplay, A11y } from 'swiper';
+import SwiperCore, { Navigation, Pagination, Autoplay, A11y } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.min.css';
+import 'swiper/swiper.min.css';
+// import 'swiper/components/navigation/navigation.min.css';
+
+SwiperCore.use([Navigation]);
 
 export default function Header() {
     return (
@@ -58,7 +62,7 @@ export default function Header() {
 
                         {imgData.map((data: any, index: number) =>
                             <SwiperSlide key={index}>
-                                <div className="flex flex-col items-center">
+                                <div className="flex flex-col items-center drop-shadow-2xl">
                                     <Image src={"/achievers/topper_" + (index < 7 ?(index + 1) : (index - 6)) + ".jpeg"} alt="" width={120} height={120} className="rounded-lg  bg-container-color p-1" />
                                     <span className="text-center">{data.name}<br />{data.session}</span>
                                 </div>

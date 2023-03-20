@@ -4,8 +4,15 @@ import { useCallback, useRef, useState } from "react";
 
 export default function Navbar() {
 
-    const navRef = useRef(null);
+    const navRef = useRef<HTMLDivElement>(null);
     const [isOpen, setIsOpen] = useState(false);
+    const handleClose = (e: any) => {
+        if (navRef.current && !navRef.current?.contains(e.target)) {
+            setIsOpen(false);
+        }
+    };
+    window.addEventListener("scroll", () => setIsOpen(false));
+    window.addEventListener("click", handleClose);
 
     const handleClickClose = useCallback((event: any, id: string) => {
         document.getElementById(id)?.scrollIntoView();
@@ -13,7 +20,7 @@ export default function Navbar() {
 
     return (
         <nav className="z-10 md:flex justify-between fixed w-full h-max items-center py-4 px-8 lg:px-16 shadow-header bg-body-color">
-            <Link href={"/"} className="text-lg md:text-xl lg:text-2xl font-semibold">B. S. Senior Secondary School</Link>
+            <Link href={"/"} className="text-lg md:text-xl lg:text-2xl font-semibold hover:text-blue-700">B. S. Senior Secondary School</Link>
             <div ref={navRef} onClick={() => setIsOpen(prev => !prev)} className={`${isOpen && 'open'} menu-btn flex z-10 md:hidden absolute top-0 right-0 justify-center items-center p-6`}>
                 <div className="ham"></div>
             </div>
