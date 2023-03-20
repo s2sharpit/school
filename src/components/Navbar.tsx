@@ -1,18 +1,22 @@
 import Link from "next/link"
 import navData from "../data/navData"
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 export default function Navbar() {
 
     const navRef = useRef<HTMLDivElement>(null);
-    const [isOpen, setIsOpen] = useState(false);
-    const handleClose = (e: any) => {
+    const [nav, setNav] = useState(false);
+
+    const handleClose = useCallback((e: any) => {
         if (navRef.current && !navRef.current?.contains(e.target)) {
-            setIsOpen(false);
+            setNav(false);
         }
-    };
-    window.addEventListener("scroll", () => setIsOpen(false));
-    window.addEventListener("click", handleClose);
+    }, [navRef]);
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => setNav(false));
+        window.addEventListener("click", handleClose);
+    }, [handleClose, nav])
 
     const handleClickClose = useCallback((event: any, id: string) => {
         document.getElementById(id)?.scrollIntoView();
@@ -21,11 +25,11 @@ export default function Navbar() {
     return (
         <nav className="z-10 md:flex justify-between fixed w-full h-max items-center py-4 px-8 lg:px-16 shadow-header bg-body-color">
             <Link href={"/"} className="text-lg md:text-xl lg:text-2xl font-semibold hover:text-blue-700">B. S. Senior Secondary School</Link>
-            <div ref={navRef} onClick={() => setIsOpen(prev => !prev)} className={`${isOpen && 'open'} menu-btn flex z-10 md:hidden absolute top-0 right-0 justify-center items-center p-6`}>
+            <div ref={navRef} onClick={() => setNav(prev => !prev)} className={`${nav && 'open'} menu-btn flex z-10 md:hidden absolute top-0 right-0 justify-center items-center p-6`}>
                 <div className="ham"></div>
             </div>
 
-            <ul className={`${!isOpen && 'max-md:-mr-48'} flexjustify-betweenmin-w-fitw-1/2font-medium overflow-x-hidden max-md:overflow-y-scroll right-0 absolute md:static md:flex h-[calc(100vh-60px)] max-md:mt-4 max-md:pt-4 md:h-max duration-300 transition-all max-md:bg-container-color w-48 md:w-1/2 text-center justify-between  max-md:space-y-5`}>
+            <ul className={`${!nav && 'max-md:-mr-48'} flexjustify-betweenmin-w-fitw-1/2font-medium overflow-x-hidden max-md:overflow-y-scroll right-0 absolute md:static md:flex h-[calc(100vh-60px)] max-md:mt-4 max-md:pt-4 md:h-max duration-300 transition-all max-md:bg-container-color w-48 md:w-1/2 text-center justify-between  max-md:space-y-5`}>
                 {navData.map((data, index) =>
                     <li key={index} className="group">
                         <Link href={data.li} className={`${data.nested && "pointer-events-none"} capitalize`}>
