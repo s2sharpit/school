@@ -11,16 +11,16 @@ export default function Header() {
     return (
         <header className="relative mb-40">
             <Navbar />
-            <div className="pt-28 flex justify-between">
-                <div className="mt-16 mb-24 mx-20 space-y-6">
-                    <h1 className="text-4xl font-bold">Discover the <span className="text-blue-700">Best Education</span> Opportunities at Our School!</h1>
+            <div className="pt-14 md:pt-28 flex justify-between gap-x-9">
+                <div className="mt-12 lg:mt-16 ml-12 lg:ml-16 space-y-4 lg:space-y-6 max-md:hidden">
+                    <h1 className="text-2xl lg:text-4xl font-bold">Discover the <span className="text-blue-700">Best Education</span> Opportunities at Our School!</h1>
                     {/* <h1 className="text-4xl font-bold">Join Our School and Empower Your Future Today!</h1> */}
                     {/* <h1 className="text-2xl font-bold">Discover the Dynamic Learning Experience at B. S. Sen. Sec. School</h1> */}
                     <p className="">An affiliated school from CBSE, New Delhi situated in Salempur Khadar, Yamunanagar.</p>
                 </div>
-                <Image className="rounded-tl-[5rem] shadow-header w-1/2 h-fit" src={'/img/school.jpg'} width={900} height={900} alt="schooPic" />
+                <Image className="rounded-tl-[5rem] shadow-header md:w-1/2 h-fit" src={'/img/school.jpg'} width={900} height={900} alt="schooPic" />
             </div>
-            <div className="absolute -bottom-28 w-full px-20">
+            <div className="absolute -bottom-32 md:-bottom-28 w-full px-8 md:px-16">
                 <div className="h-52 rounded-lg backdrop-blur-sm shadow-header pt-4">
                     <Swiper className="h-full"
                         loop={true}
@@ -38,12 +38,20 @@ export default function Header() {
                         onSlideChange={() => console.log('slide change')}
                         breakpoints={{
                             640: {
-                                slidesPerView: 4,
-                                // slidesPerGroup: 2,
+                                slidesPerView: 3,
+                                slidesPerGroup: 2,
                             },
                             769: {
+                                slidesPerView: 4,
+                                slidesPerGroup: 2,
+                            },
+                            1024: {
+                                slidesPerView: 5,
+                                slidesPerGroup: 2,
+                            },
+                            1280: {
                                 slidesPerView: 6,
-                                // slidesPerGroup: 2,
+                                slidesPerGroup: 2,
                             },
                         }}
                     >
@@ -51,7 +59,7 @@ export default function Header() {
                         {imgData.map((data: any, index: number) =>
                             <SwiperSlide key={index}>
                                 <div className="flex flex-col items-center">
-                                    <Image src={"/achievers/topper_" + (index + 1) + ".jpeg"} alt="" width={120} height={120} className="rounded-lg  bg-white" />
+                                    <Image src={"/achievers/topper_" + (index < 7 ?(index + 1) : (index - 6)) + ".jpeg"} alt="" width={120} height={120} className="rounded-lg  bg-container-color p-1" />
                                     <span className="text-center">{data.name}<br />{data.session}</span>
                                 </div>
                             </SwiperSlide>

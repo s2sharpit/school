@@ -2,13 +2,13 @@ export default function Admission() {
     return (
         <section>
             <div className="">
-            <h3>Code of Conduct</h3>
-            <ul>
-                <li>All students admitted shall strictly abide by the rules and regulations of the school in force, and notified from time to time.</li>
-                <li>The campus belongs to all of us and it is our duty to keep it neat and clean. Dustbins must be used for waste matter. No polythene bags are to be carried or used on the campus.</li>
-                <li>A school is a public place, therefore, smoking is a punishable act, and strictly prohibited on the campus.</li>
-                <li>Any grievances or suggestions should be routed through management for further redressal /consideration.</li>
-            </ul>
+                <h3>Code of Conduct</h3>
+                <ul>
+                    <li>All students admitted shall strictly abide by the rules and regulations of the school in force, and notified from time to time.</li>
+                    <li>The campus belongs to all of us and it is our duty to keep it neat and clean. Dustbins must be used for waste matter. No polythene bags are to be carried or used on the campus.</li>
+                    <li>A school is a public place, therefore, smoking is a punishable act, and strictly prohibited on the campus.</li>
+                    <li>Any grievances or suggestions should be routed through management for further redressal /consideration.</li>
+                </ul>
             </div>
             <div className="">
                 <h3>General Instructions</h3>
@@ -24,7 +24,7 @@ export default function Admission() {
                     <li>In case of any ambiguity in the rule, interpretation of the same by the Board shall be final.</li>
                     <li>All legal disputes relating to admission of students to B.S Senior Secondary School. The admission will be subject to Courts having jurisdiction at District.</li>
                     <li>Once a student has enrolled for the admission seat will be reserved against his/her name and the student will be liable to pay the full fees for the same.</li>
-                    </ul>
+                </ul>
             </div>
         </section>
     )
