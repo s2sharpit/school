@@ -13,7 +13,7 @@ SwiperCore.use([Navigation]);
 
 export default function Header() {
     return (
-        <header className="relative mb-40">
+        <header id="header" className="relative mb-40">
             <Navbar />
             <div className="pt-14 md:pt-28 flex justify-between gap-x-9">
                 <div className="mt-12 lg:mt-16 ml-12 lg:ml-16 space-y-4 lg:space-y-6 max-md:hidden">
@@ -41,6 +41,9 @@ export default function Header() {
                         onSwiper={(swiper) => console.log(swiper)}
                         onSlideChange={() => console.log('slide change')}
                         breakpoints={{
+                            512: {
+                                slidesPerView: 2,
+                            },
                             640: {
                                 slidesPerView: 3,
                                 slidesPerGroup: 2,

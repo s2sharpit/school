@@ -18,13 +18,13 @@ export default function Navbar() {
         window.addEventListener("click", handleClose);
     }, [handleClose, nav])
 
-    const handleClickClose = useCallback((event: any, id: string) => {
+    const handleClick = useCallback((id: string) => {
         document.getElementById(id)?.scrollIntoView();
     }, []);
 
     return (
         <nav className="z-10 md:flex justify-between fixed w-full h-max items-center py-4 px-8 lg:px-16 shadow-header bg-body-color">
-            <Link href={"/"} className="text-lg md:text-xl lg:text-2xl font-semibold hover:text-blue-700">B. S. Senior Secondary School</Link>
+            <Link href={"/"} onClick={() => handleClick("header")} className="text-lg md:text-xl lg:text-2xl font-semibold hover:text-blue-700">B. S. Senior Secondary School</Link>
             <div ref={navRef} onClick={() => setNav(prev => !prev)} className={`${nav && 'open'} menu-btn flex z-10 md:hidden absolute top-0 right-0 justify-center items-center p-6`}>
                 <div className="ham"></div>
             </div>
@@ -43,7 +43,7 @@ export default function Navbar() {
                         }
                     </li>
                 )}
-                <li className="cursor-pointer capitalize" onClick={event => handleClickClose(event, "contact")}>Contact</li>
+                <li className="cursor-pointer capitalize" onClick={() => handleClick("contact")}>Contact</li>
             </ul>
 
         </nav>

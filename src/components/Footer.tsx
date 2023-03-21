@@ -15,7 +15,7 @@ export default function Footer() {
                     <h2 className="font-semibold text-lg">Address</h2>
                     <p>Near Salempur Khadar, Darpur<br />Road, Khanpura, Haryana 135103</p><br />
                     <h2 className="font-semibold text-lg">Phone No</h2>
-                    <p>+91-94660-69119, 89014-37877</p><br />
+                    <p>89014-37877, 96719-83678</p><br />
                     <h2 className="font-semibold text-lg">Email</h2>
                     <p>bsmschoolsalempur@gmail.com</p>
                 </div>
