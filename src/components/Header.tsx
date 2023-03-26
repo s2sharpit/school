@@ -22,7 +22,7 @@ export default function Header() {
                     {/* <h1 className="text-2xl font-bold">Discover the Dynamic Learning Experience at B. S. Sen. Sec. School</h1> */}
                     <p className="">An affiliated school from CBSE, New Delhi situated in Salempur Khadar, Yamunanagar.</p>
                 </div>
-                <Image className="rounded-tl-[5rem] shadow-header md:w-1/2 h-fit" src={'/img/school.jpg'} width={900} height={900} alt="schooPic" />
+                <Image className="md:rounded-tl-[5rem] shadow-header md:w-1/2 h-fit" src={'/img/school.jpg'} width={900} height={900} alt="schooPic" />
             </div>
             <div className="absolute -bottom-32 md:-bottom-28 w-full px-8 md:px-16">
                 <div className="h-52 rounded-lg backdrop-blur-sm shadow-header pt-4">
