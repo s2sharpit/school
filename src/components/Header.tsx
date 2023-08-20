@@ -1,15 +1,12 @@
 'use client'
 import Image from "next/image";
 import Navbar from "./Navbar";
-import imgData from "../data/imgData";
-import SwiperCore, { Navigation, Pagination, Autoplay, A11y } from 'swiper';
+import imgData from "@/data/imgData";
+import { Navigation, Pagination, Autoplay, A11y } from 'swiper/modules';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.min.css';
-import 'swiper/swiper.min.css';
-// import 'swiper/components/navigation/navigation.min.css';
-
-SwiperCore.use([Navigation]);
+import "swiper/css";
+import "swiper/css/bundle";
 
 export default function Header() {
     return (
