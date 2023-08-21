@@ -6,7 +6,7 @@ export default function Footer() {
         <footer id="contact" className="bg-container-color border-t border-t-border-color/10">
             <div className="flex justify-center md:justify-between lg:justify-center gap-20 md:gap-12 xl:gap-32 px-8 md:px-12 lg:px-16 py-8">
                 <figure className="hidden sm:block max-w-60">
-                    <Image src="/img/Logo.png" alt="Logo" width={400} height={400} className="w-full" />
+                    <Image src="/img/school_logo.png" alt="Logo" width={180} height={240} className="w-full" />
                     <figcaption className="font-semibold text-center">B. S. Senior Secondary School</figcaption>
                 </figure>
                 <div className="max-w-xs">
