@@ -1,5 +1,5 @@
 import Link from "next/link"
-import navData from "../data/navData"
+import navData from "@/data/navData"
 import { useCallback, useEffect, useRef, useState } from "react";
 
 export default function Navbar() {
@@ -32,13 +32,13 @@ export default function Navbar() {
             <ul className={`${!nav && 'max-md:-mr-48'} flexjustify-betweenmin-w-fitw-1/2font-medium overflow-x-hidden max-md:overflow-y-scroll right-0 absolute md:static md:flex h-[calc(100vh-60px)] max-md:mt-4 max-md:pt-4 md:h-max duration-300 transition-all max-md:bg-container-color w-48 md:w-1/2 text-center justify-between  max-md:space-y-5`}>
                 {navData.map((data, index) =>
                     <li key={index} className="group">
-                        <Link href={data.li} className={`${data.nested && "pointer-events-none"} capitalize`}>
+                        <Link href={`/${data.li}`} className={`${data.nested && "pointer-events-none"} capitalize`}>
                             {data.li}
                             {/* <span className="spLink h-0.5 w-0 transition-all duration-200 bg-white"></span> */}
                         </Link>
                         {data.nested &&
                             <div className={`md:scale-0 group-hover:scale-100 group-hover:block md:hidden md:absolute text-left bg-container-color shadow-header md:pt10 w-40 rounded-md transition-all duration-700 mx-auto md:-translate-x-1/4`}>
-                                {(data.nested).map((d, i) => <Link key={i} href={"/" + data.li + "/" + d.ls} className="block capitalize w-full text-center py-4 px-2 hover:bg-body-color rounded-md transition duration-300">{d.name}</Link>)}
+                                {(data.nested).map((d, i) => <Link key={i} href={`/${data.li}/${d.ls}`} className="block capitalize w-full text-center py-4 px-2 hover:bg-body-color rounded-md transition duration-300">{d.name}</Link>)}
                             </div>
                         }
                     </li>
