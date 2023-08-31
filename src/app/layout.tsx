@@ -1,6 +1,6 @@
 import Header from '@/components/Header'
 import './globals.css'
-import newsData from '../data/newsData'
+import newsData from '@/data/newsData'
 import { Inter } from 'next/font/google'
 import Footer from '@/components/Footer'
 import Image from 'next/image'
@@ -11,18 +11,32 @@ const inter = Inter({ subsets: ['latin'] })
 
 
 export const metadata = {
-  title: 'B. S. Senior Secondary School',
-  description: 'An affiliated school from CBSE, New Delhi situated in Salempur Khadar, Yamunanagar.',
-  authors: [{ name: 's2sharpit' }, { name: 'Tushar Saini', url: 'https://s2sharpit.me' }],
-  keywords: ['b. s. senior secondary school', 'salmepur khadar', 'school', 'cbse', 'education', 'bharat', 's2sharpit'],
-  publisher: 's2sharpit',
+  metadataBase: new URL("https://bsseniorsecondaryschool.in/"),
+  title: "B. S. Senior Secondary School",
+  description:
+    "An affiliated school from CBSE, New Delhi situated in Salempur Khadar, Yamunanagar.",
+  authors: [
+    { name: "s2sharpit" },
+    { name: "Tushar Saini", url: "https://s2sharpit.me" },
+  ],
+  keywords: [
+    "b. s. senior secondary school",
+    "salmepur khadar",
+    "school",
+    "cbse",
+    "education",
+    "bharat",
+    "s2sharpit",
+  ],
+  publisher: "s2sharpit",
   openGraph: {
-    title: 'B. S. Senior Secondary School',
-    description: 'An affiliated school from CBSE, New Delhi situated in Salempur Khadar, Yamunanagar.',
-    url: 'https://bsseniorsecondaryschool.in',
-    siteName: 'B. S. Senior Secondary School',
-  }
-}
+    title: "B. S. Senior Secondary School",
+    description:
+      "An affiliated school from CBSE, New Delhi situated in Salempur Khadar, Yamunanagar.",
+    url: "https://bsseniorsecondaryschool.in",
+    siteName: "B. S. Senior Secondary School",
+  },
+};
 
 export default function RootLayout({
   children,
