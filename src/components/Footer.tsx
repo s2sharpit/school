@@ -5,8 +5,8 @@ export default function Footer() {
     return (
         <footer id="contact" className="bg-container-color border-t border-t-border-color/10">
             <div className="flex justify-center md:justify-between lg:justify-center gap-20 md:gap-12 xl:gap-32 px-8 md:px-12 lg:px-16 py-8">
-                <figure className="hidden sm:block max-w-60">
-                    <Image src="/img/school_logo.png" alt="Logo" width={180} height={240} className="w-full" />
+                <figure className="hidden sm:block max-w-60 self-center">
+                    <Image src="/img/school_logo.png" alt="Logo" width={180} height={180} className="w-full" />
                     <figcaption className="font-semibold text-center">B. S. Senior Secondary School</figcaption>
                 </figure>
                 <div className="max-w-xs">
@@ -31,10 +31,9 @@ export default function Footer() {
                 </div>
                 <hr className="md:hidden border-border/10 m-3 border-t-2" />
                 <div className="sm:flex justify-center text-sm md:order-1 space-x-3">
-                    <span className="">Copyright © 2022</span>
+                    <span className="">Copyright © {new Date().getFullYear()}</span>
                     <span className="order-2">All right reserved.</span>
                     <div className="order-1">Sewa Bharti Shiksha Samiti.</div>
-
                 </div>
             </div>
         </footer>
