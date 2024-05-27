@@ -27,7 +27,7 @@ export default function Header() {
         </div>
         <Image
           className="md:rounded-tl-[5rem] shadow-header md:w-1/2 h-fit"
-          src={"/img/school.jpg"}
+          src={"/img/building.jpg"}
           width={900}
           height={900}
           alt="schooPic"
