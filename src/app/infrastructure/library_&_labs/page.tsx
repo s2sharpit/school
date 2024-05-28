@@ -62,7 +62,7 @@ export default function LibraryLabs() {
               height={400}
               alt={image.title}
             />
-            <div className="absolute hidden top-0 left-0 right-0 bottom-0 group-hover:bg-black/60 group-hover:grid text-white p-4 place-items-center transition-all">
+            <div className="absolute hidden top-0 left-0 right-0 bottom-0 text-2xl font-semibold group-hover:bg-black/60 group-hover:grid text-white p-4 place-items-center transition-all">
               <p>{image.title}</p>
             </div>
           </div>
