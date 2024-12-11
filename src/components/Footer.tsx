@@ -27,7 +27,7 @@ export default function Footer() {
             <hr className="hidden md:block border-border-color/10 border-t-2 mx-10" />
             <div className="md:flex text-center md:text-sm justify-center md:justify-between m-2 md:px-10 space-y-5 md:space-y-0">
                 <div className="md:order-2 md:flex space-x-3">
-                    Designed by &nbsp;<Link href="https://s2sharpit.me" className="text-blue-700" target="_blank">@s2sharpit</Link>
+                    Designed by &nbsp;<Link href="https://s2sharpit.tech" className="text-blue-700" target="_blank">@s2sharpit</Link>
                 </div>
                 <hr className="md:hidden border-border/10 m-3 border-t-2" />
                 <div className="sm:flex justify-center text-sm md:order-1 space-x-3">
