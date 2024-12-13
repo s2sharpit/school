@@ -12,8 +12,8 @@ export const metadata = {
   description:
     "An affiliated school from CBSE, New Delhi situated in Salempur Khadar, Yamunanagar.",
   authors: [
-    { name: "s2sharpit" },
-    { name: "Tushar Saini", url: "https://s2sharpit.me" },
+    { name: "s2sharpit", url: "https://s2sharpit.tech" },
+    { name: "Tushar Saini", url: "https://s2sharpit.tech" },
   ],
   keywords: [
     "b. s. senior secondary school",
