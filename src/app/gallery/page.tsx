@@ -1,5 +1,13 @@
+import Section from "@/components/ui/Section";
+import Wrapper from "@/components/ui/Wrapper";
+import ImgGallery from "./ImgGallery";
+
 export default function page() {
   return (
-    <div>page</div>
+    <Wrapper>
+      <Section>
+        <ImgGallery />
+      </Section>
+    </Wrapper>
   )
 }
