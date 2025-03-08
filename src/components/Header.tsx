@@ -5,11 +5,11 @@ export default function Header() {
   return (
     <header
       id="header"
-      className="relative flex justify-center bg-[url(../../public/school_building.jpg)] bg-contain bg-fixed "
+      className="relative flex justify-center bg-[url(../../public/img/school_building.jpg)] bg-contain bg-fixed "
     >
       <div className="d:pt-28 flex justify-between gap-x-9 bg-black/30 bg-gradient-to-rfrom-black/30via-transparentto-transparent">
         <Image
-          src="/school_building.jpg"
+          src="/img/school_building.jpg"
           alt="school building"
           width={5000}
           height={4000}

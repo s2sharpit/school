@@ -31,7 +31,7 @@ export default function Navbar() {
             <div className="flex justify-between">
 
             <Link href={"/"} onClick={() => handleClick("header")} className="flex items-center gap-2">
-            <Image src="/school_logo.png" width={40} height={40} alt="school logo" className="max-sm:hidden" />
+            <Image src="/img/school_logo.png" width={40} height={40} alt="school logo" className="max-sm:hidden" />
             <span className="text-lg md:text-xl lg:text-2xl fontsemibold text-gray-300 hover:text-slate-100">B. S. Senior Secondary School</span>
             </Link>
             <div ref={navRef} onClick={() => setNav(prev => !prev)} className={`${nav && 'opened'} menu-btn flex z-10 md:hidden justify-center items-center py-1`}>
