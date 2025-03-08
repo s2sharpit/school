@@ -1,4 +1,4 @@
-import { HTMLAttributes, forwardRef } from "react";
+import * as React from "react";
 import { VariantProps, cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
@@ -17,24 +17,17 @@ const wrapperVariants = cva(
   }
 );
 
-interface WrapperProps
-  extends HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof wrapperVariants> {}
-
-const Wrapper = forwardRef<HTMLDivElement, WrapperProps>(
-  ({ className, variant, children, ...props }, ref) => {
-    return (
-      <div
-        ref={ref}
-        {...props}
-        className={cn(wrapperVariants({ variant, className }))}
-      >
-        {children}
-      </div>
-    );
-  }
-);
-
-Wrapper.displayName = "Wrapper";
+function Wrapper({
+  className,
+  variant,
+  children,
+  ...props
+}: React.ComponentProps<"div"> & VariantProps<typeof wrapperVariants>) {
+  return (
+    <div {...props} className={cn(wrapperVariants({ variant, className }))}>
+      {children}
+    </div>
+  );
+}
 
 export default Wrapper;

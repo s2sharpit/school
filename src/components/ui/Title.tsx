@@ -1,4 +1,4 @@
-import { HTMLAttributes, forwardRef } from "react";
+import * as React from "react";
 import { VariantProps, cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
@@ -15,24 +15,17 @@ const titleVariants = cva("text-primary font-bold", {
   },
 });
 
-interface TitleProps
-  extends HTMLAttributes<HTMLHeadingElement>,
-    VariantProps<typeof titleVariants> {}
-
-const Title = forwardRef<HTMLHeadingElement, TitleProps>(
-  ({ className, size, children, ...props }, ref) => {
-    return (
-      <h1
-        ref={ref}
-        {...props}
-        className={cn(titleVariants({ size, className }))}
-      >
-        {children}
-      </h1>
-    );
-  }
-);
-
-Title.displayName = "Title";
+function Title({
+  className,
+  size,
+  children,
+  ...props
+}: React.ComponentProps<"h1"> & VariantProps<typeof titleVariants>) {
+  return (
+    <h1 {...props} className={cn(titleVariants({ size, className }))}>
+      {children}
+    </h1>
+  );
+}
 
 export default Title;
