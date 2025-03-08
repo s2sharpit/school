@@ -28,7 +28,7 @@ export default function ImgGallery() {
     console.log("lightGallery has been initialized");
   };
   return (
-    <div className="App py-6">
+    <div className="App py-6 w-11/12 mx-auto">
       <LightGallery
         onInit={onInit}
         speed={500}
