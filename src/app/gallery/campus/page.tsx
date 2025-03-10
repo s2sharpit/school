@@ -1,7 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Building, Image, BookOpen } from "lucide-react";
+import { Building, Image as ImageIcon, BookOpen } from "lucide-react";
+import Image from "next/image";
 
 // Campus Highlights Data
 const campusHighlights = [
@@ -74,7 +75,7 @@ export default function CampusPage() {
         {/* Image Gallery */}
         <div className="bg-white shadow-lg rounded-2xl p-6 max-w-5xl mx-auto">
           <h3 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-            <Image className="text-blue-500 w-6 h-6" />
+            <ImageIcon className="text-blue-500 w-6 h-6" />
             Image Gallery
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
@@ -86,9 +87,11 @@ export default function CampusPage() {
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 className="overflow-hidden rounded-lg shadow-md"
               >
-                <img
+                <Image
                   src={image.src}
                   alt={image.alt}
+                  width={200}
+                  height={200}
                   className="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
                 />
               </motion.div>

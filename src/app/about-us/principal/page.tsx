@@ -12,7 +12,7 @@ export default function PrincipalMessage() {
           transition={{ duration: 0.5 }}
           className="text-4xl font-bold text-center text-blue-700 mb-8"
         >
-          Principal’s Message
+          Principal&apos;s Message
         </motion.h2>
         <div className="bg-white shadow-lg rounded-2xl p-8 max-w-3xl mx-auto">
           <motion.p
@@ -41,7 +41,7 @@ export default function PrincipalMessage() {
             className="mt-4 text-lg text-gray-700 leading-relaxed"
           >
             At B. S. Senior Secondary School, we believe in{" "}
-            <strong>"learning beyond textbooks"</strong>. Our focus is on academic 
+            <strong>&quot;learning beyond textbooks&quot;</strong>. Our focus is on academic 
             excellence, character development, and overall personality growth. We encourage 
             students to explore their talents, embrace challenges, and become responsible citizens.
           </motion.p>

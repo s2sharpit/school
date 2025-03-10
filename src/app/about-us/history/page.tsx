@@ -28,7 +28,7 @@ export default function page() {
         Our Vision
       </h1>
       <p className="italic">
-        "To nurture young minds with knowledge, values, and skills, empowering them to become responsible global citizens and lifelong learners"
+      &quot;To nurture young minds with knowledge, values, and skills, empowering them to become responsible global citizens and lifelong learners&quot;
       </p>
     </section>
     <Mission />

@@ -57,7 +57,7 @@ export default function OnlineApplicationPage() {
             Instructions for Filling the Admission Form
           </h3>
           <ul className="list-disc list-inside text-lg text-gray-700 space-y-2">
-            <li><strong>Personal Details:</strong> Student's Name, Date of Birth, Gender, Parent's Name, Contact Information.</li>
+            <li><strong>Personal Details:</strong> Student&apos;s Name, Date of Birth, Gender, Parent&apos;s Name, Contact Information.</li>
             <li><strong>Academic Details:</strong> Previous School Name, Last Class Passed.</li>
             <li><strong>Upload Documents:</strong> Birth Certificate, Report Card, Passport-size Photo, Aadhaar Card (if applicable).</li>
             <li><strong>Submission & Confirmation:</strong> Submit the form and wait for confirmation via email/SMS.</li>

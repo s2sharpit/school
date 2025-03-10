@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FlaskConical, Monitor, BookOpen } from "lucide-react";
+import { FlaskConical, BookOpen } from "lucide-react";
 
 // Labs Data
 const labs = [
