@@ -39,7 +39,7 @@ export default function Navbar() {
             </div>
             </div>
 
-            <div className={`${!nav ? 'max-md:h-0 max-md:invisible': 'max-md:h-[26rem] max-h-[calc(100vh-4rem)] max-md:overflow-y-scroll max-md:border-t'} overflow-hidden duration-300 transition-[height] w-[98%] md:w-1/2 left-[1%] right-[1%]`}>
+            <div className={`${!nav ? 'max-md:h-0 max-md:invisible': 'max-md:h-[26rem] max-h-[calc(100vh-4rem)] max-md:overflow-y-scroll max-md:border-t'} overflow-hidden duration-300 transition-[height] w-[98%] md:w-3/5 left-[1%] right-[1%]`}>
             <ul className="text-center py-4 md:flex justify-between max-md:space-y-5">
 
                 {navData.map((data, index) =>
