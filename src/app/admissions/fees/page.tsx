@@ -1,81 +1,112 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { DollarSign, FileText } from "lucide-react";
-
-// Fee Structure Data
-const feeStructure = [
-  { classRange: "Nursery - UKG", quarterly: "₹5,500", annual: "₹22,000" },
-  { classRange: "I - V", quarterly: "₹6,500", annual: "₹26,000" },
-  { classRange: "VI - VIII", quarterly: "₹7,500", annual: "₹30,000" },
-  { classRange: "IX - X", quarterly: "₹8,500", annual: "₹34,000" },
-  { classRange: "XI - XII (Science)", quarterly: "₹10,000", annual: "₹40,000" },
-  { classRange: "XI - XII (Commerce & Humanities)", quarterly: "₹9,000", annual: "₹36,000" },
-];
-
-// Additional Charges Data
-const additionalCharges = [
-  { title: "Admission Fee", description: "₹5,000 (One-time, non-refundable)" },
-  { title: "Transport Fee", description: "Varies based on location" },
-  { title: "Books & Uniforms", description: "As per actual cost" },
-];
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { CreditCard, ClipboardList, FileText } from "lucide-react";
 
 export default function FeeStructurePage() {
   return (
-    <section className="py-16 bg-gray-100">
-      <div className="container mx-auto px-6">
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-center text-blue-700 mb-8"
-        >
-          Fee Structure (2024-25)
-        </motion.h2>
-
-        {/* Tuition Fees Table */}
-        <div className="bg-white shadow-lg rounded-2xl p-6 max-w-4xl mx-auto mb-8">
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-            <DollarSign className="text-yellow-500 w-6 h-6" />
-            Tuition Fees
-          </h3>
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse border border-gray-300">
-              <thead>
-                <tr className="bg-blue-600 text-white">
-                  <th className="border border-gray-300 px-4 py-2">Class</th>
-                  <th className="border border-gray-300 px-4 py-2">Quarterly Fees</th>
-                  <th className="border border-gray-300 px-4 py-2">Annual Fees</th>
-                </tr>
-              </thead>
-              <tbody>
-                {feeStructure.map((fee, index) => (
-                  <tr key={index} className={index % 2 === 0 ? "bg-gray-100 text-center" : "text-center"}>
-                    <td className="border border-gray-300 px-4 py-2">{fee.classRange}</td>
-                    <td className="border border-gray-300 px-4 py-2">{fee.quarterly}</td>
-                    <td className="border border-gray-300 px-4 py-2">{fee.annual}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        {/* Additional Charges */}
-        <div className="bg-white shadow-lg rounded-2xl p-6 max-w-4xl mx-auto">
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-            <FileText className="text-green-500 w-6 h-6" />
-            Additional Charges
-          </h3>
-          <ul className="list-disc list-inside text-lg text-gray-700 space-y-2">
-            {additionalCharges.map((charge, index) => (
-              <li key={index}>
-                <strong>{charge.title}:</strong> {charge.description}
-              </li>
-            ))}
+    <div className="max-w-4xl mx-auto p-6 space-y-10">
+      {/* Fee Structure Overview */}
+      <Card>
+        <CardContent className="p-6 space-y-4 text-center">
+          <h2 className="text-3xl font-semibold flex items-center justify-center"><CreditCard className="mr-2" /> Transparent & Affordable Fee Structure</h2>
+          <p className="text-gray-700">
+            We ensure that education at B. S. Senior Secondary School remains affordable while maintaining high academic standards. Our fee structure is designed to be accessible for all families.
+          </p>
+        </CardContent>
+      </Card>
+      
+      {/* Fee Breakdown Table */}
+      <Card>
+        <CardContent className="p-6 space-y-4">
+          <h2 className="text-2xl font-semibold flex items-center"><ClipboardList className="mr-2" /> General Fee Breakdown (Approximate Annual Fees)</h2>
+          <table className="w-full border-collapse border border-gray-300">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border border-gray-300 p-2">Class Group</th>
+                <th className="border border-gray-300 p-2">Tuition Fee (Annual)</th>
+                <th className="border border-gray-300 p-2">Admission Fee (One-Time)</th>
+                <th className="border border-gray-300 p-2">Other Charges (Exam, Activities, etc.)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-gray-300 p-2">Nursery - UKG</td>
+                <td className="border border-gray-300 p-2">₹12,000 - ₹18,000</td>
+                <td className="border border-gray-300 p-2">₹2,000</td>
+                <td className="border border-gray-300 p-2">₹3,000 - ₹5,000</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Class I - V</td>
+                <td className="border border-gray-300 p-2">₹20,000 - ₹25,000</td>
+                <td className="border border-gray-300 p-2">₹3,000</td>
+                <td className="border border-gray-300 p-2">₹5,000 - ₹7,000</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Class VI - VIII</td>
+                <td className="border border-gray-300 p-2">₹26,000 - ₹30,000</td>
+                <td className="border border-gray-300 p-2">₹3,500</td>
+                <td className="border border-gray-300 p-2">₹6,000 - ₹8,000</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Class IX - X</td>
+                <td className="border border-gray-300 p-2">₹32,000 - ₹38,000</td>
+                <td className="border border-gray-300 p-2">₹4,000</td>
+                <td className="border border-gray-300 p-2">₹7,000 - ₹10,000</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Class XI - XII (Science)</td>
+                <td className="border border-gray-300 p-2">₹40,000 - ₹45,000</td>
+                <td className="border border-gray-300 p-2">₹5,000</td>
+                <td className="border border-gray-300 p-2">₹8,000 - ₹12,000</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Class XI - XII (Commerce/Arts)</td>
+                <td className="border border-gray-300 p-2">₹35,000 - ₹40,000</td>
+                <td className="border border-gray-300 p-2">₹5,000</td>
+                <td className="border border-gray-300 p-2">₹8,000 - ₹10,000</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="text-gray-600 font-medium">📌 Fees are subject to change. Please contact the school office for the most updated fee details.</p>
+        </CardContent>
+      </Card>
+      
+      {/* Payment Modes & Scholarships */}
+      <Card>
+        <CardContent className="p-6 space-y-4">
+          <h2 className="text-2xl font-semibold">💳 Payment Modes Available</h2>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>✔ Cash / Demand Draft</li>
+            <li>✔ Online Payment (Net Banking / UPI)</li>
+            <li>✔ EMI Options (For select classes)</li>
           </ul>
+          <p className="text-gray-600 font-medium">📢 Scholarships and fee waivers are available for meritorious students and those in need.</p>
+        </CardContent>
+      </Card>
+      
+      {/* Required Documents */}
+      <Card>
+        <CardContent className="p-6 space-y-4">
+          <h2 className="text-2xl font-semibold flex items-center"><FileText className="mr-2" /> Required Documents for Admission</h2>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>✔ Birth Certificate (for Nursery - Class I)</li>
+            <li>✔ Previous School Report Card (for Classes II - XII)</li>
+            <li>✔ Transfer Certificate (TC) from the previous school</li>
+            <li>✔ Passport-size Photographs (4 copies)</li>
+            <li>✔ Aadhar Card of the student and parents</li>
+            <li>✔ Caste Certificate (if applicable)</li>
+            <li>✔ Medical Certificate (for students with special medical needs)</li>
+          </ul>
+        </CardContent>
+      </Card>
+      
+      {/* Call to Action */}
+      <div className="text-center space-y-4">
+        <div className="flex justify-center space-x-4">
+          <Button variant="outline">Check Scholarship Eligibility →</Button>
+          <Button variant="outline">Pay Fees Online →</Button>
         </div>
       </div>
-    </section>
+    </div>
   );
-}
+} 

@@ -1,85 +1,56 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { BookOpen, Layers } from "lucide-react";
-
-// Curriculum Data
-const academicStructure = [
-  {
-    section: "Primary Section (Classes I-V)",
-    description:
-      "Focus on foundational learning, activity-based education, and moral values.",
-  },
-  {
-    section: "Middle Section (Classes VI-VIII)",
-    description:
-      "Introduction to complex subjects, analytical learning, and project-based activities.",
-  },
-  {
-    section: "Secondary Section (Classes IX-X)",
-    description:
-      "Emphasis on core subjects, practical applications, and board exam preparation.",
-  },
-  {
-    section: "Senior Secondary Section (Classes XI-XII)",
-    description:
-      "Specialized streams in Science, Commerce, and Humanities with career-oriented learning.",
-  },
-];
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { BookOpen, ListChecks, GraduationCap } from "lucide-react";
 
 export default function CurriculumPage() {
   return (
-    <section className="py-16 bg-gray-100">
-      <div className="container mx-auto px-6">
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-center text-blue-700 mb-8"
-        >
-          Our Curriculum
-        </motion.h2>
-
-        {/* Overview */}
-        <div className="bg-white shadow-lg rounded-2xl p-6 max-w-4xl mx-auto mb-8">
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-            <BookOpen className="text-yellow-500 w-6 h-6" />
-            Overview
-          </h3>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            <strong>B. S. Senior Secondary School</strong> follows the 
-            <strong> CBSE (Central Board of Secondary Education)</strong> curriculum, ensuring a balanced mix of academics, 
-            skill development, and extracurricular activities. Our curriculum is designed to:
+    <div className="max-w-4xl mx-auto p-6 space-y-10">
+      {/* Curriculum Overview */}
+      <Card>
+        <CardContent className="p-6 space-y-4 text-center">
+          <h2 className="text-3xl font-semibold flex items-center justify-center"><GraduationCap className="mr-2" /> Comprehensive & Well-Structured CBSE Curriculum</h2>
+          <p className="text-gray-700">
+            At B. S. Senior Secondary School, Salempur Khadar, we follow the Central Board of Secondary Education (CBSE) curriculum, which is designed to provide a strong academic foundation while also encouraging creativity, critical thinking, and problem-solving skills.
           </p>
-          <ul className="list-disc list-inside text-lg text-gray-700 mt-4 space-y-2">
-            <li>Foster critical thinking and problem-solving skills.</li>
-            <li>Promote scientific temperament and creativity.</li>
-            <li>Encourage holistic learning beyond textbooks.</li>
+        </CardContent>
+      </Card>
+      
+      {/* Key Features */}
+      <Card>
+        <CardContent className="p-6 space-y-4">
+          <h2 className="text-2xl font-semibold flex items-center"><ListChecks className="mr-2" /> Key Features of Our Curriculum</h2>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>✔ <strong>Activity-Based Learning</strong> – Engaging students with interactive and hands-on lessons.</li>
+            <li>✔ <strong>Balanced Approach</strong> – A perfect mix of theory, practicals, and real-life applications.</li>
+            <li>✔ <strong>Skill Development</strong> – Encouraging students to think independently, work in teams, and develop leadership qualities.</li>
+            <li>✔ <strong>Career-Oriented Education</strong> – Preparing students for higher education, competitive exams, and professional success.</li>
           </ul>
-        </div>
-
-        {/* Academic Structure */}
-        <div className="bg-white shadow-lg rounded-2xl p-6 max-w-4xl mx-auto">
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-            <Layers className="text-green-500 w-6 h-6" />
-            Academic Structure
-          </h3>
-          <div className="space-y-6">
-            {academicStructure.map((section, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-gray-100 p-4 rounded-xl shadow-md"
-              >
-                <h4 className="text-xl font-semibold text-gray-800">{section.section}</h4>
-                <p className="text-lg text-gray-700 mt-2">{section.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+        </CardContent>
+      </Card>
+      
+      {/* Subjects Offered */}
+      <Card>
+        <CardContent className="p-6 space-y-4">
+          <h2 className="text-2xl font-semibold flex items-center"><BookOpen className="mr-2" /> Subjects Offered</h2>
+          
+          <h3 className="text-xl font-semibold">🔹 Primary & Middle School (Classes I - VIII)</h3>
+          <p className="text-gray-700">📚 English | हिंदी | Mathematics | Environmental Science (EVS) | Science | Social Science | General Knowledge | Computer Science | Physical Education</p>
+          
+          <h3 className="text-xl font-semibold">🔹 Secondary School (Classes IX - X)</h3>
+          <p className="text-gray-700">📖 English | हिंदी | Mathematics | Science (Physics, Chemistry, Biology) | Social Science (History, Geography, Civics, Economics) | Computer Science | Physical Education</p>
+          
+          <h3 className="text-xl font-semibold">🔹 Senior Secondary (Classes XI - XII) – CBSE Streams</h3>
+          <p className="text-gray-700"><strong>🔸 Science Stream:</strong> Physics | Chemistry | Biology/Mathematics | English | Computer Science/Physical Education</p>
+          <p className="text-gray-700"><strong>🔸 Commerce Stream:</strong> Business Studies | Accountancy | Economics | English | Computer Science/Physical Education</p>
+          <p className="text-gray-700"><strong>🔸 Arts Stream:</strong> History | Political Science | Geography | English | Computer Science/Physical Education</p>
+        </CardContent>
+      </Card>
+      
+      {/* Call to Action */}
+      <div className="text-center">
+        <p className="text-gray-600 font-medium">📢 We ensure that every student receives quality education tailored to their interests and career goals!</p>
+        <Button variant="outline">Explore Our Faculty →</Button>
       </div>
-    </section>
+    </div>
   );
-}
+} 

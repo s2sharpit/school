@@ -27,7 +27,7 @@ export default function Navbar() {
     }, []);
 
     return (
-        <nav className="fixed top-1 left-[1%] right-[1%] z-50 rounded-md  h-max items-center px-6 max-md:pr-4 shadow-header bg-blue-950/80 backdrop-blur-xs text-blue-50 md:flex md:justify-between">
+        <nav className="fixed top-1 left-[1%] right-[1%] z-50 rounded-md  h-max items-center px-6 max-md:pr-4 shadow-header bg-blue-950/80 hover:bg-blue-950 transition backdrop-blur-xs text-blue-50 md:flex md:justify-between">
             <div className="flex justify-between">
 
             <Link href={"/"} onClick={() => handleClick("header")} className="flex items-center gap-2">
@@ -40,22 +40,22 @@ export default function Navbar() {
             </div>
 
             <div className={`${!nav ? 'max-md:h-0 max-md:invisible': 'max-md:h-[26rem] max-h-[calc(100vh-4rem)] max-md:overflow-y-scroll max-md:border-t'} overflow-hidden duration-300 transition-[height] w-[98%] md:w-3/5 left-[1%] right-[1%]`}>
-            <ul className="text-center py-4 md:flex justify-between max-md:space-y-5">
+                <ul className="text-center py-4 md:flex justify-between max-md:space-y-5">
 
-                {navData.map((data, index) =>
-                    <li key={index} className="group">
-                        <Link href={`/${data.li}`} className={`${data.nested && "pointer-events-none"} capitalize flex items-end justify-center text-gray-300 hover:text-slate-100`}>
-                            {data.li.replace('-', ' ')} {data.nested && <MdOutlineKeyboardArrowDown className="text-xl" />}
-                        </Link>
-                        {data.nested &&
-                            <div className={`md:scale-0 group-hover:h-auto group-hover:scale-100 group-hover:block md:hidden md:absolute text-left bg-blue-950/90 p-2 shadow-header md:w-40 rounded-md transition-all duration-700 mx-auto md:-translate-x-1/4`}>
-                                {(data.nested).map((d, i) => <Link key={i} href={`/${data.li}/${d.ls}`} className="block capitalize w-full text-center p-2 hover:bg-blue-900/70 rounded-md transition duration-300">{d.ls.replace('-', ' ')}</Link>)}
-                            </div>
-                        }
-                    </li>
-                )}
-                <li className="cursor-pointer capitalize" onClick={() => handleClick("contact")}>contact</li>
-                                </ul>
+                    {navData.map((data, index) =>
+                        <li key={index} className="group">
+                            <Link href={data.path} className={`${data.nested && "pointer-events-none"} capitalize flex items-end justify-center text-gray-300 hover:text-slate-100`}>
+                                {data.title} {data.nested && <MdOutlineKeyboardArrowDown className="text-xl" />}
+                            </Link>
+                            {data.nested &&
+                                <div className={`md:scale-0 group-hover:h-auto group-hover:scale-100 group-hover:block md:hidden md:absolute text-left bg-blue-950/90 p-2 shadow-header md:w-48 rounded-md transition-all duration-700 mx-auto md:-translate-x-1/4`}>
+                                    {(data.nested).map((d, i) => <Link key={i} href={`${data.path}${d.path}`} className="block capitalize w-full text-center p-2 hover:bg-blue-900/70 rounded-md transition duration-300">{d.title}</Link>)}
+                                </div>
+                            }
+                        </li>
+                    )}
+                    <li className="cursor-pointer capitalize" onClick={() => handleClick("contact")}>contact</li>
+                </ul>
             </div>
 
         </nav>

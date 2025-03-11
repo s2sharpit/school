@@ -1,73 +1,54 @@
-"use client";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ClipboardList } from "lucide-react";
 
-import { motion } from "framer-motion";
-import { FileText, Download } from "lucide-react";
-
-// Affiliation Details
-const affiliationDetails = {
-  affiliationNumber: "531917",
-  affiliatedSince: "[Year]",
-  validUntil: "[Year]",
-  pdfLink: "/documents/affiliation-letter.pdf", // Replace with actual PDF path
-};
-
-export default function AffiliationLetterPage() {
+export default function PublicDisclosurePage() {
   return (
-    <section className="py-16 bg-gray-100">
-      <div className="container mx-auto px-6">
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-center text-blue-700 mb-8"
-        >
-          CBSE Affiliation Letter
-        </motion.h2>
-
-        {/* Overview */}
-        <div className="bg-white shadow-lg rounded-2xl p-6 max-w-4xl mx-auto mb-8">
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-            <FileText className="text-yellow-500 w-6 h-6" />
-            Overview
-          </h3>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            As per CBSE norms, <strong>B. S. Senior Secondary School</strong> is an affiliated 
-            institution following CBSE guidelines for curriculum and examinations.
+    <div className="max-w-4xl mx-auto p-6 space-y-10">
+      {/* Public Disclosure Overview */}
+      <Card>
+        <CardContent className="p-6 space-y-4 text-center">
+          <h2 className="text-3xl font-semibold flex items-center justify-center"><ClipboardList className="mr-2" /> Public Disclosure Documents</h2>
+          <p className="text-gray-700">
+            As a CBSE-affiliated institution, B. S. Senior Secondary School, Salempur Khadar is committed to maintaining transparency and compliance with CBSE regulations. This section provides all the mandatory public disclosure documents as per CBSE norms.
           </p>
-        </div>
-
-        {/* Affiliation Details */}
-        <div className="bg-white shadow-lg rounded-2xl p-6 max-w-4xl mx-auto mb-8">
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4">Affiliation Details</h3>
-          <ul className="list-disc list-inside text-lg text-gray-700 space-y-2">
-            <li><strong>Affiliation Number:</strong> {affiliationDetails.affiliationNumber}</li>
-            <li><strong>Affiliated Since:</strong> {affiliationDetails.affiliatedSince}</li>
-            <li><strong>Valid Until:</strong> {affiliationDetails.validUntil}</li>
-          </ul>
-        </div>
-
-        {/* Download Affiliation Letter */}
-        <div className="bg-white shadow-lg rounded-2xl p-6 max-w-4xl mx-auto text-center">
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4 flex justify-center items-center gap-2">
-            <FileText className="text-green-500 w-6 h-6" />
-            Download Affiliation Letter
-          </h3>
-          <p className="text-lg text-gray-700 mb-4">
-            Click the button below to download the official CBSE Affiliation Letter.
-          </p>
-          <motion.a
-            href={affiliationDetails.pdfLink}
-            download
-            initial={{ scale: 0.9 }}
-            animate={{ scale: 1 }}
-            transition={{ duration: 0.3 }}
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg flex items-center gap-2 justify-center hover:bg-blue-700 transition duration-300"
-          >
-            <Download className="w-5 h-5" />
-            Download PDF
-          </motion.a>
-        </div>
+          <p className="text-gray-600 font-medium">📢 We believe in openness, accountability, and accessibility of important school-related information for parents, students, and stakeholders.</p>
+          <Button variant="outline">Download CBSE Affiliation Documents →</Button>
+        </CardContent>
+      </Card>
+      
+      {/* Key Public Disclosure Documents */}
+      <Card>
+        <CardContent className="p-6 space-y-4">
+          <h2 className="text-2xl font-semibold">📄 Key Documents for Public Disclosure</h2>
+          <table className="w-full border-collapse border border-gray-300">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border border-gray-300 p-2">Document Name</th>
+                <th className="border border-gray-300 p-2">Download/View</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td className="border border-gray-300 p-2">CBSE Affiliation Certificate</td><td className="border border-gray-300 p-2"><Button variant="outline">Download PDF</Button></td></tr>
+              <tr><td className="border border-gray-300 p-2">School NOC from State Government</td><td className="border border-gray-300 p-2"><Button variant="outline">Download PDF</Button></td></tr>
+              <tr><td className="border border-gray-300 p-2">Recognition Certificate under RTE Act</td><td className="border border-gray-300 p-2"><Button variant="outline">Download PDF</Button></td></tr>
+              <tr><td className="border border-gray-300 p-2">Society/Trust Registration Certificate</td><td className="border border-gray-300 p-2"><Button variant="outline">Download PDF</Button></td></tr>
+              <tr><td className="border border-gray-300 p-2">Building Safety Certificate</td><td className="border border-gray-300 p-2"><Button variant="outline">Download PDF</Button></td></tr>
+              <tr><td className="border border-gray-300 p-2">Fire Safety Certificate</td><td className="border border-gray-300 p-2"><Button variant="outline">Download PDF</Button></td></tr>
+              <tr><td className="border border-gray-300 p-2">Sanitation & Water Safety Certificate</td><td className="border border-gray-300 p-2"><Button variant="outline">Download PDF</Button></td></tr>
+              <tr><td className="border border-gray-300 p-2">Health & Medical Check-Up Reports</td><td className="border border-gray-300 p-2"><Button variant="outline">Download PDF</Button></td></tr>
+              <tr><td className="border border-gray-300 p-2">Fee Structure Document</td><td className="border border-gray-300 p-2"><Button variant="outline">Download PDF</Button></td></tr>
+              <tr><td className="border border-gray-300 p-2">Annual Report</td><td className="border border-gray-300 p-2"><Button variant="outline">Download PDF</Button></td></tr>
+            </tbody>
+          </table>
+          <p className="text-gray-600 font-medium">📢 All documents are updated as per the latest CBSE guidelines and school policies.</p>
+        </CardContent>
+      </Card>
+      
+      {/* Call to Action */}
+      <div className="text-center">
+        <Button variant="outline">View All Mandatory Documents →</Button>
       </div>
-    </section>
+    </div>
   );
-}
+} 

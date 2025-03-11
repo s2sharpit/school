@@ -1,96 +1,68 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { Users, Calendar } from "lucide-react";
-
-// General Eligibility Data
-const generalEligibility = [
-  {
-    title: "Nursery to Class I",
-    description:
-      "No specific criteria; admission is granted based on age and seat availability.",
-  },
-  {
-    title: "Class II to IX",
-    description:
-      "Admission based on previous academic performance and entrance test (if applicable).",
-  },
-  {
-    title: "Class XI",
-    description:
-      "Admission based on Class X board results and chosen stream.",
-  },
-];
-
-// Age Criteria Data
-const ageCriteria = [
-  { className: "Nursery", age: "3+ years" },
-  { className: "LKG", age: "4+ years" },
-  { className: "UKG", age: "5+ years" },
-  { className: "Class I", age: "6+ years" },
-];
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Users, BookOpen } from "lucide-react";
 
 export default function EligibilityPage() {
   return (
-    <section className="py-16 bg-gray-100">
-      <div className="container mx-auto px-6">
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-center text-blue-700 mb-8"
-        >
-          Eligibility Criteria
-        </motion.h2>
-
-        {/* General Eligibility */}
-        <div className="bg-white shadow-lg rounded-2xl p-6 max-w-4xl mx-auto mb-8">
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-            <Users className="text-yellow-500 w-6 h-6" />
-            General Eligibility
-          </h3>
-          <div className="space-y-6">
-            {generalEligibility.map((criteria, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-gray-100 p-4 rounded-xl shadow-md"
-              >
-                <h4 className="text-xl font-semibold text-gray-800">{criteria.title}</h4>
-                <p className="text-lg text-gray-700 mt-2">{criteria.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Age Criteria */}
-        <div className="bg-white shadow-lg rounded-2xl p-6 max-w-4xl mx-auto">
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-            <Calendar className="text-green-500 w-6 h-6" />
-            Age Criteria (as of March 31)
-          </h3>
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse border border-gray-300">
-              <thead>
-                <tr className="bg-blue-600 text-white">
-                  <th className="border border-gray-300 px-4 py-2">Class</th>
-                  <th className="border border-gray-300 px-4 py-2">Minimum Age</th>
-                </tr>
-              </thead>
-              <tbody>
-                {ageCriteria.map((age, index) => (
-                  <tr key={index} className={index % 2 === 0 ? "bg-gray-100 text-center" : "text-center"}>
-                    <td className="border border-gray-300 px-4 py-2">{age.className}</td>
-                    <td className="border border-gray-300 px-4 py-2">{age.age}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+    <div className="max-w-4xl mx-auto p-6 space-y-10">
+      {/* Age Criteria for Admission */}
+      <Card>
+        <CardContent className="p-6 space-y-4 text-center">
+          <h2 className="text-3xl font-semibold flex items-center justify-center"><Users className="mr-2" /> Age Criteria for Admission</h2>
+          <table className="w-full border-collapse border border-gray-300">
+            <thead>
+              <tr className="bg-gray-100">
+                <th className="border border-gray-300 p-2">Class</th>
+                <th className="border border-gray-300 p-2">Minimum Age as of April 1st</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td className="border border-gray-300 p-2">Nursery</td>
+                <td className="border border-gray-300 p-2">3 Years</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">LKG</td>
+                <td className="border border-gray-300 p-2">4 Years</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">UKG</td>
+                <td className="border border-gray-300 p-2">5 Years</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Class 1</td>
+                <td className="border border-gray-300 p-2">6 Years</td>
+              </tr>
+              <tr>
+                <td className="border border-gray-300 p-2">Class 2 & Above</td>
+                <td className="border border-gray-300 p-2">Based on Previous Class Completion</td>
+              </tr>
+            </tbody>
+          </table>
+          <p className="text-gray-600 font-medium">📌 Age criteria follow CBSE and government guidelines for school admissions.</p>
+        </CardContent>
+      </Card>
+      
+      {/* Academic Criteria for Admission */}
+      <Card>
+        <CardContent className="p-6 space-y-4">
+          <h2 className="text-2xl font-semibold flex items-center"><BookOpen className="mr-2" /> Academic Criteria for Admission</h2>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>✔ For Classes I to IX, the student must have successfully completed the previous academic class from a recognized school.</li>
+            <li>✔ For Class XI, admission is granted based on Class X board results and subject stream selection (Science, Commerce, Arts).</li>
+            <li>✔ Transfer students from other CBSE or recognized boards must provide a Transfer Certificate (TC) and Report Card.</li>
+          </ul>
+          <p className="text-gray-600 font-medium">📢 Students with outstanding performance in academics, sports, or extracurricular activities may be given priority admission.</p>
+        </CardContent>
+      </Card>
+      
+      {/* Call to Action */}
+      <div className="text-center space-y-4">
+        <div className="flex justify-center space-x-4">
+          <Button variant="outline">Apply for Admission →</Button>
+          <Button variant="outline">Schedule a Campus Visit →</Button>
         </div>
       </div>
-    </section>
+    </div>
   );
-}
+} 

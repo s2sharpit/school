@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="border-t border-t-border-color/10 bg-[url(../../public/img/schoolPhoto1.jpg)] bg-fixed bg-cover text-white "
+      className="border-t border-t-border-color/10 bg-[url(../../public/img/schoolPhoto1.jpg)] bg-fixed bg-cover bg-center text-white "
     >
       <div className="bg-black/80">
         <div className="flex justify-center md:justify-between lg:justify-center gap-20 md:gap-12 xl:gap-32 px-8 md:px-12 lg:px-16 py-8">

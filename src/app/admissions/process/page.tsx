@@ -1,107 +1,70 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { ClipboardList, FileText, Calendar } from "lucide-react";
-
-// Admission Steps Data
-const admissionSteps = [
-  {
-    title: "Online/Offline Registration",
-    description:
-      "Collect the admission form from the school office or download it from the website. Fill in the required details carefully.",
-  },
-  {
-    title: "Submission of Documents",
-    description:
-      "Submit the completed form along with the necessary documents.",
-  },
-  {
-    title: "Entrance Test (For Select Classes)",
-    description:
-      "For admissions in Class VI and above, students may be required to appear for an entrance exam.",
-  },
-  {
-    title: "Interaction with School Authorities",
-    description:
-      "Parents and students may be called for an interaction session with the Principal.",
-  },
-  {
-    title: "Confirmation & Fee Payment",
-    description:
-      "Selected candidates must complete the fee payment process within the given deadline.",
-  },
-];
-
-// Important Dates Data
-const importantDates = [
-  { event: "Admission Opens", date: "March 1, 2025" },
-  { event: "Last Date to Apply", date: "April 15, 2025" },
-  { event: "Entrance Test (if applicable)", date: "April 20, 2025" },
-];
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { ClipboardCheck, FileText } from "lucide-react";
 
 export default function AdmissionProcessPage() {
   return (
-    <section className="py-16 bg-gray-100">
-      <div className="container mx-auto px-6">
-        <motion.h2
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-center text-blue-700 mb-8"
-        >
-          Admission Process
-        </motion.h2>
-
-        {/* Overview */}
-        <div className="bg-white shadow-lg rounded-2xl p-6 max-w-4xl mx-auto mb-8">
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-            <ClipboardList className="text-yellow-500 w-6 h-6" />
-            Overview
-          </h3>
-          <p className="text-lg text-gray-700 leading-relaxed">
-            <strong>B. S. Senior Secondary School</strong> follows a transparent and 
-            merit-based admission process. Our goal is to provide quality education to 
-            every deserving student.
+    <div className="max-w-4xl mx-auto p-6 space-y-10">
+      {/* Admission Overview */}
+      <Card>
+        <CardContent className="p-6 space-y-4 text-center">
+          <h2 className="text-3xl font-semibold flex items-center justify-center"><ClipboardCheck className="mr-2" /> Admission Process at B. S. Senior Secondary School</h2>
+          <p className="text-gray-700">
+            We welcome students from diverse backgrounds who are eager to learn, grow, and excel. Our admission process is simple, transparent, and merit-based, ensuring every child gets an opportunity to receive quality education.
           </p>
-        </div>
-
-        {/* Steps to Apply */}
-        <div className="bg-white shadow-lg rounded-2xl p-6 max-w-4xl mx-auto mb-8">
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-            <FileText className="text-green-500 w-6 h-6" />
-            Steps to Apply
-          </h3>
-          <div className="space-y-6">
-            {admissionSteps.map((step, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-gray-100 p-4 rounded-xl shadow-md"
-              >
-                <h4 className="text-xl font-semibold text-gray-800">{step.title}</h4>
-                <p className="text-lg text-gray-700 mt-2">{step.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Important Dates */}
-        <div className="bg-white shadow-lg rounded-2xl p-6 max-w-4xl mx-auto">
-          <h3 className="text-2xl font-semibold text-gray-900 mb-4 flex items-center gap-2">
-            <Calendar className="text-blue-500 w-6 h-6" />
-            Important Dates (2025)
-          </h3>
-          <ul className="list-disc list-inside text-lg text-gray-700 space-y-2">
-            {importantDates.map((date, index) => (
-              <li key={index}>
-                <strong>{date.event}:</strong> {date.date}
-              </li>
-            ))}
+        </CardContent>
+      </Card>
+      
+      {/* Step-by-Step Admission Procedure */}
+      <Card>
+        <CardContent className="p-6 space-y-4">
+          <h2 className="text-2xl font-semibold flex items-center"><FileText className="mr-2" /> Step-by-Step Admission Procedure</h2>
+          <ul className="list-disc pl-5 space-y-3">
+            <li>
+              <strong>📍 Step 1: Inquiry & Registration</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>🔹 Parents/students can visit the school campus or fill out an online inquiry form.</li>
+                <li>🔹 Collect the admission form from the school office or download it online.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>📍 Step 2: Submission of Documents</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>🔹 Submit the filled admission form along with the required documents (listed below).</li>
+              </ul>
+            </li>
+            <li>
+              <strong>📍 Step 3: Entrance Test / Interaction</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>🔹 Students applying for Classes I - IX may have to appear for a basic aptitude assessment.</li>
+                <li>🔹 For Nursery, LKG, and UKG, an informal interaction with the child and parents is conducted.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>📍 Step 4: Confirmation & Fee Payment</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>🔹 Selected candidates will receive an admission confirmation letter.</li>
+                <li>🔹 Parents must complete the fee payment process to confirm admission.</li>
+              </ul>
+            </li>
+            <li>
+              <strong>📍 Step 5: Orientation & First Day at School</strong>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>🔹 New students and parents will be invited to an orientation session to familiarize themselves with the school environment, teachers, and academic schedule.</li>
+              </ul>
+            </li>
           </ul>
+        </CardContent>
+      </Card>
+      
+      {/* Call to Action */}
+      <div className="text-center space-y-4">
+        <p className="text-gray-600 font-medium">📢 Seats are limited, and admissions are granted on a first-come, first-served basis. Apply now!</p>
+        <div className="flex justify-center space-x-4">
+          <Button variant="outline">Download Admission Form →</Button>
+          <Button variant="outline">Contact for Admissions →</Button>
         </div>
       </div>
-    </section>
+    </div>
   );
-}
+} 
