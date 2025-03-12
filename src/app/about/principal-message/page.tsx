@@ -34,8 +34,8 @@ export default function PrincipalMessagePage() {
         <section className="space-y-6 max-w-2xl  text-justify">
           {/* Quote */}
           <p className="italic text-lg border-l-4 pl-4 border-yellow-400">
-            "Education is not just about learning facts, but about training
-            young minds to think, innovate, and grow with integrity."
+          &quot;Education is not just about learning facts, but about training
+            young minds to think, innovate, and grow with integrity.&quot;
           </p>
 
           <p>

@@ -11,9 +11,9 @@ export default function OverviewPage() {
       <section className="max-w-3xl mx-auto text-center">
       <Title>🌟 Our Vision</Title>
         <p className="mt-2 md:mt-4 text-xl md:text-2xl font-medium italic text-blue-800 md:leading-relaxed">
-          "To nurture future leaders, innovators, and responsible citizens by
+          &quot;To nurture future leaders, innovators, and responsible citizens by
           providing an education that balances academic excellence with ethical
-          values, creativity, and leadership skills."
+          values, creativity, and leadership skills.&quot;
         </p>
       </section>
 
