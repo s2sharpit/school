@@ -24,8 +24,8 @@ export default function PrincipalMessagePage() {
             <Image
               src="/img/principal.jpg" // Update with actual image path
               alt="Principal Mrs. Shashi Bala"
-              fill
-              className="object-cover"
+              width={400}
+              height={400}
             />
           </AspectRatio>
         </section>

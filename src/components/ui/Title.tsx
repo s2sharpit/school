@@ -7,7 +7,7 @@ import { motion } from "motion/react";
 const titleVariants = cva("font-bold", {
   variants: {
     size: {
-      default: "text-2xl md:text-3xl text-center",
+      default: "text-2xl md:text-3xl text-center text-primary",
       lg: "text-4xl sm:text-5xl lg:text-7xl",
       sm: "text-2xl md:text-3xl lg:text4xl",
     },
