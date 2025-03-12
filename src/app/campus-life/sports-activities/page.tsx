@@ -1,39 +1,52 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Medal, } from "lucide-react";
+import { Medal, CheckCircle } from "lucide-react";
 
 export default function SportsActivitiesPage() {
   return (
-    <div className="max-w-4xl mx-auto p-6 space-y-10">
+    <div className="max-w-5xl mx-auto px-6 py-16 space-y-16">
       {/* Sports Overview */}
-      <Card>
-        <CardContent className="p-6 space-y-4 text-center">
-          <h2 className="text-3xl font-semibold flex items-center justify-center"><Medal className="mr-2" /> Nurturing Champions On & Off the Field</h2>
-          <p className="text-gray-700">
-            Sports play a vital role in developing discipline, teamwork, and leadership among students. At B. S. Senior Secondary School, we provide world-class sports facilities to encourage physical fitness and a competitive spirit.
-          </p>
-        </CardContent>
-      </Card>
-      
+      <section className="text-center space-y-6">
+        <h2 className="text-4xl font-bold text-blue-900 flex items-center justify-center gap-3">
+          <Medal className="w-10 h-10 text-yellow-500" />
+          Nurturing Champions On & Off the Field
+        </h2>
+        <p className="text-lg text-gray-700 leading-relaxed max-w-3xl mx-auto">
+          Sports play a **vital role** in developing **discipline, teamwork, and leadership** among students.  
+          At **B. S. Senior Secondary School**, we provide **world-class sports facilities** to encourage  
+          **physical fitness and a competitive spirit**.
+        </p>
+      </section>
+
       {/* Sports Facilities */}
-      <Card>
-        <CardContent className="p-6 space-y-4">
-          <h2 className="text-2xl font-semibold">🏅 Sports Facilities at Our Campus</h2>
-          <ul className="list-disc pl-5 space-y-2">
-            <li>✔ <strong>Cricket & Football Grounds</strong> – Spacious fields for team sports and training.</li>
-            <li>✔ <strong>Basketball & Volleyball Courts</strong> – Professionally maintained courts for competitive matches.</li>
-            <li>✔ <strong>Athletics Track</strong> – Running track for sprint and endurance training.</li>
-            <li>✔ <strong>Table Tennis & Chess</strong> – Indoor sports facilities for mental agility and skill development.</li>
-            <li>✔ <strong>Yoga & Meditation Zone</strong> – A dedicated area for mental well-being and relaxation.</li>
-          </ul>
-          <p className="text-gray-600 font-medium">📢 Our students have represented the school in district, state, and national-level competitions!</p>
-        </CardContent>
-      </Card>
-      
+      <section className="bg-blue-50 rounded-xl p-10 shadow-md">
+        <h2 className="text-3xl font-semibold text-blue-900 mb-6 text-center">🏅 Sports Facilities at Our Campus</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {[
+            { title: "Cricket & Football Grounds", description: "Spacious fields for team sports and training." },
+            { title: "Basketball & Volleyball Courts", description: "Professionally maintained courts for competitive matches." },
+            { title: "Athletics Track", description: "Running track for sprint and endurance training." },
+            { title: "Table Tennis & Chess", description: "Indoor sports facilities for mental agility and skill development." },
+            { title: "Yoga & Meditation Zone", description: "A dedicated area for mental well-being and relaxation." },
+          ].map((facility, index) => (
+            <div key={index} className="p-6 border-l-4 border-blue-600 bg-gray-50 rounded-lg shadow-md transition hover:shadow-lg">
+              <h3 className="text-xl font-semibold text-blue-900 flex items-center gap-2">
+                <CheckCircle className="w-6 h-6 text-green-600" /> {facility.title}
+              </h3>
+              <p className="text-gray-700 text-sm mt-2">{facility.description}</p>
+            </div>
+          ))}
+        </div>
+        <p className="text-gray-600 font-medium text-center mt-6">
+          📢 Our students have represented the school in **district, state, and national-level competitions!**
+        </p>
+      </section>
+
       {/* Call to Action */}
       <div className="text-center">
-        <Button variant="outline">View Our Sports Achievements →</Button>
+        <Button className="bg-yellow-500 text-white hover:bg-yellow-600 px-6 py-3 text-lg font-medium rounded-md transition shadow-lg">
+          View Our Sports Achievements →
+        </Button>
       </div>
     </div>
   );
-} 
+}
