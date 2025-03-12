@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ClipboardList, FileText } from "lucide-react";
+import { ClipboardList } from "lucide-react";
 
 export default function PublicDisclosurePage() {
   return (
