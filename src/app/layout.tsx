@@ -50,7 +50,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${josefinSans.variable} font-sans antialiased mx-auto`}>
+      <body className={`${josefinSans.variable} font-sans antialiased mx-auto bg-secondary text-foreground`}>
         <Navbar />
         {children}
         <Footer />

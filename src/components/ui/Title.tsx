@@ -1,11 +1,13 @@
+'use client'
 import * as React from "react";
 import { VariantProps, cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
+import { motion } from "motion/react";
 
-const titleVariants = cva("text-primary font-bold", {
+const titleVariants = cva("font-bold", {
   variants: {
     size: {
-      default: "text-3xl md:text-4xl text-center",
+      default: "text-2xl md:text-3xl text-center",
       lg: "text-4xl sm:text-5xl lg:text-7xl",
       sm: "text-2xl md:text-3xl lg:text4xl",
     },
@@ -17,14 +19,16 @@ const titleVariants = cva("text-primary font-bold", {
 
 function Title({
   className,
-  size,
   children,
-  ...props
-}: React.ComponentProps<"h1"> & VariantProps<typeof titleVariants>) {
+  size,
+}: React.ComponentProps<"h2"> & VariantProps<typeof titleVariants>) {
   return (
-    <h1 {...props} className={cn(titleVariants({ size, className }))}>
-      {children}
-    </h1>
+    <motion.h2
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className={cn(titleVariants({ size, className }))}
+    >{children}</motion.h2>
   );
 }
 
