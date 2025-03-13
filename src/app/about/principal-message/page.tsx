@@ -1,8 +1,6 @@
-import { Button } from "@/components/ui/button";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Quote } from "lucide-react";
 import Main from "@/components/ui/Main";
-import Link from "next/link";
 import Image from "next/image";
 import Title from "@/components/ui/Title";
 import { Accent } from "@/components/ui/Section";

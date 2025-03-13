@@ -1,4 +1,3 @@
-import { Hammer, Loader2 } from "lucide-react";
 
 export default function NotAvailablePage() {
   return (
@@ -9,7 +8,7 @@ export default function NotAvailablePage() {
           🚧 Under Construction
         </h1>
         <p className="text-lg max-w-xl mx-auto">
-        We're currently working on this page to bring you something amazing. Please check back soon!
+        We&apos;re currently working on this page to bring you something amazing. Please check back soon!
         </p>
 
       </div>

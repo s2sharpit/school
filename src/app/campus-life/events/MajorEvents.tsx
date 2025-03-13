@@ -1,6 +1,5 @@
 import { Accent, SectionNote } from "@/components/ui/Section";
 import Title from "@/components/ui/Title";
-import { CheckCircle } from "lucide-react";
 import Image from "next/image";
 
 const data = [

@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import Main from "@/components/ui/Main";
 import Title from "@/components/ui/Title";
 import { GraduationCap } from "lucide-react";

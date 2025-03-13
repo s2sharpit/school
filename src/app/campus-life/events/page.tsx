@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { CalendarHeart } from "lucide-react";
 import MajorEvents from "./MajorEvents";
 import Main from "@/components/ui/Main";

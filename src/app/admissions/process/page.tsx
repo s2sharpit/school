@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { ClipboardCheck } from "lucide-react";
 import Procedure from "./Procedure";
 import Main from "@/components/ui/Main";
