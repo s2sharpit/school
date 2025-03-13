@@ -1,49 +1,113 @@
-import Title from '@/components/ui/Title'
-import { ClipboardList } from 'lucide-react'
-import React from 'react'
+import Title from "@/components/ui/Title";
+import { ClipboardList } from "lucide-react";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
+import { SectionNote } from "@/components/ui/Section";
+
+const data = [
+  {
+    class: "Nursery - UKG",
+    tuition: "₹950",
+  },
+  {
+    class: "Class 1st - 3rd",
+    tuition: "₹970",
+  },
+  {
+    class: "Class 4th - 5th",
+    tuition: "₹1,000",
+  },
+  {
+    class: "Class 6th",
+    tuition: "₹1,020",
+  },
+  {
+    class: "Class 7th",
+    tuition: "₹1,030",
+  },
+  {
+    class: "Class 8th",
+    tuition: "₹1,050",
+  },
+  {
+    class: "Class 9th",
+    tuition: "₹1,200",
+  },
+  {
+    class: "Class 10th",
+    tuition: "₹1,400",
+  },
+  {
+    class: "Class 11th (Non Med.)",
+    tuition: "₹2,000",
+  },
+  {
+    class: "Class 11th (Med.)",
+    tuition: "₹2,200",
+  },
+  {
+    class: "Class 11th - 12th (Arts)",
+    tuition: "₹1,700",
+  },
+  {
+    class: "Class 11th - 12th (Commerce)",
+    tuition: "₹1,800",
+  },
+  {
+    class: "Class 12th (Non Med.)",
+    tuition: "₹2,100",
+  },
+  {
+    class: "Class 12th (Med.)",
+    tuition: "₹2,300",
+  },
+];
 
 export default function FeeBreakdown() {
   return (
     <section className="space-y-6">
-        <Title className="flex items-center justify-center gap-3">
-          <ClipboardList className="w-8 h-8 text-blue-600" />
-          General Fee Breakdown (Approximate Annual Fees)
-        </Title>
+      <Title className="flex items-center justify-center gap-3">
+        <ClipboardList className="w-8 h-8 text-blue-600" />
+        General Fee Breakdown (Approximate Annual Fees)
+      </Title>
 
-        <div className="overflow-x-auto">
-          <table className="w-full border-collapse rounded-lg shadow-md">
-            <thead>
-              <tr className="bg-blue-100 text-blue-900">
-                <th className="p-3 text-left">Class Group</th>
-                <th className="p-3 text-left">Tuition Fee (Annual)</th>
-                <th className="p-3 text-left">Admission Fee (One-Time)</th>
-                <th className="p-3 text-left">Other Charges (Exam, Activities, etc.)</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-gray-300">
-              {[
-                { class: "Nursery - UKG", tuition: "₹12,000 - ₹18,000", admission: "₹2,000", other: "₹3,000 - ₹5,000" },
-                { class: "Class I - V", tuition: "₹20,000 - ₹25,000", admission: "₹3,000", other: "₹5,000 - ₹7,000" },
-                { class: "Class VI - VIII", tuition: "₹26,000 - ₹30,000", admission: "₹3,500", other: "₹6,000 - ₹8,000" },
-                { class: "Class IX - X", tuition: "₹32,000 - ₹38,000", admission: "₹4,000", other: "₹7,000 - ₹10,000" },
-                { class: "Class XI - XII (Science)", tuition: "₹40,000 - ₹45,000", admission: "₹5,000", other: "₹8,000 - ₹12,000" },
-                { class: "Class XI - XII (Commerce/Arts)", tuition: "₹35,000 - ₹40,000", admission: "₹5,000", other: "₹8,000 - ₹10,000" },
-              ].map((row, index) => (
-                <tr key={index} className="even:bg-gray-100">
-                  <td className="p-3 text-gray-700">{row.class}</td>
-                  <td className="p-3 text-gray-700">{row.tuition}</td>
-                  <td className="p-3 text-gray-700">{row.admission}</td>
-                  <td className="p-3 text-gray-700">{row.other}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
-        <p className="text-center font-medium">
-          📌 Fees are subject to change. Please contact the school office for the most updated fee details.
-        </p>
-      </section>
-
-  )
+      <div className="overflow-x-auto max-w-xl mx-auto">
+        <Table className="w-full border-collapse border border-border">
+          <TableHeader>
+            <TableRow className="bg-blue-100 hover:bg-blue-100">
+              <TableHead className="p-2 text-left text-lg text-blue-900">
+                Class Group
+              </TableHead>
+              <TableHead className="p-2 text-center text-lg text-blue-900">
+                Tution Fee (Monthly)
+              </TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {data.map((events, index) => (
+              <TableRow
+                key={index}
+                className="even:bg-gray-200 hover:even:bg-gray-200"
+              >
+                <TableCell className="p-2 text-base">{events.class}</TableCell>
+                <TableCell className="p-2 text-base text-center">
+                  {events.tuition}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
+      <SectionNote>
+        Fees are subject to change. Please contact the school office for the
+        most updated fee details.
+      </SectionNote>
+    </section>
+  );
 }

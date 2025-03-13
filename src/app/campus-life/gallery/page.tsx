@@ -2,6 +2,7 @@ import { Camera } from "lucide-react";
 import Main from "@/components/ui/Main";
 import Title from "@/components/ui/Title";
 import ImgGallery from "./ImgGallery";
+import { Accent, Summary } from "@/components/ui/Section";
 
 export default function GalleryPage() {
   return (
@@ -12,19 +13,11 @@ export default function GalleryPage() {
           <Camera className="w-10 h-10 text-yellow-500" />A Visual Journey
           Through School Life
         </Title>
-        <p className="text-lg text-center max-w-xl mx-auto">
-          Browse through our{" "}
-          <span className="text-blue-900 font-semibold">
-            photo & video gallery
-          </span>{" "}
-          to relive the most{" "}
-          <span className="text-blue-900 font-semibold">memorable moments</span>{" "}
-          at{" "}
-          <span className="text-blue-900 font-semibold">
-            B. S. Senior Secondary School
-          </span>
-          .
-        </p>
+        <Summary>
+          Browse through our <Accent>photo & video gallery</Accent> to relive
+          the most <Accent>memorable moments</Accent> at{" "}
+          <Accent>B. S. Senior Secondary School</Accent>.
+        </Summary>
 
         <ImgGallery />
       </section>

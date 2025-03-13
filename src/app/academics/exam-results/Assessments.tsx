@@ -1,3 +1,4 @@
+import { Card, CardContent } from "@/components/ui/card";
 import Title from "@/components/ui/Title";
 import { BookOpen, CheckCircle } from "lucide-react";
 import React from "react";
@@ -30,15 +31,17 @@ export default function Assessments() {
       </Title>
       <ul className="grid md:grid-cols-2 gap-6">
         {ass.map((assessment, index) => (
-          <li key={index} className="flex items-start gap-3">
-            <CheckCircle className="w-6 h-6 mt-2 text-green-600 flex-shrink-0" />
+          <Card key={index}>
+            <CardContent className="flex max-sm:flex-col max-sm:items-center max-sm:text-center gap-4 md:gap-6">
+            <CheckCircle className="w-10 sm:w-6 h-10 sm:h-6 mt-2 text-green-600 flex-shrink-0" />
             <div>
               <strong className="text-lg text-blue-900">
                 {assessment.title}
               </strong>
-              <p>{assessment.description}</p>
+              <p className="text-muted-foreground">{assessment.description}</p>
             </div>
-          </li>
+            </CardContent>
+          </Card>
         ))}
       </ul>
     </section>

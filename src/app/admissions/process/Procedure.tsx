@@ -1,3 +1,4 @@
+import { Accent, SectionNote } from "@/components/ui/Section";
 import Title from "@/components/ui/Title";
 import { CheckCircle, FileText } from "lucide-react";
 import React from "react";
@@ -51,7 +52,7 @@ export default function Procedure() {
             key={index}
             className="p-6 border-l-4 border-blue-600 bg-gray-50 rounded-lg shadow-md transition hover:shadow-lg"
           >
-            <h3 className="text-2xl font-semibold text-blue-900 flex items-center gap-2 mb-2">
+            <h3 className="text-xl md:text-2xl font-semibold text-blue-900 flex items-center gap-2 mb-2">
               <CheckCircle className="w-6 h-6 text-green-600" /> {step.title}
             </h3>
             <ul className="list-disc pl-6 space-y-1 text-gray-700">
@@ -62,6 +63,10 @@ export default function Procedure() {
           </div>
         ))}
       </div>
+      <SectionNote>
+        Seats are limited, and admissions are granted on a{" "}
+        <Accent>first-come, first-served basis</Accent>. Apply now!
+      </SectionNote>
     </section>
   );
 }

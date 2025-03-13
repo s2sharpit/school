@@ -1,9 +1,15 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Card, CardTitle, CardContent, CardDescription } from "@/components/ui/card";
+import {
+  Card,
+  CardTitle,
+  CardContent,
+  CardDescription,
+} from "@/components/ui/card";
 import { JSX } from "react";
 import Title from "@/components/ui/Title";
+import { SectionNote } from "@/components/ui/Section";
 
 interface Feature {
   title: string;
@@ -40,13 +46,15 @@ export default function FeatureSection({
           >
             <Card className="min-h-full text-center">
               <CardContent className="flex flex-col items-center">
-                <div className={`${iconColor} mt-4 scale-150`}>{feature.icon}</div>
+                <div className={`${iconColor} mt-4 scale-150`}>
+                  {feature.icon}
+                </div>
                 <CardTitle className="text-xl font-semibold mt-2">
                   {feature.title}
                 </CardTitle>
-              <CardDescription>
-                <p className="text-sm">{feature.description}</p>
-              </CardDescription>
+                <CardDescription>
+                  <p className="text-sm">{feature.description}</p>
+                </CardDescription>
               </CardContent>
             </Card>
           </motion.div>
@@ -54,7 +62,11 @@ export default function FeatureSection({
       </div>
 
       {/* Optional Footer Message */}
-      {footerText && <p className="font-medium md:text-lg text-center">{footerText}</p>}
+      {footerText && (
+        <SectionNote>
+          {footerText}
+        </SectionNote>
+      )}
     </section>
   );
 }

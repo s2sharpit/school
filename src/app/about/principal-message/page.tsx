@@ -5,6 +5,7 @@ import Main from "@/components/ui/Main";
 import Link from "next/link";
 import Image from "next/image";
 import Title from "@/components/ui/Title";
+import { Accent } from "@/components/ui/Section";
 
 export default function PrincipalMessagePage() {
   return (
@@ -34,43 +35,40 @@ export default function PrincipalMessagePage() {
         <section className="space-y-6 max-w-2xl  text-justify">
           {/* Quote */}
           <p className="italic text-lg border-l-4 pl-4 border-yellow-400">
-          &quot;Education is not just about learning facts, but about training
+            &quot;Education is not just about learning facts, but about training
             young minds to think, innovate, and grow with integrity.&quot;
           </p>
 
-          <p>
-            Dear Students and Parents,
-          </p>
+          <p>Dear Students and Parents,</p>
 
           <p>
             Welcome to{" "}
-            <strong>B. S. Senior Secondary School, Salempur Khadar!</strong>
-            At our school, education goes beyond textbooks and classrooms. We
-            focus on{" "}
-            <strong>
+            <Accent>B. S. Senior Secondary School, Salempur Khadar!</Accent> At
+            our school, education goes beyond textbooks and classrooms. We focus
+            on{" "}
+            <Accent>
               academic brilliance, ethical values, and a student-centered
               approach
-            </strong>{" "}
+            </Accent>{" "}
             that nurtures future leaders, thinkers, and responsible individuals.
           </p>
-
           <p>
-            Our teachers are not just educators but <strong>mentors</strong> who
+            Our teachers are not just educators but <Accent>mentors</Accent> who
             guide students to unlock their true potential. With a{" "}
-            <strong>
+            <Accent>
               CBSE-aligned curriculum, state-of-the-art facilities, and
-              co-curricular opportunities
-            </strong>
+              co-curricular opportunities{" "}
+            </Accent>
             , we strive to empower students with{" "}
-            <strong>knowledge, confidence, and creativity</strong>.
+            <Accent>knowledge, confidence, and creativity</Accent>.
           </p>
 
           <p>
             We encourage{" "}
-            <strong>
+            <Accent>
               active participation, self-discipline, and a love for lifelong
-              learning
-            </strong>
+              learning{" "}
+            </Accent>
             . Together, let’s create an environment where education is an
             enjoyable and transformative journey!
           </p>
@@ -85,14 +83,14 @@ export default function PrincipalMessagePage() {
           </p>
 
           {/* CTA Button */}
-          <div className="mt-6">
+          {/* <div className="mt-6">
             <Button
               className="bg-yellow-500 hover:bg-yellow-600 px-6 py-3 text-lg shadow-lg"
               asChild
             >
               <Link href="/about/faculty">Discover Our Faculty →</Link>
             </Button>
-          </div>
+          </div> */}
         </section>
       </div>
     </Main>

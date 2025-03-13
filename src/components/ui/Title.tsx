@@ -4,7 +4,7 @@ import { VariantProps, cva } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 import { motion } from "motion/react";
 
-const titleVariants = cva("font-bold", {
+const titleVariants = cva("font-bold capitalize", {
   variants: {
     size: {
       default: "text-2xl md:text-3xl text-center text-primary",

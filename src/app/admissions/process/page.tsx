@@ -3,6 +3,7 @@ import { ClipboardCheck } from "lucide-react";
 import Procedure from "./Procedure";
 import Main from "@/components/ui/Main";
 import Title from "@/components/ui/Title";
+import { Accent, Summary } from "@/components/ui/Section";
 
 export default function AdmissionProcessPage() {
   return (
@@ -13,20 +14,17 @@ export default function AdmissionProcessPage() {
           <ClipboardCheck className="w-10 h-10 text-yellow-500" />
           Admission Process at B. S. Senior Secondary School
         </Title>
-        <p className="text-lg max-w-3xl mx-auto">
-          We welcome students from <span className="text-blue-900 font-semibold">diverse backgrounds</span> who are eager to learn, grow, and excel.  
-          Our admission process is <span className="text-blue-900 font-semibold">simple, transparent, and merit-based</span>, ensuring every child  
-          gets an opportunity to receive <span className="text-blue-900 font-semibold">quality education</span>.
-        </p>
+        <Summary>
+          We welcome students from <Accent>diverse backgrounds</Accent> who are eager to learn, grow, and excel.  
+          Our admission process is <Accent>simple, transparent, and merit-based</Accent>, ensuring every child  
+          gets an opportunity to receive <Accent>quality education</Accent>.
+        </Summary>
       </section>
 
       <Procedure />
 
       {/* Call to Action */}
-      <div className="text-center space-y-4">
-        <p className="text-lg font-medium">
-          📢 Seats are limited, and admissions are granted on a <span className="text-blue-900 font-semibold">first-come, first-served basis</span>. Apply now!
-        </p>
+      {/* <div className="text-center space-y-4">
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
           <Button className="bg-yellow-500 text-white hover:bg-yellow-600 px-6 py-3 text-lg font-medium rounded-md transition shadow-lg">
             Download Admission Form →
@@ -35,7 +33,7 @@ export default function AdmissionProcessPage() {
             Contact for Admissions →
           </Button>
         </div>
-      </div>
+      </div> */}
     </Main>
   );
 }

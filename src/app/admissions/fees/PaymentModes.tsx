@@ -20,8 +20,8 @@ export default function PaymentModes() {
         ))}
       </ul>
       <p className="text-center font-medium">
-        📢 Scholarships and fee waivers are available for **meritorious students
-        and those in need**.
+        {/* 📢 Scholarships and fee waivers are available for **meritorious students
+        and those in need**. */}
       </p>
     </section>
   );

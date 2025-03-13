@@ -1,3 +1,4 @@
+import { Accent, SectionNote, Summary } from "@/components/ui/Section";
 import {
   Table,
   TableBody,
@@ -22,27 +23,17 @@ const gradingData = [
 
 export default function GradingSystem() {
   return (
-    <section className="space-y-8">
+    <section className="space-y-6">
       <div className="text-center space-y-4">
         <Title className="flex items-center justify-center gap-3">
           <ClipboardCheck className="w-10 h-10 text-yellow-500" />
           CBSE Grading System
         </Title>
-        <p className="text-lg max-w-2xl mx-auto">
-          The{" "}
-          <span className="text-blue-900 font-semibold">
-            CBSE Grading System
-          </span>{" "}
-          evaluates students based on{" "}
-          <span className="text-blue-900 font-semibold">
-            marks obtained in assessments
-          </span>
-          , ensuring a{" "}
-          <span className="text-blue-900 font-semibold">
-            fair and uniform evaluation process
-          </span>
-          .
-        </p>
+        <Summary>
+          The <Accent>CBSE Grading System</Accent> evaluates students based on{" "}
+          <Accent>marks obtained in assessments</Accent>, ensuring a{" "}
+          <Accent>fair and uniform evaluation process</Accent>.
+        </Summary>
       </div>
 
       {/* Grading Table */}
@@ -53,12 +44,17 @@ export default function GradingSystem() {
               <TableHead className="p-4 text-left text-lg text-blue-900">
                 Marks Range
               </TableHead>
-              <TableHead className="p-4 text-left text-lg text-blue-900">Grade</TableHead>
+              <TableHead className="p-4 text-left text-lg text-blue-900">
+                Grade
+              </TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {gradingData.map((grade, index) => (
-              <TableRow key={index} className="even:bg-gray-100">
+              <TableRow
+                key={index}
+                className="even:bg-gray-200 hover:even:bg-gray-200"
+              >
                 <TableCell className="p-4 text-lg">{grade.range}</TableCell>
                 <TableCell
                   className={`p-4 text-white text-lg font-bold ${grade.color} rounded-md text-center w-24`}
@@ -70,6 +66,10 @@ export default function GradingSystem() {
           </TableBody>
         </Table>
       </div>
+      <SectionNote>
+        Students must secure at least a Grade D (33% and above) to pass the
+        examination.
+      </SectionNote>
     </section>
   );
 }

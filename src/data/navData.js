@@ -4,10 +4,9 @@ const navData = [
     path: "/about",
     nested: [
       { title: "Overview", path: "/overview" },
-      // { title: "Vision & Mission", path: "/vision-mission" },
       { title: "Principal’s Message", path: "/principal-message" },
-      { title: "Faculty", path: "/faculty" },
-      { title: "Alumni", path: "/alumni" },
+      // { title: "Faculty", path: "/faculty" },
+      // { title: "Alumni", path: "/alumni" },
     ],
   },
   {
@@ -16,7 +15,6 @@ const navData = [
     nested: [
       { title: "Curriculum & Subjects", path: "/curriculum" },
       { title: "Exams & Results", path: "/exam-results" },
-      { title: "Academic Calendar", path: "/calendar" },
     ],
   },
   {
@@ -33,8 +31,8 @@ const navData = [
     title: "Campus Life",
     path: "/campus-life",
     nested: [
-      { title: "Facilities & Infrastructure", path: "/facilities" },
-      { title: "Sports & Activities", path: "/sports-activities" },
+      { title: "Facilities", path: "/facilities" },
+      // { title: "Sports & Activities", path: "/sports-activities" },
       // { title: "Clubs & Societies", path: "/clubs" },
       { title: "Events", path: "/events" },
       { title: "Student Achievements", path: "/achievements" },
@@ -60,7 +58,7 @@ const navData = [
   // },
   {
     title: "Public Disclosures",
-    path: "/public-disclosure",
+    path: "/documents",
     // nested: [
     //   { title: "Mandatory Information", path: "/mandatory-info" },
     //   { title: "School Policies", path: "/policies" },

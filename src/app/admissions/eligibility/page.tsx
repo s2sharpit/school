@@ -10,7 +10,7 @@ export default function EligibilityPage() {
       <RequiredDocs />
 
       {/* Call to Action */}
-      <section className="text-center space-y-4">
+      {/* <section className="text-center space-y-4">
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
           <Button className="bg-yellow-500 text-white hover:bg-yellow-600 px-6 py-3 text-lg font-medium rounded-md transition shadow-lg">
             Apply for Admission →
@@ -19,7 +19,7 @@ export default function EligibilityPage() {
             Schedule a Campus Visit →
           </Button>
         </div>
-      </section>
+      </section> */}
     </Main>
   );
 }

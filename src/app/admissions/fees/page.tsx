@@ -3,6 +3,7 @@ import Title from "@/components/ui/Title";
 import { CreditCard } from "lucide-react";
 import PaymentModes from "./PaymentModes";
 import FeeBreakdown from "./FeeBreakdown";
+import { Accent, Summary } from "@/components/ui/Section";
 
 export default function FeeStructurePage() {
   return (
@@ -13,14 +14,16 @@ export default function FeeStructurePage() {
           <CreditCard className="w-10 h-10 text-yellow-500" />
           Fee Structure
         </Title>
-        <p className="text-lg max-w-2xl mx-auto">
-          We ensure that <span className="text-blue-900 font-semibold">education remains affordable</span> while maintaining <span className="text-blue-900 font-semibold">high academic standards</span>.  
-          Our fee structure is designed to be <span className="text-blue-900 font-semibold">accessible</span> for all families.
-        </p>
+        <Summary>
+          We ensure that <Accent>education remains affordable</Accent> while
+          maintaining <Accent>high academic standards</Accent>. Our fee
+          structure is designed to be <Accent>accessible</Accent> for all
+          families.
+        </Summary>
       </section>
 
       <FeeBreakdown />
-      
+
       <PaymentModes />
 
       {/* Call to Action */}
