@@ -16,55 +16,55 @@ const data = [
     tuition: "₹950",
   },
   {
-    class: "Class 1st - 3rd",
+    class: "1st - 3rd",
     tuition: "₹970",
   },
   {
-    class: "Class 4th - 5th",
+    class: "4th - 5th",
     tuition: "₹1,000",
   },
   {
-    class: "Class 6th",
+    class: "6th",
     tuition: "₹1,020",
   },
   {
-    class: "Class 7th",
+    class: "7th",
     tuition: "₹1,030",
   },
   {
-    class: "Class 8th",
+    class: "8th",
     tuition: "₹1,050",
   },
   {
-    class: "Class 9th",
+    class: "9th",
     tuition: "₹1,200",
   },
   {
-    class: "Class 10th",
+    class: "10th",
     tuition: "₹1,400",
   },
   {
-    class: "Class 11th (Non Med.)",
+    class: "11th (Non Med.)",
     tuition: "₹2,000",
   },
   {
-    class: "Class 11th (Med.)",
+    class: "11th (Med.)",
     tuition: "₹2,200",
   },
   {
-    class: "Class 11th - 12th (Arts)",
+    class: "11th - 12th (Arts)",
     tuition: "₹1,700",
   },
   {
-    class: "Class 11th - 12th (Commerce)",
+    class: "11th - 12th (Commerce)",
     tuition: "₹1,800",
   },
   {
-    class: "Class 12th (Non Med.)",
+    class: "12th (Non Med.)",
     tuition: "₹2,100",
   },
   {
-    class: "Class 12th (Med.)",
+    class: "12th (Med.)",
     tuition: "₹2,300",
   },
 ];
@@ -74,7 +74,7 @@ export default function FeeBreakdown() {
     <section className="space-y-6">
       <Title className="flex items-center justify-center gap-3">
         <ClipboardList className="w-8 h-8 text-blue-600" />
-        General Fee Breakdown (Approximate Annual Fees)
+        General Fee Breakdown (Approximate Monthly Fees)
       </Title>
 
       <div className="overflow-x-auto max-w-xl mx-auto">
@@ -85,7 +85,7 @@ export default function FeeBreakdown() {
                 Class Group
               </TableHead>
               <TableHead className="p-2 text-center text-lg text-blue-900">
-                Tution Fee (Monthly)
+                Tution Fee
               </TableHead>
             </TableRow>
           </TableHeader>
