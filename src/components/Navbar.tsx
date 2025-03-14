@@ -19,7 +19,7 @@ export default function Navbar() {
 
     useEffect(() => {
         window.addEventListener("scroll", () => setNav(false));
-        window.addEventListener("click", handleClose);
+        // window.addEventListener("click", handleClose);
     }, [handleClose, nav])
 
     const handleClick = useCallback((id: string) => {
@@ -39,7 +39,7 @@ export default function Navbar() {
             </div>
             </div>
 
-            <div className={`${!nav ? 'max-md:h-0 max-md:invisible': 'max-md:h-[26rem] max-h-[calc(100vh-4rem)] max-md:overflow-y-scroll max-md:border-t'} overflow-hidden duration-300 transition-[height] w-[98%] md:w-3/5 left-[1%] right-[1%]`}>
+            <div className={`${!nav ? 'max-md:h-0 max-md:invisible': 'max-md:max-h-[calc(100vh-4rem)] max-md:overflow-y-scroll max-md:border-t'} overflow-hidden duration-300 transition-[height] w-[98%] md:w-3/5 left-[1%] right-[1%]`}>
                 <ul className="text-center py-4 md:flex justify-between max-md:space-y-5">
 
                     {navData.map((data, index) =>
@@ -48,7 +48,7 @@ export default function Navbar() {
                                 {data.title} {data.nested && <MdOutlineKeyboardArrowDown className="text-xl" />}
                             </Link>
                             {data.nested &&
-                                <div className={`md:scale-0 group-hover:h-auto group-hover:scale-100 group-hover:block md:hidden md:absolute text-left bg-blue-950/90 p-2 shadow-header md:w-48 rounded-md transition-all duration-700 mx-auto md:-translate-x-1/4`}>
+                                <div className={`max-h-0 overflow-hidden group-hover:max-h-60 md:absolute bg-blue-950/90 group-hover:p-2 shadow-header md:w-48 rounded-md transition-all duration-500 md:-translate-x-1/4`}>
                                     {(data.nested).map((d, i) => <Link key={i} href={`${data.path}${d.path}`} className="block capitalize w-full text-center p-2 hover:bg-blue-900/70 rounded-md transition duration-300">{d.title}</Link>)}
                                 </div>
                             }
