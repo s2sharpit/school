@@ -14,7 +14,7 @@ export default function Header() {
           width={5000}
           height={4000}
           className="invisible"
-        />
+           />
         <div className="absolute font-serif bottom-6 left-12 text-5xl/tight text-white ">
           <h1 className="">
             Welcome to <br /> B. S. Sr. Sec. School <br /> Salempur Khadar,{" "}

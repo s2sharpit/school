@@ -12,7 +12,6 @@ export default function PrincipalMessagePage() {
         <Quote className="w-10 h-10 text-yellow-400" />
         Principal’s Message
       </Title>
-
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-12">
         {/* Principal's Image */}
         <section className="w-52 md:w-60 flex-shrink-0 relative">
@@ -21,7 +20,7 @@ export default function PrincipalMessagePage() {
             className="rounded-full overflow-hidden shadow-lg border-4 border-yellow-400 hover:scale-105 transition-transform duration-300"
           >
             <Image
-              src="/img/principal.jpg" // Update with actual image path
+              src="/img/principal.jpg"
               alt="Principal Mrs. Shashi Bala"
               width={400}
               height={400}

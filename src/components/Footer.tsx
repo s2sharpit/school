@@ -15,8 +15,8 @@ export default function Footer() {
               alt="Logo"
               width={180}
               height={180}
-              className="w-full"
-            />
+              className="w-full h-auto"
+               />
             <figcaption className="font-semibold text-center">
               B. S. Senior Secondary School
             </figcaption>

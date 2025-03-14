@@ -39,8 +39,9 @@ export default function MajorEvents() {
               <Image
                 src={event.img}
                 alt={event.title}
-                layout="fill"
                 className="object-cover"
+                fill
+                sizes="100vw"
               />
             </div>
             <h3 className="text-xl font-semibold text-blue-900 mt-4">
@@ -50,7 +51,6 @@ export default function MajorEvents() {
           </div>
         ))}
       </div>
-
       <SectionNote>
         Unleash your creativity and make <Accent>unforgettable memories</Accent>
         .

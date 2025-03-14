@@ -54,7 +54,6 @@ export default function KeyFacilities() {
   return (
     <section className="space-y-10">
       <Title>🏫 Key Facilities at Our Campus</Title>
-
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
         {data.map((facility, index) => (
           <div
@@ -65,8 +64,9 @@ export default function KeyFacilities() {
               <Image
                 src={facility.img}
                 alt={facility.title}
-                layout="fill"
                 className="object-cover"
+                fill
+                sizes="100vw"
               />
             </div>
             <h3 className="text-xl font-semibold text-blue-900 flex items-center gap-2 mt-4">
@@ -77,7 +77,6 @@ export default function KeyFacilities() {
           </div>
         ))}
       </div>
-
       <SectionNote>
         Our modern infrastructure supports an{" "}
         <Accent>engaging and effective learning experience</Accent>!
