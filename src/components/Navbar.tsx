@@ -39,7 +39,7 @@ export default function Navbar() {
   }, [closeNav, handleOutsideClick]);
 
   // Close navbar when route changes
-  useEffect(closeNav, [pathname]);
+  useEffect(closeNav, [closeNav, pathname]);
 
   // Toggle Navbar
   const handleNavToggle = () => setNavOpen((prev) => !prev);
