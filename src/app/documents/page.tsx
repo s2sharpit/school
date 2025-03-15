@@ -3,19 +3,19 @@ import Title from "@/components/ui/Title";
 import { ClipboardList } from "lucide-react";
 import Documents from "./Documents";
 import { redirect } from "next/navigation";
-import { Accent, Summary } from "@/components/ui/Section";
+import Section, { Accent } from "@/components/ui/Section";
 
 export default function PublicDisclosurePage() {
   redirect('/under-construction');
   return (
     <Main>
       {/* Public Disclosure Overview */}
-      <section className="space-y-6">
+      <Section>
         <Title className="flex items-center justify-center gap-3">
           <ClipboardList className="w-10 h-10 text-yellow-500" />
           Public Disclosure Documents
         </Title>
-        <Summary className="text-lg text-center max-w-3xl mx-auto">
+        <Section.Summary className="text-lg text-center max-w-3xl mx-auto">
           As a{" "}
           <Accent>
             CBSE-affiliated institution, B. S. Senior Secondary School, Salempur
@@ -26,8 +26,8 @@ export default function PublicDisclosurePage() {
           This section provides all the{" "}
           <Accent>mandatory public disclosure documents</Accent> as per CBSE
           norms.
-        </Summary>
-      </section>
+        </Section.Summary>
+      </Section>
 
       <Documents val={"mandatory"} />
       <Documents val={"academic"} />

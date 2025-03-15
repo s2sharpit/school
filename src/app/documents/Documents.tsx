@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FileText } from "lucide-react";
 import Title from "@/components/ui/Title";
-import { SectionNote } from "@/components/ui/Section";
+import Section from "@/components/ui/Section";
 
 const documents = {
   mandatory: [
@@ -36,7 +36,7 @@ export default function Documents({ val }: { val: DocumentCategory }) {
   const selectedDocs = documents[val] ?? [];
 
   return (
-    <section className="space-y-6">
+    <Section>
       <Title>📌 {val} Documents</Title>
       <div>
         {selectedDocs.length ? (
@@ -63,11 +63,11 @@ export default function Documents({ val }: { val: DocumentCategory }) {
         )}
       </div>
       {val == "academic" && (
-        <SectionNote>
+        <Section.Note>
           As per CBSE guidelines, our school maintains full transparency in
           sharing key disclosure documents.
-        </SectionNote>
+        </Section.Note>
       )}
-    </section>
+    </Section>
   );
 }
