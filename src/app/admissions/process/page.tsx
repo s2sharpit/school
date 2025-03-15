@@ -2,7 +2,7 @@ import { ClipboardCheck } from "lucide-react";
 import Procedure from "./Procedure";
 import Main from "@/components/ui/Main";
 import Title from "@/components/ui/Title";
-import { Accent, Summary } from "@/components/ui/Section";
+import Section, { Accent } from "@/components/ui/Section";
 
 export default function AdmissionProcessPage() {
   return (
@@ -13,11 +13,11 @@ export default function AdmissionProcessPage() {
           <ClipboardCheck className="w-10 h-10 text-yellow-500" />
           Admission Process at B. S. Senior Secondary School
         </Title>
-        <Summary>
+        <Section.Summary>
           We welcome students from <Accent>diverse backgrounds</Accent> who are eager to learn, grow, and excel.  
           Our admission process is <Accent>simple, transparent, and merit-based</Accent>, ensuring every child  
           gets an opportunity to receive <Accent>quality education</Accent>.
-        </Summary>
+        </Section.Summary>
       </section>
 
       <Procedure />

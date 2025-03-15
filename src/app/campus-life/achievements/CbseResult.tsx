@@ -1,4 +1,4 @@
-import { Accent, SectionNote } from "@/components/ui/Section";
+import Section, { Accent } from "@/components/ui/Section";
 import Title from "@/components/ui/Title";
 import { CheckCircle } from "lucide-react";
 
@@ -23,7 +23,7 @@ const data = [
 
 export default function CbseResult() {
   return (
-    <section className="space-y-6">
+    <Section>
       <Title>📌 Latest CBSE Results</Title>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8">
         {data.map((achievement, index) => (
@@ -41,10 +41,10 @@ export default function CbseResult() {
           </div>
         ))}
       </div>
-      <SectionNote>
+      <Section.Note>
         Every achievement is a <Accent>step towards success</Accent> and we
         celebrate them all!
-      </SectionNote>
-    </section>
+      </Section.Note>
+    </Section>
   );
 }

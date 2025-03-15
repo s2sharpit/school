@@ -1,6 +1,6 @@
 import { Building } from "lucide-react";
 import KeyFacilities from "./KeyFacilities";
-import { Summary, Accent } from "@/components/ui/Section";
+import Section, { Accent } from "@/components/ui/Section";
 import Main from "@/components/ui/Main";
 import Title from "@/components/ui/Title";
 
@@ -8,12 +8,12 @@ export default function FacilitiesPage() {
   return (
     <Main>
       {/* Facilities Overview */}
-      <section className="space-y-6">
+      <Section>
         <Title className="flex items-center justify-center gap-3">
           <Building className="w-10 h-10 text-yellow-500" />A Modern Learning
           Environment for Holistic Growth
         </Title>
-        <Summary className="">
+        <Section.Summary className="">
           At <Accent>B. S. Senior Secondary School, Salempur Khadar</Accent>, we
           provide <Accent>state-of-the-art infrastructure</Accent> designed to
           support{" "}
@@ -24,8 +24,8 @@ export default function FacilitiesPage() {
           <Accent>
             best resources for learning, sports, and extracurricular activities.
           </Accent>
-        </Summary>
-      </section>
+        </Section.Summary>
+      </Section>
 
       <KeyFacilities />
 

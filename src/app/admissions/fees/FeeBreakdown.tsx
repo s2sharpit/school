@@ -8,7 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { SectionNote } from "@/components/ui/Section";
+import Section from "@/components/ui/Section";
 
 const data = [
   {
@@ -71,7 +71,7 @@ const data = [
 
 export default function FeeBreakdown() {
   return (
-    <section className="space-y-6">
+    <Section>
       <Title className="flex items-center justify-center gap-3">
         <ClipboardList className="w-8 h-8 text-blue-600" />
         General Fee Breakdown (Approximate Monthly Fees)
@@ -104,10 +104,10 @@ export default function FeeBreakdown() {
           </TableBody>
         </Table>
       </div>
-      <SectionNote>
+      <Section.Note>
         Fees are subject to change. Please contact the school office for the
         most updated fee details.
-      </SectionNote>
-    </section>
+      </Section.Note>
+    </Section>
   );
 }

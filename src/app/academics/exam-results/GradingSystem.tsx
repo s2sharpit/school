@@ -1,4 +1,4 @@
-import { Accent, SectionNote, Summary } from "@/components/ui/Section";
+import Section, { Accent } from "@/components/ui/Section";
 import {
   Table,
   TableBody,
@@ -23,17 +23,17 @@ const gradingData = [
 
 export default function GradingSystem() {
   return (
-    <section className="space-y-6">
+    <Section>
       <div className="text-center space-y-4">
         <Title className="flex items-center justify-center gap-3">
           <ClipboardCheck className="w-10 h-10 text-yellow-500" />
           CBSE Grading System
         </Title>
-        <Summary>
+        <Section.Summary>
           The <Accent>CBSE Grading System</Accent> evaluates students based on{" "}
           <Accent>marks obtained in assessments</Accent>, ensuring a{" "}
           <Accent>fair and uniform evaluation process</Accent>.
-        </Summary>
+        </Section.Summary>
       </div>
 
       {/* Grading Table */}
@@ -66,10 +66,10 @@ export default function GradingSystem() {
           </TableBody>
         </Table>
       </div>
-      <SectionNote>
+      <Section.Note>
         Students must secure at least a Grade D (33% and above) to pass the
         examination.
-      </SectionNote>
-    </section>
+      </Section.Note>
+    </Section>
   );
 }

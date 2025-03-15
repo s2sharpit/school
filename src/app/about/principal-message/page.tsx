@@ -3,18 +3,19 @@ import { Quote } from "lucide-react";
 import Main from "@/components/ui/Main";
 import Image from "next/image";
 import Title from "@/components/ui/Title";
-import { Accent } from "@/components/ui/Section";
+import Section, { Accent } from "@/components/ui/Section";
 
 export default function PrincipalMessagePage() {
   return (
-    <Main className="">
+    <Main>
       <Title className="justify-center flex items-center gap-3">
         <Quote className="w-10 h-10 text-yellow-400" />
         Principal’s Message
       </Title>
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-12">
+
+      <div className="mx-auto flex flex-col md:flex-row items-center md:items-start gap-12">
         {/* Principal's Image */}
-        <section className="w-52 md:w-60 flex-shrink-0 relative">
+        <Section className="w-52 md:w-60 flex-shrink-0 relative">
           <AspectRatio
             ratio={1 / 1}
             className="rounded-full overflow-hidden shadow-lg border-4 border-yellow-400 hover:scale-105 transition-transform duration-300"
@@ -26,10 +27,10 @@ export default function PrincipalMessagePage() {
               height={400}
             />
           </AspectRatio>
-        </section>
+        </Section>
 
         {/* Message Content */}
-        <section className="space-y-6 max-w-2xl  text-justify">
+        <Section className="max-w-2xl  text-justify">
           {/* Quote */}
           <p className="italic text-lg border-l-4 pl-4 border-yellow-400">
             &quot;Education is not just about learning facts, but about training
@@ -88,7 +89,7 @@ export default function PrincipalMessagePage() {
               <Link href="/about/faculty">Discover Our Faculty →</Link>
             </Button>
           </div> */}
-        </section>
+        </Section>
       </div>
     </Main>
   );

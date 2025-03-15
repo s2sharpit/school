@@ -1,5 +1,5 @@
-import Showcase from "@/components/ShowCase";
-import { Accent, SectionNote } from "@/components/ui/Section";
+import ImgCard from "@/components/ImgCard";
+import Section, { Accent } from "@/components/ui/Section";
 import Title from "@/components/ui/Title";
 
 const facilities = [
@@ -47,13 +47,18 @@ const facilities = [
 
 export default function KeyFacilities() {
   return (
-    <section className="space-y-6">
+    <Section>
       <Title>🏫 Key Facilities at Our Campus</Title>
-      <Showcase items={facilities} />
-      <SectionNote>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {facilities.map((item, index) => (
+          <ImgCard key={index} index={index} {...item} />
+        ))}
+      </div>
+
+      <Section.Note>
         Our modern infrastructure supports an{" "}
         <Accent>engaging and effective learning experience</Accent>!
-      </SectionNote>
-    </section>
+      </Section.Note>
+    </Section>
   );
 }

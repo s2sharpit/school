@@ -1,5 +1,5 @@
-import Showcase from "@/components/ShowCase";
-import { Accent, SectionNote } from "@/components/ui/Section";
+import ImgCard from "@/components/ImgCard";
+import Section, { Accent } from "@/components/ui/Section";
 import Title from "@/components/ui/Title";
 
 const events = [
@@ -27,13 +27,17 @@ const events = [
 
 export default function MajorEvents() {
   return (
-    <section className="space-y-6">
+    <Section>
       <Title>📌 Some of Our Major Events</Title>
-      <Showcase items={events} />
-      <SectionNote>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {events.map((item, index) => (
+          <ImgCard key={index} index={index} {...item} />
+        ))}
+      </div>
+      <Section.Note>
         Unleash your creativity and make <Accent>unforgettable memories</Accent>
         .
-      </SectionNote>
-    </section>
+      </Section.Note>
+    </Section>
   );
 }

@@ -3,18 +3,18 @@ import Title from "@/components/ui/Title";
 import { GraduationCap } from "lucide-react";
 import Subjects from "./Subjects";
 import KeyFeatures from "./KeyFeatures";
-import { Accent, Summary } from "@/components/ui/Section";
+import Section, { Accent } from "@/components/ui/Section";
 
 export default function CurriculumPage() {
   return (
     <Main className="">
       {/* Curriculum Overview */}
-      <section className="text-center space-y-6">
+      <Section className="text-center space-y-6">
         <Title className="flex items-center justify-center gap-3">
           <GraduationCap className="w-10 h-10 text-yellow-500" />
           Comprehensive & Well-Structured CBSE Curriculum
         </Title>
-        <Summary>
+        <Section.Summary>
           At <Accent>B. S. Senior Secondary School, Salempur Khadar</Accent>, we
           follow the Central Board of Secondary Education (CBSE) curriculum,
           which provides a <Accent>strong academic foundation</Accent> while
@@ -23,8 +23,8 @@ export default function CurriculumPage() {
             creativity, critical thinking, and problem-solving skills
           </Accent>
           .
-        </Summary>
-      </section>
+        </Section.Summary>
+      </Section>
 
       <KeyFeatures />
       <Subjects />

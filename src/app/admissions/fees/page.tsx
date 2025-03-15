@@ -3,24 +3,24 @@ import Title from "@/components/ui/Title";
 import { CreditCard } from "lucide-react";
 import PaymentModes from "./PaymentModes";
 import FeeBreakdown from "./FeeBreakdown";
-import { Accent, Summary } from "@/components/ui/Section";
+import Section, { Accent } from "@/components/ui/Section";
 
 export default function FeeStructurePage() {
   return (
     <Main>
       {/* Fee Structure Overview */}
-      <section className="text-center space-y-6">
+      <Section className="text-center">
         <Title className="flex items-center justify-center gap-3">
           <CreditCard className="w-10 h-10 text-yellow-500" />
           Fee Structure
         </Title>
-        <Summary>
+        <Section.Summary>
           We ensure that <Accent>education remains affordable</Accent> while
           maintaining <Accent>high academic standards</Accent>. Our fee
           structure is designed to be <Accent>accessible</Accent> for all
           families.
-        </Summary>
-      </section>
+        </Section.Summary>
+      </Section>
 
       <FeeBreakdown />
 

@@ -1,4 +1,4 @@
-import { Accent, SectionNote } from "@/components/ui/Section";
+import Section, { Accent } from "@/components/ui/Section";
 import Title from "@/components/ui/Title";
 import { CheckCircle, FileText } from "lucide-react";
 import React from "react";
@@ -41,7 +41,7 @@ const data = [
 
 export default function Procedure() {
   return (
-    <section className="space-y-6">
+    <Section>
       <Title className="flex items-center justify-center gap-3">
         <FileText className="w-8 h-8 text-blue-600" />
         Step-by-Step Admission Procedure
@@ -63,10 +63,10 @@ export default function Procedure() {
           </div>
         ))}
       </div>
-      <SectionNote>
+      <Section.Note>
         Seats are limited, and admissions are granted on a{" "}
         <Accent>first-come, first-served basis</Accent>. Apply now!
-      </SectionNote>
-    </section>
+      </Section.Note>
+    </Section>
   );
 }

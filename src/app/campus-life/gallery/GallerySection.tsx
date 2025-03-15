@@ -1,3 +1,4 @@
+import Section from "@/components/ui/Section";
 import Title from "@/components/ui/Title";
 import { CheckCircle } from "lucide-react";
 import React from "react";
@@ -23,7 +24,7 @@ const data = [
 
 export default function GallerySection() {
   return (
-    <section className="space-y-6">
+    <Section>
       <Title>📌 Gallery Sections</Title>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {data.map((section, index) => (
@@ -41,6 +42,6 @@ export default function GallerySection() {
       <p className="text-gray-600 font-medium text-center mt-6">
         📢 Experience the <span className="text-blue-900 font-semibold">joy, learning, and energy</span> that define our school!
       </p>
-    </section>
+    </Section>
   );
 }

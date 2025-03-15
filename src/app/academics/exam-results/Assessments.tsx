@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import Section from "@/components/ui/Section";
 import Title from "@/components/ui/Title";
 import { BookOpen, CheckCircle } from "lucide-react";
 import React from "react";
@@ -24,7 +25,7 @@ const ass = [
 
 export default function Assessments() {
   return (
-    <section className="space-y-6 md:space-y-8">
+    <Section>
       <Title className=" flex items-center justify-center gap-3">
         <BookOpen className="w-8 h-8 text-blue-600" />
         Types of Assessments
@@ -44,6 +45,6 @@ export default function Assessments() {
           </Card>
         ))}
       </ul>
-    </section>
+    </Section>
   );
 }

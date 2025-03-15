@@ -1,4 +1,4 @@
-import { Accent, SectionNote, Summary } from "@/components/ui/Section";
+import Section, { Accent } from "@/components/ui/Section";
 import Title from "@/components/ui/Title";
 import { BookOpen } from "lucide-react";
 
@@ -25,17 +25,17 @@ const subjects = [
 
 export default function Subjects() {
   return (
-    <section className="space-y-6">
+    <Section>
       {/* Section Title */}
       <Title className="flex items-center justify-center gap-3">
         <BookOpen className="w-10 h-10 text-yellow-500" />
         Subjects Offered
       </Title>
-      <Summary>
+      <Section.Summary>
         Our curriculum provides students with a{" "}
         <Accent>comprehensive selection of subjects</Accent>, ensuring academic
         excellence and holistic growth.
-      </Summary>
+      </Section.Summary>
 
       {/* Subject Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -58,10 +58,10 @@ export default function Subjects() {
           </div>
         ))}
       </div>
-      <SectionNote>
+      <Section.Note>
         We ensure that every student receives quality education tailored to
         their interests and career goals!
-      </SectionNote>
-    </section>
+      </Section.Note>
+    </Section>
   );
 }

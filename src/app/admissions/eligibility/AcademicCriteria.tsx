@@ -1,4 +1,4 @@
-import { SectionNote } from "@/components/ui/Section";
+import Section from "@/components/ui/Section";
 import Title from "@/components/ui/Title";
 import { BookOpen, CheckCircle } from "lucide-react";
 
@@ -10,7 +10,7 @@ const data = [
 
 export default function AcademicCriteria() {
   return (
-    <section className="space-y-6">
+    <Section className="space-y-6">
       <Title className="flex items-center justify-center gap-3">
         <BookOpen className="w-8 h-8 text-blue-600" />
         Academic Criteria for Admission
@@ -23,10 +23,10 @@ export default function AcademicCriteria() {
           </li>
         ))}
       </ul>
-      <SectionNote>
+      <Section.Note>
         Students with outstanding performance in academics, sports, or
         extracurricular activities may be given priority admission.
-      </SectionNote>
-    </section>
+      </Section.Note>
+    </Section>
   );
 }

@@ -10,30 +10,19 @@ import {
 import { CheckCircle } from "lucide-react";
 import Image from "next/image";
 
-interface ShowcaseCardProps {
+interface ImageCardProps {
+  index: number;
   title: string;
   desc: string;
   imgSrc?: string;
 }
 
-// Showcase Component
-function Showcase({ items }: { items: ShowcaseCardProps[] }) {
-  return (
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-    {items.map((item, index) => (
-      <ShowcaseCard key={index} index={index} {...item} />
-    ))}
-  </div>
-);
-}
-
-// Showcase Card Component
-function ShowcaseCard({
+function ImgCard({
   index,
   title,
   desc,
   imgSrc,
-}: { index: number } & ShowcaseCardProps) {
+}: ImageCardProps) {
   return (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
@@ -64,4 +53,4 @@ function ShowcaseCard({
   );
 }
 
-export default Showcase;
+export default ImgCard;

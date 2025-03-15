@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import Section from "@/components/ui/Section";
 import Title from "@/components/ui/Title";
 import { CheckCircle } from "lucide-react";
 
@@ -9,7 +10,7 @@ const data = [
 
 export default function PaymentModes() {
   return (
-    <section className="space-y-6">
+    <Section className="space-y-6">
       <Title>💳 Payment Modes Available</Title>
       <ul className="grid sm:grid-cols-2 gap-6 md:gap-12 max-w-3xl mx-auto">
         {data.map((method, index) => (
@@ -19,10 +20,6 @@ export default function PaymentModes() {
           </Card>
         ))}
       </ul>
-      <p className="text-center font-medium">
-        {/* 📢 Scholarships and fee waivers are available for **meritorious students
-        and those in need**. */}
-      </p>
-    </section>
+    </Section>
   );
 }

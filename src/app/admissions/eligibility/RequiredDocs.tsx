@@ -1,3 +1,4 @@
+import Section from "@/components/ui/Section";
 import Title from "@/components/ui/Title";
 import { CheckCircle, FileText } from "lucide-react";
 
@@ -13,7 +14,7 @@ const data = [
 
 export default function RequiredDocs() {
   return (
-    <section className="space-y-8">
+    <Section>
       <Title className="flex items-center justify-center gap-3">
         <FileText className="w-8 h-8 text-blue-600" />
         Required Documents for Admission
@@ -26,6 +27,6 @@ export default function RequiredDocs() {
           </li>
         ))}
       </ul>
-    </section>
+    </Section>
   );
 }
