@@ -1,5 +1,5 @@
 "use client";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 import { CheckCircle } from "lucide-react";
 import { motion } from "motion/react";
 
@@ -24,8 +24,8 @@ export default function FeatCard({
         <CardContent className="flex max-sm:flex-col max-sm:items-center max-sm:text-center gap-4 md:gap-6">
           <CheckCircle className="w-10 sm:w-6 h-10 sm:h-6 mt-2 text-green-600 flex-shrink-0" />
           <div>
-            <strong className="text-lg text-blue-900">{title}</strong>
-            <p className="text-muted-foreground">{desc}</p>
+            <CardTitle className="text-lg text-blue-900 leading-tight">{title}</CardTitle>
+            <CardDescription className="text-base leading-tight">{desc}</CardDescription>
           </div>
         </CardContent>
       </Card>

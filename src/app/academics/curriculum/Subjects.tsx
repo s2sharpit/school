@@ -15,9 +15,9 @@ const subjects = [
   {
     title: "Senior Secondary (Classes XI - XII) – CBSE Streams",
     desc: [
-      "Science Stream: Physics | Chemistry | Biology/Mathematics | English | Computer Science/Physical Education",
-      "Commerce Stream: Business Studies | Accountancy | Economics | English | Computer Science/Physical Education",
-      "Arts Stream: History | Political Science | Geography | English | Computer Science/Physical Education",
+      "Science Stream: Physics | Chemistry | Biology / Mathematics | English | Computer Science / Physical Education",
+      "Commerce Stream: Business Studies | Accountancy | Economics | English | Computer Science / Physical Education",
+      "Arts Stream: History | Political Science | Geography | English | Computer Science / Physical Education",
     ],
   },
 ];
