@@ -28,8 +28,8 @@ const navData = [
     ],
   },
   {
-    title: "Campus Life",
-    path: "/campus-life",
+    title: "Campus",
+    path: "/campus",
     nested: [
       { title: "Facilities", path: "/facilities" },
       // { title: "Sports & Activities", path: "/sports-activities" },

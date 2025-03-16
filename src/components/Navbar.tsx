@@ -52,7 +52,7 @@ export default function Navbar() {
   return (
     <nav
       ref={navRef}
-      className="fixed top-2 left-3 right-3 z-50 rounded-md h-max px-6 max-md:pr-4 shadow-header bg-blue-950/80 transition backdrop-blur-xs text-blue-50 md:flex md:justify-between"
+      className="fixed top-2 left-3 right-3 z-50 rounded-md h-max px-6 max-md:pr-4 shadow-header bg-blue-950/80 transition backdrop-blur-xs text-blue-50 lg:flex lg:justify-between gap-6"
     >
       <div className="flex justify-between items-center">
         <Link
@@ -67,7 +67,7 @@ export default function Navbar() {
             alt="school logo"
             className="max-sm:hidden"
           />
-          <span className="text-lg md:text-xl lg:text-2xl font-semibold text-gray-300 hover:text-slate-100">
+          <span className="text-lg md:text-xl font-semibold text-gray-300 hover:text-slate-100">
             B. S. Senior Secondary School
           </span>
         </Link>
@@ -77,7 +77,7 @@ export default function Navbar() {
           onClick={handleNavToggle}
           aria-label="Toggle navigation"
           className={clsx(
-            "menu-btn flex z-10 md:hidden justify-center items-center py-1",
+            "menu-btn flex z-10 lg:hidden justify-center items-center py-1",
             { opened: navOpen }
           )}
         >
@@ -87,19 +87,19 @@ export default function Navbar() {
       {/* Navbar Links */}
       <div
         className={clsx(
-          "duration-300 transition-all w-full md:w-3/5 left-[1%] right-[1%]",
+          "duration-300 transition-all w-full lg:max-w-3/5 lg:min-w-[37rem] left-[1%] right-[1%]",
           navOpen
-            ? "max-md:max-h-[calc(100vh-4rem)] max-md:overflow-y-scroll max-md:border-t"
-            : "max-md:max-h-0 max-md:opacity-0"
+            ? "max-lg:max-h-[calc(100vh-4rem)] max-lg:overflow-y-auto max-lg:border-t"
+            : "max-lg:max-h-0 max-lg:opacity-0"
         )}
       >
-        <ul className="text-center py-4 md:flex justify-between max-md:space-y-5">
+        <ul className="text-center py-4 lg:flex justify-between gap-">
           {navData.map((data, index) => (
             <li key={index} className="group">
               <Link
                 href={data.path}
                 className={clsx(
-                  "capitalize flex items-center justify-center text-gray-300 hover:text-slate-100 relative",
+                  "capitalize flex items-end justify-center text-gray-300 hover:text-slate-100 relative",
                   data.nested && "pointer-events-none"
                 )}
               >
@@ -109,7 +109,7 @@ export default function Navbar() {
                 )}
               </Link>
               {data.nested && (
-                <div className="max-h-0 overflow-hidden group-hover:max-h-60 opacity-0 group-hover:opacity-100 md:absolute bg-blue-950/90 group-hover:p-2 shadow-header md:w-48 rounded-md transition-all duration-500 md:-translate-x-1/4">
+                <div className="max-h-0 overflow-hidden group-hover:max-h-60 opacity-0 group-hover:opacity-100 lg:absolute bg-blue-950/90 group-hover:p-2 shadow-header lg:w-48 max-w-72 mx-auto rounded-md transition-all duration-500 lg:-translate-x-1/4">
                   {data.nested.map((d, i) => (
                     <Link
                       key={i}
