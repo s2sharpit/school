@@ -24,8 +24,8 @@ export default function FeatCard({
         <CardContent className="flex max-sm:flex-col max-sm:items-center max-sm:text-center gap-4 md:gap-6">
           <CheckCircle className="w-10 sm:w-6 h-10 sm:h-6 mt-2 text-green-600 flex-shrink-0" />
           <div>
-            <CardTitle className="text-lg text-blue-900 leading-tight">{title}</CardTitle>
-            <CardDescription className="text-base leading-tight">{desc}</CardDescription>
+            <CardTitle className="text-lg/tight text-blue-900">{title}</CardTitle>
+            <CardDescription className="text-base">{desc}</CardDescription>
           </div>
         </CardContent>
       </Card>

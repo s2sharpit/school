@@ -49,11 +49,11 @@ function ImgCard({
           </CardHeader>
         )}
         <CardContent>
-          <CardTitle className="text-lg text-blue-900 leading-tight flex gap-2 mb-1">
+          <CardTitle className="text-lg/tight text-blue-900 flex gap-2 mb-1">
             {icon || <CheckCircle className="min-w-6 h-6 text-green-600 " />}{" "}
             {title}
           </CardTitle>
-          <CardDescription className="text-base leading-tight">
+          <CardDescription className="text-base">
             {Array.isArray(desc) ? (
               <ul className="space-y-1">
                 {desc.map((dsc, i) => (
