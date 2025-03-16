@@ -6,7 +6,7 @@ import Section, { Accent } from "@/components/ui/Section";
 
 export default function GalleryPage() {
   return (
-    <Main>
+    <Main className="max-w-6xl">
       {/* Gallery Overview */}
       <Section>
         <Title className="flex items-center justify-center gap-3">

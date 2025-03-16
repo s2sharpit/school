@@ -1,7 +1,7 @@
 import Title from "@/components/ui/Title";
 import { ListChecks } from "lucide-react";
 import Section from "@/components/ui/Section";
-import FeatCard from "./FeatCard";
+import FeatCard from "@/components/FeatCard";
 
 const features = [
   {

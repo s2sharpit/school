@@ -19,7 +19,7 @@ export default function ImgGallery() {
   useEffect(() => {
     JustifiedGallery({
       container: document.querySelector(".gallery") as HTMLElement,
-      rowHeight: 260,
+      rowHeight: 270,
       gap: 6,
     });
   }, []);

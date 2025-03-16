@@ -1,32 +1,33 @@
+import ImgCard from "@/components/ImgCard";
 import Section from "@/components/ui/Section";
 import Title from "@/components/ui/Title";
-import { CheckCircle, FileText } from "lucide-react";
+import { FileText } from "lucide-react";
 
 const data = [
-  "Birth Certificate (for Nursery - Class I)",
-  "Previous School Report Card (for Classes II - XII)",
-  "Transfer Certificate (TC) from the previous school",
-  "Passport-size Photographs (4 copies)",
-  "Aadhar Card of the student and parents",
-  "Caste Certificate (if applicable)",
-  "Medical Certificate (for students with special medical needs)",
+  { title: "Birth Certificate (for Nursery - Class I)" },
+  { title: "Previous School Report Card (for Classes II - XII)" },
+  { title: "Transfer Certificate (TC) from the previous school" },
+  { title: "Passport-size Photographs (4 copies)" },
+  { title: "Aadhar Card of the student and parents" },
+  { title: "Caste Certificate (if applicable)" },
+  { title: "Medical Certificate (for students with special medical needs)" },
 ];
 
 export default function RequiredDocs() {
   return (
     <Section>
+      {/* Section Title */}
       <Title className="flex items-center justify-center gap-3">
-        <FileText className="w-8 h-8 text-blue-600" />
+        <FileText className="w-10 h-10 text-yellow-500 animate-bounce" />
         Required Documents for Admission
       </Title>
-      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {data.map((doc, index) => (
-          <li key={index} className="flex items-start gap-3">
-            <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0" />
-            <p className="text-gray-700">{doc}</p>
-          </li>
+
+      {/* Document List */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+        {data.map((item, index) => (
+          <ImgCard key={index} index={index} {...item} />
         ))}
-      </ul>
+      </div>
     </Section>
   );
 }

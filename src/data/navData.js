@@ -35,7 +35,7 @@ const navData = [
       // { title: "Sports & Activities", path: "/sports-activities" },
       // { title: "Clubs & Societies", path: "/clubs" },
       { title: "Events", path: "/events" },
-      { title: "Student Achievements", path: "/achievements" },
+      { title: "Achievements", path: "/achievements" },
       { title: "Gallery", path: "/gallery" },
     ],
   },
