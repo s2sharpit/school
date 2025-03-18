@@ -25,7 +25,7 @@ export default function FeatCard({
           <CheckCircle className="w-10 sm:w-6 h-10 sm:h-6 mt-2 text-green-600 flex-shrink-0" />
           <div>
             <CardTitle className="text-lg/tight text-blue-900">{title}</CardTitle>
-            <CardDescription className="text-base">{desc}</CardDescription>
+            <CardDescription>{desc}</CardDescription>
           </div>
         </CardContent>
       </Card>

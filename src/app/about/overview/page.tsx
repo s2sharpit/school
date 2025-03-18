@@ -9,7 +9,7 @@ export default function OverviewPage() {
     <Main>
       {/* Vision Statement */}
       <Section>
-        <Title>🌟 Our Vision</Title>
+        {/* <Title>🌟 Our Vision</Title> */}
         <Section.Summary className="text-xl md:text-2xl font-medium italic text-blue-800 md:leading-relaxed">
           &quot;To nurture future leaders, innovators, and responsible citizens
           by providing an education that balances academic excellence with
@@ -19,7 +19,7 @@ export default function OverviewPage() {
 
       {/* School Overview */}
       <Section>
-        <Title>🏫 About Our School</Title>
+        {/* <Title>🏫 About Our School</Title> */}
         <Section.Summary>
           <Accent>B. S. Senior Secondary School, Salempur Khadar</Accent> was
           established on <Accent>April 1, 2001</Accent>, with a vision to

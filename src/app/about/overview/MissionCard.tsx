@@ -32,7 +32,7 @@ export default function MissionCard({
       <Card className="h-full">
         <CardContent className="flex flex-col items-center">
           <div className={`${iconColor} mt-4 scale-150`}>{icon}</div>
-          <CardTitle className="text-xl mt-2">{title}</CardTitle>
+          <CardTitle className="text-xl mt-2 text-center text-blue-900">{title}</CardTitle>
           <CardDescription>
             <p className="text-center">{desc}</p>
           </CardDescription>
