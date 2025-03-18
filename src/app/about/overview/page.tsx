@@ -1,5 +1,5 @@
 import Main from "@/components/ui/Main";
-import Title from "@/components/ui/Title";
+// import Title from "@/components/ui/Title";
 import Section, { Accent } from "@/components/ui/Section";
 import Mission from "./Mission";
 import WhyChooseUs from "./WhyChooseUs";

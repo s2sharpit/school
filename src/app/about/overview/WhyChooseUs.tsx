@@ -53,7 +53,7 @@ export default function WhyChooseUs() {
           <MissionCard
             key={index}
             index={index}
-            iconColor="text-yellow-500"
+            iconColor="text-[#ff595e]"
             {...item}
           />
         ))}

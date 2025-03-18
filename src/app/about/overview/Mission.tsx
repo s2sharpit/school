@@ -47,7 +47,7 @@ export default function Mission() {
         <MissionCard
           key={index}
           index={index}
-          iconColor="text-blue-600"
+          iconColor="text-orange-400"
           {...item}
         />
       ))}
