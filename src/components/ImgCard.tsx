@@ -16,18 +16,17 @@ interface ImageCardProps {
   title: string;
   desc?: string[] | string;
   imgSrc?: string;
-  className?: string;
   icon?: JSX.Element | string;
 }
 
 function ImgCard({
+  className,
   index,
   title,
   desc,
   imgSrc,
   icon,
-  className,
-}: ImageCardProps) {
+}: React.ComponentProps<"div"> & ImageCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}

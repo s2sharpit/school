@@ -32,7 +32,7 @@ export default function KeyFeatures() {
       </Title>
       <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {features.map((item, index) => (
-          <FeatCard key={index} index={index} {...item} />
+          <FeatCard variant={'list'} key={index} index={index} {...item} />
         ))}
       </ul>
     </Section>

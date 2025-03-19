@@ -7,7 +7,7 @@ import Section, { Accent } from "@/components/ui/Section";
 
 export default function CurriculumPage() {
   return (
-    <Main className="">
+    <Main>
       {/* Curriculum Overview */}
       <Section className="text-center space-y-6">
         <Title className="flex items-center justify-center gap-3">

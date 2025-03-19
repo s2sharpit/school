@@ -18,7 +18,7 @@ export default function ExamResultsPage() {
           At <Accent>B. S. Senior Secondary School</Accent> , we follow the{" "}
           <Accent>CBSE examination guidelines</Accent> and conduct regular
           assessments to track student progress. Our evaluation system ensures a{" "}
-          <Accent>fair, transparent, and stress-free</Accent>approach to
+          <Accent>fair, transparent, and stress-free</Accent> approach to
           learning.
         </Section.Summary>
       </Section>

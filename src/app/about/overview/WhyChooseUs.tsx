@@ -1,7 +1,6 @@
 import Section from "@/components/ui/Section";
 import Title from "@/components/ui/Title";
 import React from "react";
-import MissionCard from "./MissionCard";
 import {
   BookOpen,
   Users,
@@ -10,6 +9,7 @@ import {
   Building,
   Briefcase,
 } from "lucide-react";
+import FeatCard from "@/components/FeatCard";
 
 const whyChooseUs = [
   {
@@ -50,7 +50,7 @@ export default function WhyChooseUs() {
       <Title>🛡️ Why Choose Us?</Title>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {whyChooseUs.map((item, index) => (
-          <MissionCard
+          <FeatCard
             key={index}
             index={index}
             iconColor="text-[#ff595e]"

@@ -1,8 +1,8 @@
 import Section from '@/components/ui/Section'
 import Title from '@/components/ui/Title'
 import React from 'react'
-import MissionCard from './MissionCard'
 import { BookOpen, Globe, Handshake, Lightbulb, ShieldCheck, Users } from "lucide-react";
+import FeatCard from '@/components/FeatCard';
 
 const missions = [
     {
@@ -44,7 +44,7 @@ export default function Mission() {
     <Title>🚀 Our Mission</Title>
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
       {missions.map((item, index) => (
-        <MissionCard
+        <FeatCard
           key={index}
           index={index}
           iconColor="text-orange-400"
