@@ -7,7 +7,7 @@ import LeftBar from "@/components/LeftBar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  metadataBase: new URL("https://bsseniorsecondaryschool.in/"),
+  metadataBase: new URL("https://bsseniorsecondary.in/"),
   title: "B. S. Senior Secondary School",
   description:
     "An affiliated school from CBSE, New Delhi situated in Salempur Khadar, Yamunanagar.",
