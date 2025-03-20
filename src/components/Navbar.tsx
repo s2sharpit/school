@@ -93,7 +93,7 @@ export default function Navbar() {
             : "max-lg:max-h-0 max-lg:opacity-0"
         )}
       >
-        <ul className="text-center py-4 lg:flex justify-between gap-2 max-lg:space-y-5">
+        <ul className="text-center py-4 lg:flex justify-between gap-2 max-lg:space-y-8">
           {navData.map((data, index) => (
             <li key={index} className="group">
               <Link
