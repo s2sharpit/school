@@ -23,17 +23,17 @@ export default function Principal() {
                   className="object-cover"
                 />
               </div>
-              <div className="mt-6 text-center bg-white p-4 rounded-lg shadow-sm -mt-10 mx-4 relative">
+              <div className="mt-6 text-center bg-white p-4 rounded-lg shadow-sm -mt10 mx-4 relative">
                 <h3 className="text-xl font-bold text-gray-900">
-                  Dr. Rajiv Sharma
+                  Smt. Shashi Bala
                 </h3>
                 <p className="text-primary font-medium">Principal</p>
                 <div className="mt-3 pt-3 border-t border-gray-100">
-                  <p className="text-sm text-muted-foreground">
+                  {/* <p className="text-sm text-muted-foreground">
                     Ph.D. in Education
-                  </p>
+                  </p> */}
                   <p className="text-sm text-muted-foreground">
-                    25+ Years of Experience
+                    20+ Years of Experience
                   </p>
                 </div>
               </div>
@@ -95,7 +95,7 @@ export default function Principal() {
 
                 <div className="mt-6">
                   <p className="text-xl font-bold text-primary">
-                    Dr. Rajiv Sharma
+                    Smt Shashi Bala
                   </p>
                   <p className="text-muted-foreground">Principal</p>
                 </div>

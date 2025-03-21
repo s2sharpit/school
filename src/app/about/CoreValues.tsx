@@ -1,6 +1,33 @@
 import { Award, BookOpen, Users } from "lucide-react";
 import React from "react";
 
+const coreValues = [
+  {
+    title: "Excellence",
+    description:
+      "We strive for excellence in all aspects of education, encouraging students to aim high and achieve their best.",
+    Icon: Award,
+  },
+  {
+    title: "Respect",
+    description:
+      "We foster a culture of respect for self, others, and the environment, promoting harmony and understanding.",
+    Icon: Users,
+  },
+  {
+    title: "Integrity",
+    description:
+      "We uphold the highest standards of honesty, ethics, and transparency in all our actions and decisions.",
+    Icon: BookOpen,
+  },
+  {
+    title: "Innovation",
+    description:
+      "We embrace creativity and innovation, encouraging students to think critically and find unique solutions.",
+    Icon: Award,
+  },
+];
+
 export default function CoreValues() {
   return (
     <section className="py-16 md:py-24">
@@ -18,46 +45,15 @@ export default function CoreValues() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white p-6 rounded-lg shadow-sm">
-            <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
-              <Award className="h-6 w-6 text-primary" />
+          {coreValues.map(({ title, description, Icon }, index) => (
+            <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
+              <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
+                <Icon className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="text-xl font-bold mb-2">{title}</h3>
+              <p className="text-muted-foreground">{description}</p>
             </div>
-            <h3 className="text-xl font-bold mb-2">Excellence</h3>
-            <p className="text-muted-foreground">
-              We strive for excellence in all aspects of education, encouraging
-              students to aim high and achieve their best.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-sm">
-            <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
-              <Users className="h-6 w-6 text-primary" />
-            </div>
-            <h3 className="text-xl font-bold mb-2">Respect</h3>
-            <p className="text-muted-foreground">
-              We foster a culture of respect for self, others, and the
-              environment, promoting harmony and understanding.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-sm">
-            <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
-              <BookOpen className="h-6 w-6 text-primary" />
-            </div>
-            <h3 className="text-xl font-bold mb-2">Integrity</h3>
-            <p className="text-muted-foreground">
-              We uphold the highest standards of honesty, ethics, and
-              transparency in all our actions and decisions.
-            </p>
-          </div>
-          <div className="bg-white p-6 rounded-lg shadow-sm">
-            <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
-              <Award className="h-6 w-6 text-primary" />
-            </div>
-            <h3 className="text-xl font-bold mb-2">Innovation</h3>
-            <p className="text-muted-foreground">
-              We embrace creativity and innovation, encouraging students to
-              think critically and find unique solutions.
-            </p>
-          </div>
+          ))}
         </div>
       </div>
     </section>

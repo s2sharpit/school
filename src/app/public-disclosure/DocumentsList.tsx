@@ -1,42 +1,32 @@
 import { Button } from "@/components/ui/button";
 import { Download, FileText } from "lucide-react";
 import Link from "next/link";
-import React from "react";
 
-const mandatory = [
-  { name: "CBSE Affiliation Certificate", file: "cbse-affiliation.pdf" },
-  { name: "Society Certificate", file: "society-certificate.pdf" },
-  { name: "School NOC from State Government", file: "school-noc.pdf" },
-  {
-    name: "Recognition Certificate under RTE Act",
-    file: "rte-certificate.pdf",
-  },
-  { name: "Building Safety Certificate", file: "building-safety.pdf" },
-  { name: "Fire Safety Certificate", file: "fire-safety.pdf" },
-  { name: "Self Certification", file: "self-certification.pdf" },
-  {
-    name: "Water & Sanitation Certificate",
-    file: "sanitation-certificate.pdf",
-  },
-];
-
-export default function Mandatory() {
+const DocumentsList: React.FC<{
+  title: string;
+  description: string;
+  badgeText: string;
+  docs: { name: string; file: string }[];
+}> = ({ title, description, badgeText, docs }) => {
   return (
-    <section className="py-16 md:py-24 bg-muted/30">
+    <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
+        {/* Header */}
         <div className="text-center mb-12">
           <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary mb-4">
-            Mandatory Disclosure
+            {badgeText}
           </div>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-            Mandatory Documents
+            {title}
           </h2>
           <p className="mx-auto mt-4 max-w-[700px] text-muted-foreground">
-            Essential documents as required by CBSE and regulatory authorities.
+            {description}
           </p>
         </div>
+
+        {/* Document Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {mandatory.map((doc, index) => (
+          {docs.map((doc, index) => (
             <div
               key={index}
               className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow"
@@ -54,7 +44,11 @@ export default function Mandatory() {
                       size="sm"
                       className="flex-1"
                     >
-                      <Link href={`/documents/${doc.file}`} target="_blank">
+                      <Link
+                        href={`/documents/${doc.file}`}
+                        target="_blank"
+                        aria-label={`View ${doc.name}`}
+                      >
                         View
                       </Link>
                     </Button>
@@ -64,7 +58,11 @@ export default function Mandatory() {
                       size="sm"
                       className="flex-1"
                     >
-                      <Link href={`/documents/${doc.file}`} download>
+                      <Link
+                        href={`/documents/${doc.file}`}
+                        download
+                        aria-label={`Download ${doc.name}`}
+                      >
                         <Download className="h-4 w-4 mr-1" /> Download
                       </Link>
                     </Button>
@@ -77,4 +75,6 @@ export default function Mandatory() {
       </div>
     </section>
   );
-}
+};
+
+export default DocumentsList;

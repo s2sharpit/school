@@ -19,12 +19,12 @@ export default function Hero() {
     <div className="container relative z-10 mx-auto px-4 text-center text-white">
       <div className="mx-auto max-w-3xl space-y-6">
         <div className="inline-block rounded-full bg-white/10 backdrop-blur-sm px-4 py-1.5 text-sm font-medium mb-2">
-          Excellence in Education Since 1985
+          Excellence in Education Since 2001
         </div>
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-sm">
           B. S. Sr. Sec. School
         </h1>
-        <h2 className="text-xl md:text-2xl font-medium text-white/90">Salempur Khadar</h2>
+        <h2 className="text-xl md:text-2xl font-medium text-white/90">Salempur Khadar, Yamunanagar</h2>
         <p className="mx-auto max-w-[700px] text-lg md:text-xl text-white/80">
           Empowering minds, building futures. Nurturing excellence through quality education and holistic
           development.

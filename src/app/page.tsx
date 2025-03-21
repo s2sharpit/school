@@ -1,17 +1,33 @@
 import Hero from "@/components/landing/Hero";
 import QuickINfo from "@/components/landing/QuickINfo";
-import About from "@/components/landing/About";
 import Programs from "@/components/landing/Programs";
 import Testimonials from "@/components/landing/Testimonials";
 import NewsEvents from "@/components/landing/NewsEvents";
 import CTA from "@/components/CTA";
+import Overview from "@/components/Overview";
 
 export default function HomePage() {
   return (
     <div className="flex flex-col">
       <Hero />
       <QuickINfo />
-      <About />
+
+      <Overview
+        title="Nurturing Excellence Since 2001"
+        para={[
+          "B. S. Sr. Sec. School is committed to providing quality education that nurtures academic excellence, character development, and holistic growth. Our dedicated faculty and state-of-the-art facilities create an environment where students can thrive and reach their full potential.",
+        ]}
+        badgeText="About Our School"
+        imageUrl="/img/school_building.jpg"
+        highlights={[
+          { value: "500+", label: "Students" },
+          { value: "30+", label: "Faculty Members" },
+          { value: "95%", label: "Success Rate" },
+          { value: "20+", label: "Years of Excellence" },
+        ]}
+        primaryBtn={{ title: "Learn More About Us", href: "/about" }}
+      />
+
       <Programs />
       <Testimonials />
       <NewsEvents />
