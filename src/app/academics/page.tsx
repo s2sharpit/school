@@ -1,13 +1,9 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, BookOpen, GraduationCap, Palette, Trophy, Users } from "lucide-react"
-import Hero from "@/components/Hero"
-import Overview from "./Overview"
-import Programs from "./Programs"
-import ExtraCurricular from "./ExtraCurricular"
-import Facilities from "./Facilities"
-import CTA from "@/components/CTA"
+import Hero from "@/components/Hero";
+import Overview from "@/components/Overview";
+import Programs from "./Programs";
+import ExtraCurricular from "./ExtraCurricular";
+import Facilities from "./Facilities";
+import CTA from "@/components/CTA";
 
 export default function AcademicsPage() {
   return (
@@ -19,12 +15,19 @@ export default function AcademicsPage() {
         imgSrc="/img/school_building.jpg"
       />
 
-      <Overview />
+      <Overview
+        title="Comprehensive Education for Every Stage"
+        para={[
+          "At B. S. Sr. Sec. School, we offer a well-structured curriculum that caters to students from primary to senior secondary levels. Our academic programs are designed to foster critical thinking, creativity, and a love for learning while preparing students for future academic and professional success.",
+          "Our experienced faculty employs innovative teaching methodologies that make learning engaging and effective. We maintain small class sizes to ensure personalized attention for each student, helping them reach their full potential.",
+        ]}
+        badgeText="Academic Excellence"
+        imageUrl="/img/school_building.jpg"
+      />
       <Programs />
       <ExtraCurricular />
       <Facilities />
 
-      {/* CTA Section */}
       <CTA
         title="Ready to Join Our Academic Community?"
         desc="Take the first step towards a quality education that prepares your child for future success. Apply for
@@ -34,6 +37,5 @@ export default function AcademicsPage() {
         imageUrl="/img/campus.jpg"
       />
     </div>
-  )
+  );
 }
-

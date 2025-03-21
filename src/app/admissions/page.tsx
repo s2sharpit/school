@@ -1,26 +1,10 @@
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import {
-  ArrowRight,
-  Calendar,
-  CheckCircle,
-  FileText,
-  HelpCircle,
-} from "lucide-react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import Hero from "@/components/Hero";
-import Overview from "./Overview";
 import ApplicationProcess from "./ApplicationProcess";
 import RequiredDocs from "./RequiredDocs";
 import FeeStructure from "./FeeStructure";
 import CTA from "@/components/CTA";
 import FAQ from "./FAQ";
+import Overview from "@/components/Overview";
 
 export default function AdmissionsPage() {
   return (
@@ -32,7 +16,16 @@ export default function AdmissionsPage() {
         imgSrc="/img/school_building.jpg"
       />
 
-      <Overview />
+      <Overview
+        title="Begin Your Educational Journey With Us"
+        para={[
+          "At B. S. Sr. Sec. School, we welcome students from diverse backgrounds who demonstrate a passion for learning and personal growth. Our admission process is designed to be transparent and straightforward, ensuring that deserving students have the opportunity to benefit from our quality education.",
+          "We admit students based on their academic potential, character, and alignment with our school's values. We believe in nurturing each student's unique talents and helping them develop into well-rounded individuals.",
+        ]}
+        badgeText="Admission Process"
+        imageUrl="/img/school_building.jpg"
+        primaryBtn={{ title: "Download Application Form", href: "#application-process" }}
+      />
       <ApplicationProcess />
       <RequiredDocs />
       <FeeStructure />
