@@ -1,8 +1,3 @@
-import type React from "react";
-
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import Hero from "@/components/Hero";
 import ContactInfo from "./ContactInfo";
 import MapForm from "./MapForm";

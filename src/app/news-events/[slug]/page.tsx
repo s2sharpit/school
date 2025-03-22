@@ -6,6 +6,8 @@ import { ArrowLeft, Calendar, Clock, Share2 } from "lucide-react"
 // This would typically come from a database or CMS
 const getEventBySlug = (slug: string) => {
   // Mock data for demonstration
+  console.log(slug);
+  
   return {
     title: "Annual Day Celebration",
     date: "March 15, 2025",

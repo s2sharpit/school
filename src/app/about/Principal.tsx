@@ -8,10 +8,10 @@ export default function Principal() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <Badge className="bg-primary/10 text-primary mb-4" size="lg">
-            From the Principal's Desk
+            From the Principal&apos;s Desk
           </Badge>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-            Principal's Message
+            Principal&apos;s Message
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-12 items-start">

@@ -39,7 +39,7 @@ export default function SendMessage() {
         </h2>
         <p className="text-muted-foreground text-lg">
           Have a question or need more information? Fill out the form below and
-          we'll get back to you as soon as possible.
+          we&apos;ll get back to you as soon as possible.
         </p>
       </div>
       <form onSubmit={handleSubmit} className="space-y-6">
@@ -97,7 +97,7 @@ export default function SendMessage() {
         </Button>
         {formStatus === "success" && (
           <div className="p-4 bg-green-50 text-green-700 rounded-md">
-            Thank you for your message! We'll get back to you soon.
+            Thank you for your message! Wel&apos;l get back to you soon.
           </div>
         )}
         {formStatus === "error" && (

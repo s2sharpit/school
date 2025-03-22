@@ -1,7 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Award, BookOpen, Clock, Users } from "lucide-react";
 import MissionVission from "./MissionVission";
 import Hero from "@/components/Hero";
 import Principal from "./Principal";

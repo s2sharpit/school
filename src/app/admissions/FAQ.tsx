@@ -71,7 +71,7 @@ export default function FAQ() {
         </div>
         <div className="text-center mt-8">
           <p className="text-muted-foreground mb-4">
-            Don't see your question here? Feel free to contact our admissions
+            Don&apos;t see your question here? Feel free to contact our admissions
             office.
           </p>
           <Button asChild>

@@ -19,7 +19,7 @@ export default function QuickINfo() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {info.map(({ label, value, Icon }) => (
-            <div className="flex items-center gap-4 p-6 bg-white rounded-lg shadow-sm">
+            <div key={label} className="flex items-center gap-4 p-6 bg-white rounded-lg shadow-sm">
               <div className="bg-primary/10 p-3 rounded-full">
                 <Icon className="h-6 w-6 text-primary" />
               </div>

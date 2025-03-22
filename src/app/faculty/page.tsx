@@ -1,13 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import {
-  ArrowRight,
-  Facebook,
-  Instagram,
-  Linkedin,
-  Twitter,
-} from "lucide-react";
 import Hero from "@/components/Hero";
 import Overview from "@/components/Overview";
 import Leadership from "./Leadership";
