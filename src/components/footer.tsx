@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Facebook, Instagram, Mail, MapPin, Phone, Twitter, Youtube } from "lucide-react";
+import {  Instagram, Mail, MapPin, Phone, Youtube } from "lucide-react";
 import navigation from "@/data/navigation";
 
 const socialLinks = [

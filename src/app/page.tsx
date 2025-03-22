@@ -1,8 +1,6 @@
 import Hero from "@/components/landing/Hero";
-import QuickINfo from "@/components/landing/QuickINfo";
 import Programs from "@/components/landing/Programs";
 import Testimonials from "@/components/landing/Testimonials";
-import NewsEvents from "@/components/landing/NewsEvents";
 import CTA from "@/components/CTA";
 import Overview from "@/components/Overview";
 
