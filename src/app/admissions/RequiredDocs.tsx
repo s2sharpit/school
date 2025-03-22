@@ -1,3 +1,4 @@
+import { Badge } from "@/components/ui/badge";
 import { CheckCircle } from "lucide-react";
 import Image from "next/image";
 import React from "react";
@@ -36,21 +37,22 @@ export default function RequiredDocs() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative h-[400px] w-full rounded-lg overflow-hidden">
             <Image
-              src="/placeholder.svg?height=800&width=600"
+              src="/img/campus.jpg?height=800&width=600"
               alt="Required Documents"
               fill
               className="object-cover"
             />
           </div>
           <div className="space-y-6">
-            <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary">
+            <Badge size={"lg"} className="bg-primary/10 text-primary mb-4">
               Documentation
-            </div>
+            </Badge>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
               Required Documents
             </h2>
             <p className="text-muted-foreground text-lg mb-6">
-              Please ensure you have the following documents ready when applying for admission:
+              Please ensure you have the following documents ready when applying
+              for admission:
             </p>
             <ul className="space-y-4">
               {documents.map((doc, index) => (

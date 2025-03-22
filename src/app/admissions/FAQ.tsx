@@ -1,4 +1,10 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -40,19 +46,24 @@ export default function FAQ() {
     <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary mb-4">
+          <Badge className="bg-primary/10 text-primary mb-4" size="lg">
             Common Questions
-          </div>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Frequently Asked Questions</h2>
+          </Badge>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
+            Frequently Asked Questions
+          </h2>
           <p className="mx-auto mt-4 max-w-[700px] text-muted-foreground">
-            Find answers to commonly asked questions about our admission process.
+            Find answers to commonly asked questions about our admission
+            process.
           </p>
         </div>
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="w-full">
             {faqData.map((item, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger>{item.question}</AccordionTrigger>
+                <AccordionTrigger className="text-base">
+                  {item.question}
+                </AccordionTrigger>
                 <AccordionContent>{item.answer}</AccordionContent>
               </AccordionItem>
             ))}
@@ -60,7 +71,8 @@ export default function FAQ() {
         </div>
         <div className="text-center mt-8">
           <p className="text-muted-foreground mb-4">
-            Don't see your question here? Feel free to contact our admissions office.
+            Don't see your question here? Feel free to contact our admissions
+            office.
           </p>
           <Button asChild>
             <Link href="/contact">Contact Admissions Office</Link>

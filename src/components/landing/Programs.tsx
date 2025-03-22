@@ -1,6 +1,8 @@
 import { ArrowRight, BookOpen, GraduationCap, Users } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import { Card, CardContent } from "../ui/card";
+import { Badge } from "../ui/badge";
 
 const programs = [
   {
@@ -28,9 +30,9 @@ export default function Programs() {
     <section className="py-16 md:py-24 bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary mb-4">
+          <Badge className="bg-primary/10 text-primary mb-4" size="lg">
             Our Programs
-          </div>
+          </Badge>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
             Comprehensive Educational Programs
           </h2>
@@ -41,20 +43,22 @@ export default function Programs() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {programs.map(({ title, desc, Icon, href }) => (
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
+            <Card key={title} className="">
+            <CardContent className="space-y-4">
+              <div className="bg-primary/10 p-3 rounded-full w-fit">
                 <Icon className="h-6 w-6 text-primary" />
               </div>
-              <h3 className="text-xl font-bold mb-2">{title}</h3>
-              <p className="text-muted-foreground mb-4">{desc}</p>
+              <h3 className="text-xl font-bold">{title}</h3>
+              <p className="text-muted-foreground">{desc}</p>
               <Link
                 href={href}
                 className="text-primary font-medium inline-flex items-center"
               >
                 Learn More <ArrowRight className="ml-1 h-4 w-4" />
               </Link>
-            </div>
-          ))}
+            </CardContent>
+          </Card>
+        ))}
         </div>
       </div>
     </section>

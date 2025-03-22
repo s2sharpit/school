@@ -38,6 +38,7 @@ export default function PublicDisclosurePage() {
 
       <SchoolInfo />
       <DocumentsList
+        className="bg-muted/50"
         title="Mandatory Documents"
         description="Essential documents as required by CBSE and regulatory authorities."
         badgeText="Mandatory Disclosure"

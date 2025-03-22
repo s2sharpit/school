@@ -35,18 +35,11 @@ export default function FacultyPage() {
         imageUrl="/img/school_building.jpg"
       />
 
-      {/* Leadership Section */}
       <Leadership />
-
-      {/* Department Heads Section */}
       <DepartmentHeads />
-      {/* Faculty Grid Section */}
       <FacultyGrid />
-
-      {/* Support Staff Section */}
       <SupportStaff />
 
-      {/* Join Us Section */}
       <CTA
         title="Join Our Team"
         desc="We're always looking for passionate educators and support staff to join our team. If you're interested

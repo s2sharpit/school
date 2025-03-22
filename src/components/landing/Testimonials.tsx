@@ -1,5 +1,8 @@
 import React from "react";
 import Svg from "../Svg";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "../ui/badge";
 
 const testimonials = [
   {
@@ -37,9 +40,9 @@ export default function Testimonials() {
     <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary mb-4">
+          <Badge className="bg-primary/10 text-primary mb-4" size="lg">
             Testimonials
-          </div>
+          </Badge>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
             What Parents & Students Say
           </h2>
@@ -48,32 +51,35 @@ export default function Testimonials() {
             School.
           </p>
         </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {testimonials.map(({ review, name, role, rating }) => (
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="flex items-center gap-2 mb-4">
-                {[...Array(rating)].map((_, index) => (
-                  <Svg.Star
-                    key={index}
-                    className={
-                      index < rating ? "text-yellow-500" : "text-gray-300"
-                    }
-                  />
-                ))}
-              </div>
-              <p className="text-muted-foreground mb-4">"{review}"</p>
-              <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-primary/20 flex items-center justify-center">
-                  <span className="text-primary font-medium">
-                    {getInitials(name)}
-                  </span>
+            <Card className="rounded-md">
+              <CardContent className="space-y-4">
+                <div className="flex items-center gap-2">
+                  {[...Array(5)].map((_, index) => (
+                    <Svg.Star
+                      key={index}
+                      className={
+                        index < rating ? "text-yellow-500" : "text-gray-300"
+                      }
+                    />
+                  ))}
                 </div>
-                <div>
-                  <h4 className="font-medium">{name}</h4>
-                  <p className="text-sm text-muted-foreground">{role}</p>
+                <p className="text-muted-foreground">"{review}"</p>
+                <div className="flex items-center gap-3">
+                  <Avatar className="size-10">
+                    <AvatarFallback className="text-primary font-medium bg-primary/20">
+                      {getInitials(name)}
+                    </AvatarFallback>
+                  </Avatar>
+                  <div>
+                    <h4 className="font-medium">{name}</h4>
+                    <p className="text-sm text-muted-foreground">{role}</p>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>

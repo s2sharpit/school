@@ -1,3 +1,4 @@
+import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import React from "react";
 
@@ -29,9 +30,9 @@ export default function Facilities() {
     <section className="py-16 md:py-24 bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary mb-4">
+          <Badge size={'lg'} className="bg-primary/10 text-primary mb-4">
             Learning Environment
-          </div>
+          </Badge>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
             State-of-the-Art Facilities
           </h2>

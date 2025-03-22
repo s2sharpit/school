@@ -1,3 +1,4 @@
+import { Badge } from '@/components/ui/badge';
 import React from 'react'
 
 const faqData = [
@@ -14,9 +15,9 @@ export default function FAQ() {
     <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary mb-4">
-            Quick Answers
-          </div>
+        <Badge className="bg-primary/10 text-primary mb-4" size="lg">
+        Quick Answers
+          </Badge>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">Frequently Asked Questions</h2>
           <p className="mx-auto mt-4 max-w-[700px] text-muted-foreground">
             Find answers to commonly asked questions about contacting and visiting our school.

@@ -1,3 +1,5 @@
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent } from "@/components/ui/card";
 import { Clock } from "lucide-react";
 import Image from "next/image";
 import React from "react";
@@ -30,14 +32,15 @@ export default function History() {
     <section className="py-16 md:py-24 bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <div className="inline-block rounded-lg bg-primary/10 px-3 py-1 text-sm text-primary mb-4">
+          <Badge className="bg-primary/10 text-primary mb-4" size="lg">
             Our History
-          </div>
+          </Badge>
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
             A Legacy of Excellence Since 1985
           </h2>
           <p className="mx-auto mt-4 max-w-[700px] text-muted-foreground">
-            Tracing our journey from humble beginnings to becoming a premier educational institution.
+            Tracing our journey from humble beginnings to becoming a premier
+            educational institution.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -52,13 +55,13 @@ export default function History() {
           <div className="space-y-6">
             {historyEvents.map((event, index) => (
               <div key={index} className="space-y-4">
-                <div className="flex items-center gap-4">
-                  <div className="bg-primary/10 p-3 rounded-full">
-                    <Clock className="h-6 w-6 text-primary" />
+                  <div className="flex items-center gap-4">
+                    <div className="bg-primary/10 p-3 rounded-full">
+                      <Clock className="h-6 w-6 text-primary" />
+                    </div>
+                    <h3 className="text-xl font-bold">{event.year}</h3>
                   </div>
-                  <h3 className="text-xl font-bold">{event.year}</h3>
-                </div>
-                <p className="text-muted-foreground pl-16">{event.description}</p>
+                  <p className="text-muted-foreground pl-16">{event.description}</p>
               </div>
             ))}
           </div>
