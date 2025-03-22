@@ -1,13 +1,15 @@
-import Image from "next/image"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { ArrowLeft, Calendar, Clock, Share2 } from "lucide-react"
+import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft, Calendar, Clock, Share2 } from "lucide-react";
+
+type tParams = Promise<{ slug: string }>;
 
 // This would typically come from a database or CMS
 const getEventBySlug = (slug: string) => {
   // Mock data for demonstration
   console.log(slug);
-  
+
   return {
     title: "Annual Day Celebration",
     date: "March 15, 2025",
@@ -31,11 +33,16 @@ const getEventBySlug = (slug: string) => {
       <p>We look forward to your presence as we celebrate the accomplishments of our students and the spirit of our school community.</p>
     `,
     category: "event",
-  }
-}
+  };
+};
 
-export default function EventDetailPage({ params }: { params: { slug: string } }) {
-  const event = getEventBySlug(params.slug)
+export default async function EventDetailPage({
+  params,
+}: {
+  params: tParams;
+}) {
+  const { slug } = await params;
+  const event = getEventBySlug(slug);
 
   return (
     <div className="flex flex-col">
@@ -55,7 +62,9 @@ export default function EventDetailPage({ params }: { params: { slug: string } }
             <div className="inline-block rounded-lg bg-primary px-3 py-1 text-sm mb-4">
               {event.category.toUpperCase()}
             </div>
-            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">{event.title}</h1>
+            <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">
+              {event.title}
+            </h1>
             <div className="flex flex-wrap justify-center gap-4 text-white/80">
               <div className="flex items-center gap-2">
                 <Calendar className="h-5 w-5" />
@@ -75,7 +84,10 @@ export default function EventDetailPage({ params }: { params: { slug: string } }
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             <div className="lg:col-span-2">
-              <div className="prose prose-lg max-w-none" dangerouslySetInnerHTML={{ __html: event.content }} />
+              <div
+                className="prose prose-lg max-w-none"
+                dangerouslySetInnerHTML={{ __html: event.content }}
+              />
 
               <div className="mt-8 flex items-center gap-4">
                 <span className="text-muted-foreground">Share:</span>
@@ -107,11 +119,15 @@ export default function EventDetailPage({ params }: { params: { slug: string } }
                     <p>{event.time}</p>
                   </div>
                   <div>
-                    <h4 className="font-medium text-muted-foreground">Location</h4>
+                    <h4 className="font-medium text-muted-foreground">
+                      Location
+                    </h4>
                     <p>{event.location}</p>
                   </div>
                   <div>
-                    <h4 className="font-medium text-muted-foreground">Contact</h4>
+                    <h4 className="font-medium text-muted-foreground">
+                      Contact
+                    </h4>
                     <p>events@bsschool.edu</p>
                     <p>+91 98765 43210</p>
                   </div>
@@ -122,22 +138,37 @@ export default function EventDetailPage({ params }: { params: { slug: string } }
                 <h3 className="text-xl font-bold mb-4">Upcoming Events</h3>
                 <div className="space-y-4">
                   <div>
-                    <Link href="/news-events/science-exhibition" className="font-medium hover:text-primary">
+                    <Link
+                      href="/news-events/science-exhibition"
+                      className="font-medium hover:text-primary"
+                    >
                       Science Exhibition
                     </Link>
-                    <p className="text-sm text-muted-foreground">April 5, 2025</p>
+                    <p className="text-sm text-muted-foreground">
+                      April 5, 2025
+                    </p>
                   </div>
                   <div>
-                    <Link href="/news-events/debate-competition" className="font-medium hover:text-primary">
+                    <Link
+                      href="/news-events/debate-competition"
+                      className="font-medium hover:text-primary"
+                    >
                       Inter-School Debate Competition
                     </Link>
-                    <p className="text-sm text-muted-foreground">April 25, 2025</p>
+                    <p className="text-sm text-muted-foreground">
+                      April 25, 2025
+                    </p>
                   </div>
                   <div>
-                    <Link href="/news-events/sports-day" className="font-medium hover:text-primary">
+                    <Link
+                      href="/news-events/sports-day"
+                      className="font-medium hover:text-primary"
+                    >
                       Annual Sports Day
                     </Link>
-                    <p className="text-sm text-muted-foreground">May 10, 2025</p>
+                    <p className="text-sm text-muted-foreground">
+                      May 10, 2025
+                    </p>
                   </div>
                 </div>
                 <div className="mt-4">
@@ -151,6 +182,5 @@ export default function EventDetailPage({ params }: { params: { slug: string } }
         </div>
       </section>
     </div>
-  )
+  );
 }
-
