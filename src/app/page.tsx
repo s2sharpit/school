@@ -10,7 +10,7 @@ export default function HomePage() {
   return (
     <div className="flex flex-col">
       <Hero />
-      <QuickINfo />
+      {/* <QuickINfo /> */}
 
       <Overview
         title="Nurturing Excellence Since 2001"
@@ -18,9 +18,9 @@ export default function HomePage() {
           "B. S. Sr. Sec. School is committed to providing quality education that nurtures academic excellence, character development, and holistic growth. Our dedicated faculty and state-of-the-art facilities create an environment where students can thrive and reach their full potential.",
         ]}
         badgeText="About Our School"
-        imageUrl="/img/school_building.jpg"
+        imageUrl="/img/schoolPhoto1.jpg"
         highlights={[
-          { value: "500+", label: "Students" },
+          { value: "800+", label: "Students" },
           { value: "30+", label: "Faculty Members" },
           { value: "95%", label: "Success Rate" },
           { value: "20+", label: "Years of Excellence" },
@@ -30,7 +30,7 @@ export default function HomePage() {
 
       <Programs />
       <Testimonials />
-      <NewsEvents />
+      {/* <NewsEvents /> */}
       <CTA
         title="Ready to Join Our School?"
         desc="Take the first step towards providing your child with quality education. Apply for admission or

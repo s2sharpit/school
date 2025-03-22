@@ -1,6 +1,5 @@
 import Hero from "@/components/Hero";
 import SchoolInfo from "./SchoolInfo";
-import AdditionalInfo from "./AdditionalInfo";
 import CTA from "@/components/CTA";
 import DocumentsList from "./DocumentsList";
 
@@ -50,7 +49,8 @@ export default function PublicDisclosurePage() {
         badgeText="Academic Information"
         docs={academicDocs}
       />
-      <AdditionalInfo />
+
+      {/* <AdditionalInfo /> */}
 
       <CTA
         title="Need More Information?"

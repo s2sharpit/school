@@ -36,7 +36,7 @@ export default function CTA({title, desc, secBtn, outlineBtn, imageUrl}: CTAProp
                     asChild
                     size="lg"
                     variant="outline"
-                    className="bg-transparent text-white border-white hover:bg-white/10"
+                    className="bg-transparent text-white hover:text-white border-white hover:bg-white/10"
                   >
                     <Link href={outlineBtn.href}>{outlineBtn.title}</Link>
                   </Button>

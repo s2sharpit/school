@@ -63,7 +63,7 @@ export default function FeeStructure() {
                 </div>
                 <p className="text-muted-foreground flex-grow">{description}</p>
                 {button && (
-                  <Button asChild variant="outline" className="mt-4 w-full">
+                  <Button asChild variant="outline" className="mt-4 w-min shadow">
                     <Link href={button.link}>{button.label}</Link>
                   </Button>
                 )}

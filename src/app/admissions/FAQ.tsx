@@ -12,7 +12,7 @@ const faqData = [
   {
     question: "When does the admission process begin?",
     answer:
-      "The admission process for the new academic year typically begins in January. However, we accept transfer admissions throughout the year, subject to seat availability.",
+      "The admission process for the new academic year typically begins in March. However, we accept transfer admissions throughout the year, subject to seat availability.",
   },
   {
     question: "What is the age criterion for admission?",
@@ -24,11 +24,11 @@ const faqData = [
     answer:
       "Yes, there is an entrance assessment for all classes except Nursery. The assessment is designed to evaluate the student's readiness for the grade level they are applying to.",
   },
-  {
-    question: "Are there any scholarships available?",
-    answer:
-      "Yes, we offer merit-based scholarships to deserving students. Additionally, we have provisions for financial aid for students from economically disadvantaged backgrounds.",
-  },
+  // {
+  //   question: "Are there any scholarships available?",
+  //   answer:
+  //     "Yes, we offer merit-based scholarships to deserving students. Additionally, we have provisions for financial aid for students from economically disadvantaged backgrounds.",
+  // },
   {
     question: "What is the student-teacher ratio?",
     answer:

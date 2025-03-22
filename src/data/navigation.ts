@@ -5,7 +5,7 @@ const navigation = [
     { name: "Admissions", href: "/admissions" },
     { name: "Faculty", href: "/faculty" },
     { name: "Gallery", href: "/gallery" },
-    { name: "News & Events", href: "/news-events" },
+    // { name: "News & Events", href: "/news-events" },
     { name: "Public Disclosure", href: "/public-disclosure" },
     { name: "Contact", href: "/contact" },
   ]

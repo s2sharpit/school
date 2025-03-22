@@ -1,7 +1,8 @@
 import Image from 'next/image'
 import React from 'react'
-import { Button } from '../ui/button'
+import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+import { Badge } from '@/components/ui/badge'
 
 export default function Hero() {
   return (
@@ -18,9 +19,9 @@ export default function Hero() {
     </div>
     <div className="container relative z-10 mx-auto px-4 text-center text-white">
       <div className="mx-auto max-w-3xl space-y-6">
-        <div className="inline-block rounded-full bg-white/10 backdrop-blur-sm px-4 py-1.5 text-sm font-medium mb-2">
+        <Badge size='lg' className="rounded-full bg-white/10 backdrop-blur-sm px-4 py-1.5 font-medium mb-2">
           Excellence in Education Since 2001
-        </div>
+        </Badge>
         <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl drop-shadow-sm">
           B. S. Sr. Sec. School
         </h1>
@@ -37,7 +38,7 @@ export default function Hero() {
             asChild
             variant="outline"
             size="lg"
-            className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white border-white/20"
+            className="bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white hover:text-white border-white/20"
           >
             <Link href="/about">Learn More</Link>
           </Button>
