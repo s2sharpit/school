@@ -6,6 +6,7 @@ import Image from "next/image";
 
 interface FeatureCardProps {
   icon?: LucideIcon;
+  iconNum?: string;
   title: string;
   description: string;
   imageSrc?: string;
@@ -17,13 +18,14 @@ interface FeatureCardProps {
 
 export function FeatureCard({
   icon: Icon,
+  iconNum,
   title,
   description,
   imageSrc,
   link,
 }: FeatureCardProps) {
   return (
-    <Card className={`${imageSrc && " pt-0 overflow-hidden"}`}>
+    <Card className={`${imageSrc && "pt-0"} overflow-hidden`}>
       {imageSrc && (
         <div className="relative h-48 w-full">
           <Image
@@ -36,15 +38,16 @@ export function FeatureCard({
       )}
 
       <CardContent>
-        {Icon && <div className="bg-primary/10 p-3 rounded-full w-fit mb-4 text-center">
-          <Icon className="h-6 w-6 text-primary" />
-        </div>}
+        {(Icon || iconNum) && <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
+          {Icon && <Icon className="h-6 w-6 text-primary" />}
+          {iconNum && <span className="text-primary font-bold text-lg">{iconNum}</span>}
+          </div>}
         <h3 className="text-xl font-bold mb-2">{title}</h3>
-        <p className="text-muted-foreground mb-4">{description}</p>
+        <p className="text-muted-foreground">{description}</p>
         {link && (
           <Link
             href={link.href}
-            className="text-primary font-medium inline-flex items-center"
+            className="text-primary font-medium inline-flex items-center mt-4"
           >
             {link.text} <ArrowRight className="ml-1 h-4 w-4" />
           </Link>

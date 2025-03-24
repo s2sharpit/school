@@ -4,6 +4,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import React from "react";
 import { ArrowRight } from "lucide-react";
+import { FeatureCard } from "@/components/feature-card";
 
 const steps = [
   {
@@ -49,15 +50,12 @@ export default function ApplicationProcess() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {steps.map(({ step, title, description }) => (
-            <Card key={step}>
-              <CardContent>
-                <div className="bg-primary/10 p-3 rounded-full w-fit mb-4 text-center">
-                  <span className="text-primary font-bold text-lg">{step}</span>
-                </div>
-              <h3 className="text-xl font-bold mb-2">{title}</h3>
-              <p className="text-muted-foreground">{description}</p>
-              </CardContent>
-            </Card>
+            <FeatureCard
+              key={step}
+              title={title}
+              description={description}
+              iconNum={step}
+            />
           ))}
         </div>
         <div className="mt-12 text-center flex flex-col sm:flex-row justify-center gap-8 md:gap-12 pt-4">
@@ -69,7 +67,6 @@ export default function ApplicationProcess() {
               View Fee Structure <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
-
         </div>
       </div>
     </section>
