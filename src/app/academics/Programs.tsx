@@ -4,33 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { Badge } from "@/components/ui/badge";
+import programsData from "@/data/programsData";
+import { FeatureCard } from "@/components/feature-card";
 
-const programs = [
-  {
-    title: "Primary Education",
-    description:
-      "Our primary education program (Classes I-V) focuses on building a strong foundation in core subjects while nurturing creativity and curiosity. We employ activity-based learning to make education enjoyable and effective.",
-    imageSrc: "/img/campus.jpg?height=400&width=600",
-    icon: BookOpen,
-    link: "/academics/primary",
-  },
-  {
-    title: "Secondary Education",
-    description:
-      "Our secondary program (Classes VI-X) offers a comprehensive curriculum that prepares students for board examinations while developing critical thinking and analytical skills through practical applications.",
-    imageSrc: "/img/campus.jpg?height=400&width=600",
-    icon: Users,
-    link: "/academics/secondary",
-  },
-  {
-    title: "Senior Secondary",
-    description:
-      "Our senior secondary program (Classes XI-XII) offers specialized streams in Science, Commerce, and Arts with expert faculty, well-equipped laboratories, and career guidance to prepare students for higher education.",
-    imageSrc: "/img/campus.jpg?height=400&width=600",
-    icon: GraduationCap,
-    link: "/academics/senior-secondary",
-  },
-];
 
 export default function Programs() {
   return (
@@ -48,22 +24,13 @@ export default function Programs() {
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {programs.map(({ title, description, imageSrc, icon: Icon, link }, index) => (
-            <Card key={index} className="overflow-hidden pt-0">
-              <div className="relative h-48 w-full">
-                <Image src={imageSrc} alt={title} fill className="object-cover" />
-              </div>
-              <CardContent>
-                <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
-                  <Icon className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">{title}</h3>
-                <p className="text-muted-foreground mb-4">{description}</p>
-                <Link href={link} className="text-primary font-medium inline-flex items-center">
-                  Learn More <ArrowRight className="ml-1 h-4 w-4" />
-                </Link>
-              </CardContent>
-            </Card>
+        {programsData.map((value, index) => (
+            <FeatureCard
+              key={index}
+              description={value.landingDescription}
+              link={{ text: "Learn More", href: value.href }}
+              {...value}
+            />
           ))}
         </div>
       </div>

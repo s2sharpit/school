@@ -10,8 +10,8 @@ interface FeatureCardProps {
   description: string;
   imageSrc?: string;
   link?: {
-    href: string;
     text: string;
+    href: string;
   };
 }
 
@@ -36,7 +36,7 @@ export function FeatureCard({
       )}
 
       <CardContent>
-        {Icon && <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
+        {Icon && <div className="bg-primary/10 p-3 rounded-full w-fit mb-4 text-center">
           <Icon className="h-6 w-6 text-primary" />
         </div>}
         <h3 className="text-xl font-bold mb-2">{title}</h3>

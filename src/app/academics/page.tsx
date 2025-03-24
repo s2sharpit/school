@@ -1,5 +1,4 @@
 import Programs from "./Programs";
-import ExtraCurricular from "./ExtraCurricular";
 import Facilities from "./Facilities";
 import { CTASection, HeroSection, OverviewSection } from "@/components";
 

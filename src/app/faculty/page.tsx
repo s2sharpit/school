@@ -1,5 +1,3 @@
-import Leadership from "./Leadership";
-import DepartmentHeads from "./DepartmentHeads";
 import FacultyGrid from "./FacultyGrid";
 import SupportStaff from "./SupportStaff";
 import { CTASection, HeroSection, OverviewSection } from "@/components";

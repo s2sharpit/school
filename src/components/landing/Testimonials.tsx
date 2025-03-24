@@ -2,7 +2,6 @@ import React from "react";
 import Svg from "../Svg";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "../ui/badge";
 import { SectionHeader } from "../ui/section-header";
 
 const testimonials = [
