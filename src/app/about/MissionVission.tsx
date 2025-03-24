@@ -1,4 +1,5 @@
 import { Badge } from "@/components/ui/badge";
+import { SectionHeader } from "@/components/ui/section-header";
 import Image from "next/image";
 import React from "react";
 
@@ -8,12 +9,12 @@ export default function MissionVission() {
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <Badge className="bg-primary/10 text-primary" size="lg">
-              Our Mission
-            </Badge>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-              Empowering Students for a Brighter Future
-            </h2>
+            <SectionHeader
+              badge="Our Mission"
+              title="Empowering Students for a Brighter Future"
+              centered={false}
+              className="mb-6"
+            />
             <p className="text-muted-foreground text-lg">
               At B. S. Sr. Sec. School, our mission is to provide a nurturing
               and stimulating environment where students can develop their
@@ -21,7 +22,11 @@ export default function MissionVission() {
               their fullest potential. We aim to instill a love for learning,
               foster critical thinking, and cultivate responsible citizenship.
             </p>
-            <Badge className="bg-primary/10 text-primary mt-6" size="lg">
+            <Badge
+              variant="outline"
+              size='lg'
+              className="bg-primary/10 text-primary mt-6 border-primary/20"
+            >
               Our Vision
             </Badge>
             <p className="text-muted-foreground text-lg">
@@ -30,7 +35,7 @@ export default function MissionVission() {
               and compassionate global citizens who contribute positively to
               society and excel in their chosen fields.
             </p>
-            <Badge className="bg-primary/10 text-primary" size="lg">
+            {/* <Badge className="bg-primary/10 text-primary" size="lg">
               School Information
             </Badge>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
@@ -52,7 +57,7 @@ export default function MissionVission() {
                   Central Board of Secondary Education (CBSE)
                 </span>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="relative h-[400px] w-full rounded-lg overflow-hidden">
             <Image

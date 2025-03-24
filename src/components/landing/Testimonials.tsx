@@ -3,6 +3,7 @@ import Svg from "../Svg";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "../ui/badge";
+import { SectionHeader } from "../ui/section-header";
 
 const testimonials = [
   {
@@ -37,19 +38,14 @@ export default function Testimonials() {
   }
 
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-24 bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <Badge className="bg-primary/10 text-primary mb-4" size="lg">
-            Testimonials
-          </Badge>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-            What Parents & Students Say
-          </h2>
-          <p className="mx-auto mt-4 max-w-[700px] text-muted-foreground">
-            Hear from our community about their experiences at B. S. Sr. Sec.
-            School.
-          </p>
+        <SectionHeader
+          badge="Testimonials"
+          title="What Parents & Students Say"
+          description="Hear from our community about their experiences at B. S. Sr. Sec. School."
+        />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

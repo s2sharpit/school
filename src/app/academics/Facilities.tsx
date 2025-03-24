@@ -1,65 +1,54 @@
-import { Badge } from "@/components/ui/badge";
-import Image from "next/image";
-import React from "react";
+import { FeatureCard } from "@/components/feature-card";
+import { SectionHeader } from "@/components/ui/section-header";
 
 const facilities = [
   {
     title: "Well-Equipped Classrooms",
-    description:
-      "Our spacious classrooms are equipped with modern teaching aids including smart boards and audio-visual equipment to facilitate interactive learning.",
+    description: "Smart boards and modern teaching aids",
+    imageSrc: "/placeholder.svg?height=400&width=600",
   },
   {
     title: "Science Laboratories",
-    description:
-      "We have separate well-equipped laboratories for Physics, Chemistry, and Biology with modern apparatus and safety measures for practical learning.",
+    description: "Separate labs for Physics, Chemistry, and Biology",
+    imageSrc: "/placeholder.svg?height=400&width=600",
   },
   {
     title: "Computer Lab",
-    description:
-      "Our computer lab features the latest hardware and software, providing students with hands-on experience in information technology.",
+    description: "Latest hardware and software for digital literacy",
+    imageSrc: "/placeholder.svg?height=400&width=600",
   },
   {
     title: "Library",
-    description:
-      "Our extensive library houses a rich collection of books, periodicals, and digital resources to foster a love for reading and research.",
+    description: "Extensive collection of books and digital resources",
+    imageSrc: "/placeholder.svg?height=400&width=600",
   },
-];
+  {
+    title: "Sports Facilities",
+    description: "Playground, indoor games, and sports equipment",
+    imageSrc: "/placeholder.svg?height=400&width=600",
+  },
+  {
+    title: "Auditorium",
+    description: "For school events, assemblies, and performances",
+    imageSrc: "/placeholder.svg?height=400&width=600",
+  },
+]
 
 export default function Facilities() {
   return (
-    <section className="py-16 md:py-24 bg-muted/50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <Badge size={'lg'} className="bg-primary/10 text-primary mb-4">
-            Learning Environment
-          </Badge>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-            State-of-the-Art Facilities
-          </h2>
-          <p className="mx-auto mt-4 max-w-[700px] text-muted-foreground">
-            Our campus is equipped with modern facilities to enhance the
-            learning experience.
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="relative h-[400px] w-full rounded-lg overflow-hidden">
-            <Image
-              src="/img/campus.jpg?height=800&width=1200"
-              alt="School Facilities"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="space-y-6">
-            {facilities.map(({ title, description }, index) => (
-              <div key={index} className="space-y-4">
-                <h3 className="text-xl font-bold">{title}</h3>
-                <p className="text-muted-foreground">{description}</p>
-              </div>
+    <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4">
+          <SectionHeader
+            badge="Learning Environment"
+            title="Campus Facilities"
+            description="Our campus is equipped with modern facilities to enhance the learning experience."
+          />
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {facilities.map((value, index) => (
+              <FeatureCard key={index} {...value} />
             ))}
           </div>
         </div>
-      </div>
     </section>
   );
 }

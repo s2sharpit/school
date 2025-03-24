@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button'
 import Link from 'next/link'
 import { Badge } from '@/components/ui/badge'
 
-export default function Hero() {
+export function LandingHeroSection() {
   return (
     <section className="relative w-full py-16 md:py-24 lg:py-32 xl:py48 overflow-hidden">
     <div className="absolute inset-0 z-0">

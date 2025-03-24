@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function AdditionalInfo() {
+export function InfrastructureSection() {
   const infrastructureData = [
     { label: 'Total Campus Area', value: '2.5 Acres' },
     { label: 'Built-up Area', value: '15,000 sq. ft.' },

@@ -12,7 +12,7 @@ const InfoItem: React.FC<InfoItemProps> = ({ label, value }) => (
   </div>
 );
 
-export default function SchoolInfo() {
+export function SchoolInfoSection() {
   return (
     <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">

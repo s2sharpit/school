@@ -1,29 +1,33 @@
-import Hero from "@/components/Hero";
 import MapForm from "./MapForm";
 import FAQ from "./FAQ";
-import CTA from "@/components/CTA";
+import { CTASection, HeroSection } from "@/components";
 
 export default function ContactPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <Hero
+      <HeroSection
         title="Contact Us"
-        desc="We're here to help. Reach out to us with any questions or inquiries."
-        imgSrc="/img/school_building.jpg"
+        description="We're here to help. Reach out to us with any questions or inquiries."
+        badge="Get In Touch"
       />
 
       {/* <ContactInfo /> */}
       <MapForm />
       <FAQ />
 
-      <CTA
+      <CTASection
         title="Schedule a Visit"
-        desc="Experience our campus firsthand. Schedule a visit to tour our facilities, meet our faculty, and learn
+        description="Experience our campus firsthand. Schedule a visit to tour our facilities, meet our faculty, and learn
                   more about our programs."
-        secBtn={{ title: "Apply for Admission", href: "/admissions" }}
-        outlineBtn={{ title: "Call Us Now", href: "tel:+918901437877" }}
-        imageUrl="/img/campus.jpg"
+        primaryAction={{
+          text: "Apply for Admission",
+          href: "/admissions",
+        }}
+        secondaryAction={{
+          text: "Call Us Now",
+          href: "tel:+918901437877",
+        }}
       />
     </div>
   );

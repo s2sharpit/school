@@ -1,32 +1,34 @@
+import { FeatureCard } from "@/components/feature-card";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
+import { SectionHeader } from "@/components/ui/section-header";
 import { Award, BookOpen, Users } from "lucide-react";
 import React from "react";
 
 const coreValues = [
   {
+    icon: Award,
     title: "Excellence",
     description:
       "We strive for excellence in all aspects of education, encouraging students to aim high and achieve their best.",
-    Icon: Award,
   },
   {
+    icon: Users,
     title: "Respect",
     description:
       "We foster a culture of respect for self, others, and the environment, promoting harmony and understanding.",
-    Icon: Users,
   },
   {
+    icon: BookOpen,
     title: "Integrity",
     description:
       "We uphold the highest standards of honesty, ethics, and transparency in all our actions and decisions.",
-    Icon: BookOpen,
   },
   {
+    icon: Award,
     title: "Innovation",
     description:
       "We embrace creativity and innovation, encouraging students to think critically and find unique solutions.",
-    Icon: Award,
   },
 ];
 
@@ -34,30 +36,15 @@ export default function CoreValues() {
   return (
     <section className="py-16 md:py-24 bg-muted/50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <Badge className="bg-primary/10 text-primary mb-4" size="lg">
-            Our Core Values
-          </Badge>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-            Principles That Guide Us
-          </h2>
-          <p className="mx-auto mt-4 max-w-[700px] text-muted-foreground">
-            These values form the foundation of our educational philosophy and
-            guide our approach to teaching and learning.
-          </p>
-        </div>
+      <SectionHeader
+            badge="Our Core Values"
+            title="Principles That Guide Us"
+            description="These values form the foundation of our educational philosophy and guide our approach to teaching and learning."
+          />
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {coreValues.map(({ title, description, Icon }, index) => (
-            <Card key={index}>
-              <CardContent>
-                <div className="bg-primary/10 p-3 rounded-full w-fit mb-4">
-                  <Icon className="h-6 w-6 text-primary" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">{title}</h3>
-                <p className="text-muted-foreground">{description}</p>
-              </CardContent>
-            </Card>
-          ))}
+        {coreValues.map((value, index) => (
+              <FeatureCard key={index} icon={value.icon} title={value.title} description={value.description} />
+            ))}
         </div>
       </div>
     </section>

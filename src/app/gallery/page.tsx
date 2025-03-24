@@ -1,4 +1,4 @@
-import Hero from "@/components/Hero";
+import { HeroSection } from "@/components";
 import Gallery from "./Gallery";
 
 // Gallery categories and images
@@ -7,10 +7,10 @@ export default function GalleryPage() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <Hero
+      <HeroSection
         title="Photo Gallery"
-        desc="Explore moments and memories from B. S. Sr. Sec. School through our collection of photographs."
-        imgSrc="/img/school_building.jpg"
+        description="Explore moments and memories from B. S. Sr. Sec. School through our collection of photographs."
+        badge="Visual Journey"
       />
 
       <Gallery />

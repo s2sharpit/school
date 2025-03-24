@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import Link from "next/link";
 import React from "react";
+import { ArrowRight } from "lucide-react";
 
 const steps = [
   {
@@ -59,10 +60,16 @@ export default function ApplicationProcess() {
             </Card>
           ))}
         </div>
-        <div className="mt-12 text-center">
+        <div className="mt-12 text-center flex flex-col sm:flex-row justify-center gap-8 md:gap-12 pt-4">
           <Button asChild size="lg">
             <Link href="/contact">Contact Admissions Office</Link>
           </Button>
+          <Button asChild size="lg" variant="outline">
+            <Link href="/public-disclosure/fee-structure.pdf">
+              View Fee Structure <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+
         </div>
       </div>
     </section>

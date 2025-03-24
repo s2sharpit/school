@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { SectionHeader } from "@/components/ui/section-header";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -34,30 +35,31 @@ export default function Leadership() {
   return (
     <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <Badge className="bg-primary/10 text-primary mb-4" size="lg">
-            Our Leadership
-          </Badge>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-            Meet Our Leadership Team
-          </h2>
-          <p className="mx-auto mt-4 max-w-[700px] text-muted-foreground">
-            Dedicated professionals guiding our institution towards excellence.
-          </p>
-        </div>
+        <SectionHeader
+          badge="Our Leadership"
+          title="Meet Our Leadership Team"
+          description="Dedicated professionals guiding our institution towards excellence."
+        />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {leadershipTeam.map(({ name, role, description, imageSrc }, index) => (
-            <Card key={index} className="overflow-hidden pt-0">
-              <div className="relative h-64 w-full">
-                <Image src={imageSrc} alt={role} fill className="object-cover" />
-              </div>
-              <CardContent>
-                <h3 className="text-xl font-bold mb-1">{name}</h3>
-                <p className="text-primary font-medium mb-3">{role}</p>
-                <p className="text-muted-foreground mb-4">{description}</p>
-              </CardContent>
-            </Card>
-          ))}
+          {leadershipTeam.map(
+            ({ name, role, description, imageSrc }, index) => (
+              <Card key={index} className="overflow-hidden pt-0">
+                <div className="relative h-64 w-full">
+                  <Image
+                    src={imageSrc}
+                    alt={role}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <CardContent>
+                  <h3 className="text-xl font-bold mb-1">{name}</h3>
+                  <p className="text-primary font-medium mb-3">{role}</p>
+                  <p className="text-muted-foreground mb-4">{description}</p>
+                </CardContent>
+              </Card>
+            )
+          )}
         </div>
         <div className="text-center mt-8">
           <Button asChild variant="outline">

@@ -1,8 +1,9 @@
 import { ArrowRight, BookOpen, GraduationCap, Users } from "lucide-react";
 import Link from "next/link";
-import React from "react";
 import { Card, CardContent } from "../ui/card";
 import { Badge } from "../ui/badge";
+import { SectionHeader } from "../ui/section-header";
+import { Button } from "../ui/button";
 
 const programs = [
   {
@@ -28,23 +29,16 @@ const programs = [
 export default function Programs() {
   return (
     <section className="py-16 md:py-24 bg-muted/50">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <Badge className="bg-primary/10 text-primary mb-4" size="lg">
-            Our Programs
-          </Badge>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-            Comprehensive Educational Programs
-          </h2>
-          <p className="mx-auto mt-4 max-w-[700px] text-muted-foreground">
-            We offer a wide range of programs designed to cater to diverse
-            learning needs and interests.
-          </p>
-        </div>
+    <div className="container mx-auto px-4">
+      <SectionHeader
+        badge="Academic Excellence"
+        title="Comprehensive Educational Programs"
+        description="We offer a wide range of programs designed to cater to diverse learning needs and interests."
+      />
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {programs.map(({ title, desc, Icon, href }) => (
             <Card key={title} className="">
-            <CardContent className="space-y-4">
+            <CardContent className="space-y-3">
               <div className="bg-primary/10 p-3 rounded-full w-fit">
                 <Icon className="h-6 w-6 text-primary" />
               </div>
@@ -61,6 +55,6 @@ export default function Programs() {
         ))}
         </div>
       </div>
-    </section>
-  );
+  </section>
+);
 }
