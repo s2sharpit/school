@@ -1,8 +1,3 @@
-import { ArrowRight, BookOpen, GraduationCap, Users } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
 import { Badge } from "@/components/ui/badge";
 import programsData from "@/data/programsData";
 import { FeatureCard } from "@/components/feature-card";
