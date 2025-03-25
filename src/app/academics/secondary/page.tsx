@@ -1,6 +1,5 @@
 import { CTASection, HeroSection, OverviewSection } from "@/components";
 import Teaching from "./teaching";
-import Board from "./board";
 import { CurriculumSection } from "../curriculum-section";
 import curriculumSections from "./curriculumSections.json"
 import boardFeatures from "./boardFeatures.json"
@@ -44,8 +43,6 @@ export default function SecondaryEducationPage() {
         features={boardFeatures}
       />
 
-      <Board />
-
       <CTASection
         title="Join Our Secondary Education Program"
         description="Provide your child with a strong academic foundation and holistic development. Apply for admission to our secondary section today."
@@ -57,7 +54,6 @@ export default function SecondaryEducationPage() {
           text: "Contact Us",
           href: "/contact",
         }}
-        imageSrc="/placeholder.svg?height=600&width=800"
       />
     </div>
   );

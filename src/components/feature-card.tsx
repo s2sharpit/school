@@ -8,7 +8,7 @@ interface FeatureCardProps {
   icon?: LucideIcon;
   iconNum?: string;
   title: string;
-  description: string;
+  description?: string;
   imageSrc?: string;
   link?: {
     text: string;

@@ -4,34 +4,44 @@ import { SectionHeader } from "@/components/ui/section-header";
 const facilities = [
   {
     title: "Well-Equipped Classrooms",
-    description: "Smart boards and modern teaching aids",
+    description: "Spacious, well-lit classrooms with essential learning resources.",
     imageSrc: "/placeholder.svg?height=400&width=600",
   },
   {
-    title: "Science Laboratories",
-    description: "Separate labs for Physics, Chemistry, and Biology",
-    imageSrc: "/placeholder.svg?height=400&width=600",
+    title: "Physics Laboratory",
+    description: "Equipped for hands-on experiments in mechanics, electricity, and optics.",
+    imageSrc: "/facilities/physics-lab.jpg",
   },
   {
-    title: "Computer Lab",
-    description: "Latest hardware and software for digital literacy",
-    imageSrc: "/placeholder.svg?height=400&width=600",
+    title: "Chemistry Laboratory",
+    description: "Safe, well-ventilated lab for chemical analysis and experimentation.",
+    imageSrc: "/facilities/chemistry-lab.jpg",
   },
+  {
+    title: "Biology Laboratory",
+    description: "Exploring life sciences through microscopy, dissections, and practical studies.",
+    imageSrc: "/facilities/biology-lab.jpg",
+  },
+  // {
+  //   title: "Computer Lab",
+  //   description: "Latest hardware and software for digital literacy",
+  //   imageSrc: "/placeholder.svg?height=400&width=600",
+  // },
   {
     title: "Library",
-    description: "Extensive collection of books and digital resources",
+    description: "Diverse collection of books for academic and recreational reading.",
     imageSrc: "/placeholder.svg?height=400&width=600",
   },
   {
     title: "Sports Facilities",
-    description: "Playground, indoor games, and sports equipment",
+    description: "Expansive playground for athletics and team sports activities.",
     imageSrc: "/placeholder.svg?height=400&width=600",
   },
-  {
-    title: "Auditorium",
-    description: "For school events, assemblies, and performances",
-    imageSrc: "/placeholder.svg?height=400&width=600",
-  },
+  // {
+  //   title: "Auditorium",
+  //   description: "For school events, assemblies, and performances",
+  //   imageSrc: "/placeholder.svg?height=400&width=600",
+  // },
 ]
 
 export default function Facilities() {

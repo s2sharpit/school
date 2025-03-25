@@ -39,7 +39,6 @@ export default function ClubsPage() {
           text: "Contact Us",
           href: "/contact",
         }}
-        imageSrc="/placeholder.svg?height=600&width=800"
       />
     </div>
   );

@@ -8,10 +8,10 @@ import React from "react";
 
 const leadershipTeam = [
   {
-    name: "Dr. Rajiv Sharma",
+    name: "Smt. Shashi Bala",
     role: "Principal",
     description:
-      "With over 25 years of experience in education, Dr. Sharma leads our institution with vision and dedication.",
+      "With over 20 years of experience in education, Smt. Shashi Bala leads our institution with vision and dedication.",
     imageSrc: "/img/principal.jpg?height=400&width=300",
   },
   {

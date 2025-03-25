@@ -1,6 +1,7 @@
-import MapForm from "./MapForm";
 import FAQ from "./FAQ";
 import { CTASection, HeroSection } from "@/components";
+import MapSection from "./map-section";
+import ContactInfo from "./ContactInfo";
 
 export default function ContactPage() {
   return (
@@ -12,8 +13,8 @@ export default function ContactPage() {
         badge="Get In Touch"
       />
 
-      {/* <ContactInfo /> */}
-      <MapForm />
+      <ContactInfo />
+      <MapSection />
       <FAQ />
 
       <CTASection
