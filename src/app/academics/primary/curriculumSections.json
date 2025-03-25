@@ -1,0 +1,44 @@
+[
+  {
+    "title": "Core subjects",
+    "subjects": [
+      {
+        "name": "English",
+        "description": "Reading, writing, speaking, and listening skills"
+      },
+      {
+        "name": "Hindi",
+        "description": "Developing proficiency in the national language"
+      },
+      {
+        "name": "Mathematics",
+        "description": "Building numerical skills and logical reasoning"
+      },
+      {
+        "name": "Environmental Studies",
+        "description": "Understanding the world around us"
+      }
+    ]
+  },
+  {
+    "title": "Co-Scholastic Areas",
+    "subjects": [
+      {
+        "name": "Art & Craft",
+        "description": "Developing creativity and fine motor skills"
+      },
+      {
+        "name": "Music & Dance",
+        "description": "Exploring rhythm, melody, and movement"
+      },
+      {
+        "name": "Physical Education",
+        "description": "Promoting physical fitness and team spirit"
+      },
+      {
+        "name": "Value Education",
+        "description": "Instilling moral values and ethics"
+      }
+    ]
+  }
+]

@@ -23,7 +23,8 @@ export function FeatureCard({
   description,
   imageSrc,
   link,
-}: FeatureCardProps) {
+  children
+}: FeatureCardProps & React.ComponentProps<"div">) {
   return (
     <Card className={`${imageSrc && "pt-0"} overflow-hidden`}>
       {imageSrc && (
@@ -52,6 +53,7 @@ export function FeatureCard({
             {link.text} <ArrowRight className="ml-1 h-4 w-4" />
           </Link>
         )}
+        {children}
       </CardContent>
     </Card>
   );

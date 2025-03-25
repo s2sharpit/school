@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Core Subjects",
+    "subjects": [
+      {
+        "name": "English",
+        "description": "Advanced language skills, literature appreciation"
+      },
+      {
+        "name": "Hindi",
+        "description": "Comprehensive language and literature studies"
+      },
+      {
+        "name": "Mathematics",
+        "description": "Advanced concepts, problem-solving skills"
+      },
+      {
+        "name": "Science",
+        "description": "Physics, Chemistry, Biology with practical applications"
+      },
+      {
+        "name": "Social Science",
+        "description": "History, Geography, Civics, Economics"
+      }
+    ]
+  },
+  {
+    "title": "Additional Subjects",
+    "subjects": [
+      {
+        "name": "Computer Science",
+        "description": "Digital literacy, programming fundamentals"
+      },
+      {
+        "name": "Third Language",
+        "description": "Sanskrit/French (Classes VI-VIII)"
+      },
+      {
+        "name": "Art Education",
+        "description": "Visual and performing arts"
+      },
+      {
+        "name": "Health & Physical Education",
+        "description": "Sports, fitness, health awareness"
+      },
+      {
+        "name": "Work Education",
+        "description": "Practical skills and vocational awareness"
+      }
+    ]
+  }
+]

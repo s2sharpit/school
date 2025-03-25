@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import { SectionHeader } from "@/components/ui/section-header";
 import { CheckCircle } from "lucide-react";
 import Image from "next/image";
 import React from "react";
@@ -34,6 +34,13 @@ export default function RequiredDocs() {
   return (
     <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
+        <SectionHeader
+          badge="Documentation"
+          title="Required Documents"
+          description="Please ensure you have the following documents ready when applying
+              for admission."
+        />
+
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative h-[400px] w-full rounded-lg overflow-hidden">
             <Image
@@ -44,16 +51,6 @@ export default function RequiredDocs() {
             />
           </div>
           <div className="space-y-6">
-            <Badge size={"lg"} className="bg-primary/10 text-primary mb-4">
-              Documentation
-            </Badge>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-              Required Documents
-            </h2>
-            <p className="text-muted-foreground text-lg mb-6">
-              Please ensure you have the following documents ready when applying
-              for admission:
-            </p>
             <ul className="space-y-4">
               {documents.map((doc, index) => (
                 <li key={index} className="flex items-start gap-3">
