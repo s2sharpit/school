@@ -21,16 +21,16 @@ export default function SeniorSecondaryPage() {
           "With expert faculty, well-equipped laboratories, and comprehensive career guidance, we ensure that our students are well-prepared for competitive examinations and university admissions. Our approach balances academic excellence with holistic development, helping students make informed choices about their future.",
         ]}
         badge="Program Overview"
-        imageSrc="/img/school_building.jpg"
+        imageSrc="/programs/senior-secondary.jpg"
       />
 
       <Stream />
 
       <ImageTextFeatureSection
         badge="Board Examinations"
-        title="Preparation for CBSE Class X Board Exams"
+        title="Preparation for CBSE Class XII Board Exams"
         description="Our approach ensures students are well-prepared for their first board exams."
-        imageSrc="/placeholder.svg?height=800&width=600"
+        imageSrc="/img/campus.jpg"
         features={careerFeatures}
       />
       

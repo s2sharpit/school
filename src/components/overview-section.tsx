@@ -28,6 +28,8 @@ export function OverviewSection({
   primaryAction,
   highlights = [],
 }: OverviewSectionProps) {
+  // const isPdf = primaryAction?.href.split('?')[0].endsWith('.pdf');
+
   return (
     <section className="py-16 md:py-24">
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">

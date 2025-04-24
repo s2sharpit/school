@@ -23,7 +23,7 @@ export default function SecondaryEducationPage() {
           "During these formative years, we focus on deepening students' understanding of core subjects, introducing specialized disciplines, and helping them discover their strengths and interests. Our approach balances academic rigor with opportunities for personal growth and exploration.",
         ]}
         badge="Program Overview"
-        imageSrc="/img/school_building.jpg"
+        imageSrc="/programs/secondary.jpg"
       />
 
       <CurriculumSection
@@ -39,7 +39,7 @@ export default function SecondaryEducationPage() {
         badge="Board Examinations"
         title="Preparation for CBSE Class X Board Exams"
         description="Our approach ensures students are well-prepared for their first board exams."
-        imageSrc="/placeholder.svg?height=800&width=600"
+        imageSrc="/img/campus.jpg"
         features={boardFeatures}
       />
 

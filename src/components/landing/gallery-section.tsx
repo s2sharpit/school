@@ -6,9 +6,9 @@ import { SectionHeader } from "@/components/ui/section-header"
 
 // Sample gallery images
 const galleryImages = [
-  { src: "/placeholder.svg?height=400&width=600", alt: "Classroom" },
-  { src: "/placeholder.svg?height=400&width=600", alt: "Science Lab" },
-  { src: "/placeholder.svg?height=400&width=600", alt: "Annual Day" },
+  { src: "/gallery/1.jpg", alt: "Classroom" },
+  { src: "/gallery/2.jpg", alt: "Science Lab" },
+  { src: "/gallery/3.jpg", alt: "Annual Day" },
 ]
 
 export function GallerySection() {

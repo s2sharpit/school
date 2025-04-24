@@ -5,36 +5,46 @@ import React from "react";
 
 const departmentHeads = [
   {
-    name: "Dr. Priya Mehta",
-    title: "Head of Science",
-    description:
-      "Ph.D. in Physics with 18 years of teaching experience. Specializes in making complex scientific concepts accessible and engaging.",
+    name: "Mrs Khuswant Kaur",
+    title: "HOD English",
     image: "/img/principal.jpg?height=300&width=300",
-    alt: "Science Department Head",
+    alt: "English Department Head",
   },
   {
-    name: "Mr. Arun Kumar",
-    title: "Head of Mathematics",
-    description:
-      "M.Sc. in Mathematics with 15 years of teaching experience. Known for his innovative approach to teaching mathematical concepts.",
+    name: "Ms Shivani",
+    title: "HOD Mathematics",
     image: "/img/principal.jpg?height=300&width=300",
     alt: "Mathematics Department Head",
   },
   {
-    name: "Mrs. Sunita Patel",
-    title: "Head of Languages",
-    description:
-      "M.A. in English Literature with 20 years of teaching experience. Passionate about fostering effective communication skills.",
+    name: "Ms Monika",
+    title: "HOD Science",
     image: "/img/principal.jpg?height=300&width=300",
-    alt: "Languages Department Head",
+    alt: "Science Department Head",
   },
   {
-    name: "Mr. Vikram Singh",
-    title: "Head of Social Sciences",
-    description:
-      "M.A. in History with 16 years of teaching experience. Specializes in making history and social studies relevant and engaging.",
+    name: "Mrs Baby",
+    title: "HOD Hindi",
     image: "/img/principal.jpg?height=300&width=300",
-    alt: "Social Sciences Department Head",
+    alt: "Hindi Department Head",
+  },
+  {
+    name: "Mr Rajender Kumar",
+    title: "HOD Sanksrit",
+    image: "/img/principal.jpg?height=300&width=300",
+    alt: "Hindi Department Head",
+  },
+  {
+    name: "Mrs Nirmala Saini",
+    title: "Social Science",
+    image: "/img/principal.jpg?height=300&width=300",
+    alt: "Social Science Department Head",
+  },
+  {
+    name: "Mrs Rajinder Kaur",
+    title: "HOD Punjabi",
+    image: "/img/principal.jpg?height=300&width=300",
+    alt: "Punjabi Department Head",
   },
 ];
 
@@ -57,9 +67,9 @@ export default function DepartmentHeads() {
                 <div className="relative h-48 w-full mb-4 rounded-md overflow-hidden">
                   <Image src={head.image} alt={head.alt} fill className="object-cover" />
                 </div>
-                <h3 className="text-lg font-bold mb-1">{head.name}</h3>
-                <p className="text-primary font-medium mb-2">{head.title}</p>
-                <p className="text-muted-foreground text-sm">{head.description}</p>
+                <h3 className="text-lg font-bold">{head.name}</h3>
+                <p className="text-primary font-medium mb2">{head.title}</p>
+                {/* <p className="text-muted-foreground text-sm">{head.description}</p> */}
               </CardContent>
             </Card>
           ))}

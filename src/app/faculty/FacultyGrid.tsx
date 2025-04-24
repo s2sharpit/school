@@ -34,23 +34,23 @@ export default function FacultyGrid() {
                     className="object-cover"
                   />
                 </div>
-                <h3 className="text-lg font-bold mb-1">{`Teacher ${i + 1}`}</h3>
-                <p className="text-primary font-medium mb-2">{`Subject Teacher`}</p>
-                <p className="text-muted-foreground text-sm">
+                <h3 className="text-lg font-bold mb1">{`Teacher ${i + 1}`}</h3>
+                <p className="text-primary font-medium mb2">{`Subject Teacher`}</p>
+                {/* <p className="text-muted-foreground text-sm">
                   Experienced educator with a passion for teaching and mentoring
                   students.
-                </p>
+                </p> */}
               </CardContent>
             </Card>
           ))}
         </div>
-        <div className="text-center mt-8">
+        {/* <div className="text-center mt-8">
           <Button asChild variant="outline">
             <Link href="/faculty/all">
               View All Faculty Members <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );

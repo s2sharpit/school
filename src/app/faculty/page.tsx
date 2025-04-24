@@ -1,3 +1,4 @@
+import DepartmentHeads from "./DepartmentHeads";
 import FacultyGrid from "./FacultyGrid";
 import SupportStaff from "./SupportStaff";
 import { CTASection, HeroSection, OverviewSection } from "@/components";
@@ -21,10 +22,10 @@ export default function FacultyPage() {
         imageSrc="/img/school_building.jpg"
       />
 
-      {/* <Leadership />
-      <DepartmentHeads /> */}
+      {/* <Leadership /> */}
+      <DepartmentHeads />
       <FacultyGrid />
-      <SupportStaff />
+      {/* <SupportStaff /> */}
 
       <CTASection
         title="Join Our Team"

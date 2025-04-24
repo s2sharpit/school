@@ -66,7 +66,7 @@ export function InfrastructureSection() {
               {facilities.map((facility, index) => (
                 <div
                   key={index}
-                  className="bg-muted/30 p-4 rounded-lg text-center hover:bg-muted/50 transition-colors"
+                  className="bg-muted/70 p-4 rounded-lg text-center hover:bg-muted/50 transition-colors"
                 >
                   <span className="font-medium text-gray-900">{facility}</span>
                 </div>

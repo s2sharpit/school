@@ -21,7 +21,7 @@ export default function PrimaryEducationPage() {
           "At this crucial stage of development, we emphasize not just academic learning but also character formation, social skills, and physical development. Our holistic approach ensures that children develop into well-rounded individuals with a love for learning.",
         ]}
         badge="Program Overview"
-        imageSrc="/img/school_building.jpg"
+        imageSrc="/programs/primary.jpg"
       />
 
       <CurriculumSection
@@ -37,7 +37,7 @@ export default function PrimaryEducationPage() {
         badge="Learning Environment"
         title="Facilities for Primary Students"
         description="Our campus offers specialized facilities designed for young learners."
-        imageSrc="/placeholder.svg?height=800&width=600"
+        imageSrc="/img/campus.jpg"
         features={facilitiesFeatures}
       />
 

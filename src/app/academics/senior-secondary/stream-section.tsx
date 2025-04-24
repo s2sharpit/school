@@ -13,7 +13,7 @@ const streams = [
       "Well-equipped laboratories for practical learning",
       "Preparation for JEE, NEET, and other competitive exams",
     ],
-    imageSrc: "/science-stream.jpg",
+    // imageSrc: "/science-stream.jpg",
   },
   {
     title: "Commerce Stream",
@@ -24,7 +24,7 @@ const streams = [
       "Mathematics/Computer Science as optional subjects",
       "Practical exposure through projects and case studies",
     ],
-    imageSrc: "/commerce-stream.jpg",
+    // imageSrc: "/commerce-stream.jpg",
   },
   {
     title: "Arts Stream",
@@ -35,7 +35,7 @@ const streams = [
       "English/Hindi Literature, Economics as options",
       "Focus on critical thinking and analytical skills",
     ],
-    imageSrc: "/arts-stream.jpg",
+    // imageSrc: "/arts-stream.jpg",
   },
 ];
 
@@ -54,7 +54,7 @@ export default function Stream() {
               <ul className="space-y-2 mt-4">
                 {stream.subjects.map((subject) => (
                   <li key={subject} className="flex items-start gap-2">
-                    <Check className="h-5 w-5 text-primary mt-0.5" />
+                    <Check className="h-5 w-5 text-primary mt-0.5 shrink-0" />
                     <span className="text-muted-foreground">{subject}</span>
                   </li>
                 ))}

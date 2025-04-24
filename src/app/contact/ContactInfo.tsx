@@ -8,9 +8,7 @@ const contactDetails = [
     icon: Phone,
     title: "Phone",
     details: [
-      "Main Office: +91 98765 43210",
-      "Admissions: +91 98765 43211",
-      "Principal's Office: +91 890143 7877",
+      "Office: +91 890143 7877",
     ],
   },
   {

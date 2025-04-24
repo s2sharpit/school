@@ -22,7 +22,7 @@ export default function AdmissionsPage() {
         imageSrc="/img/school_building.jpg"
         primaryAction={{
           text: "Download Application Form",
-          href: "#application-process",
+          href: "/admission_form.pdf",
         }}
       />
       <ApplicationProcess />
