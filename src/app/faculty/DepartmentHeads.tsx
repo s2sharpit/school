@@ -1,7 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
-import React from "react";
 
 const departmentHeads = [
   {
@@ -13,7 +12,7 @@ const departmentHeads = [
   {
     name: "Ms Shivani",
     title: "HOD Mathematics",
-    image: "/img/principal.jpg?height=300&width=300",
+    image: "/faculty/shivani.jpg",
     alt: "Mathematics Department Head",
   },
   {
@@ -21,18 +20,6 @@ const departmentHeads = [
     title: "HOD Science",
     image: "/img/principal.jpg?height=300&width=300",
     alt: "Science Department Head",
-  },
-  {
-    name: "Mrs Baby",
-    title: "HOD Hindi",
-    image: "/img/principal.jpg?height=300&width=300",
-    alt: "Hindi Department Head",
-  },
-  {
-    name: "Mr Rajender Kumar",
-    title: "HOD Sanksrit",
-    image: "/img/principal.jpg?height=300&width=300",
-    alt: "Hindi Department Head",
   },
   {
     name: "Mrs Nirmala Saini",
@@ -45,6 +32,18 @@ const departmentHeads = [
     title: "HOD Punjabi",
     image: "/img/principal.jpg?height=300&width=300",
     alt: "Punjabi Department Head",
+  },
+  {
+    name: "Mrs Baby",
+    title: "HOD Hindi",
+    image: "/faculty/baby.jpg",
+    alt: "Hindi Department Head",
+  },
+  {
+    name: "Mr Rajender Kumar",
+    title: "HOD Sanksrit",
+    image: "/faculty/rajender.jpg",
+    alt: "Hindi Department Head",
   },
 ];
 
