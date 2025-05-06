@@ -23,7 +23,7 @@ export default function FacultyPage() {
 
       {/* <Leadership /> */}
       <DepartmentHeads />
-      <FacultyGrid />
+      {/* <FacultyGrid /> */}
       {/* <SupportStaff /> */}
 
       <CTASection
