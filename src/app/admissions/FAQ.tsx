@@ -4,8 +4,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { SectionHeader } from "@/components/ui/section-header";
 import Link from "next/link";
 
 const faqData = [
@@ -45,18 +45,12 @@ export default function FAQ() {
   return (
     <section className="py-16 md:py-24 bg-muted/50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <Badge className="bg-primary/10 text-primary mb-4" size="lg">
-            Common Questions
-          </Badge>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-            Frequently Asked Questions
-          </h2>
-          <p className="mx-auto mt-4 max-w-[700px] text-muted-foreground">
-            Find answers to commonly asked questions about our admission
-            process.
-          </p>
-        </div>
+      <SectionHeader
+          badge="Common Questions"
+          title="Frequently Asked Questions"
+          description="Find answers to commonly asked questions about our admission process."
+        />
+
         <div className="max-w-3xl mx-auto">
           <Accordion type="single" collapsible className="w-full">
             {faqData.map((item, index) => (

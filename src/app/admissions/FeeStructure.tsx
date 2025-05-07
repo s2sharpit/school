@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { SectionHeader } from "@/components/ui/section-header";
 import { Calendar, FileText, HelpCircle } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -33,18 +34,12 @@ export default function FeeStructure() {
   return (
     <section className="py-16 md:py-24 bg-muted/50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <div className="inline-block rounded-full bg-primary/10 px-4 py-1 text-sm text-primary font-medium mb-4">
-            Financial Information
-          </div>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-            Fee Structure
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            We strive to provide quality education at reasonable costs. Our fee
-            structure is designed to be transparent and inclusive.
-          </p>
-        </div>
+        <SectionHeader
+          badge="Financial Information"
+          title="Fee Structure"
+          description="We strive to provide quality education at reasonable costs. Our fee structure is designed to be transparent and inclusive."
+        />
+
         <div className="bg-white rounded-lg shadow-sm overflow-hidden p-6 md:p-8">
           <p className="text-muted-foreground mb-6 text-lg">
             Our fee structure varies by grade level and includes tuition fees,
@@ -63,7 +58,11 @@ export default function FeeStructure() {
                 </div>
                 <p className="text-muted-foreground flex-grow">{description}</p>
                 {button && (
-                  <Button asChild variant="outline" className="mt-4 w-min shadow">
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="mt-4 w-min shadow"
+                  >
                     <Link href={button.link}>{button.label}</Link>
                   </Button>
                 )}

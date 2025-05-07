@@ -1,6 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import React from "react";
+import { SectionHeader } from "@/components/ui/section-header";
 
 const supportStaffData = [
   {
@@ -39,18 +39,12 @@ export default function SupportStaff() {
   return (
     <section className="py-16 md:py-24">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <Badge className="bg-primary/10 text-primary mb-4" size="lg">
-            Behind the Scenes
-          </Badge>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-            Support Staff
-          </h2>
-          <p className="mx-auto mt-4 max-w-[700px] text-muted-foreground">
-            Meet the dedicated professionals who ensure the smooth functioning
-            of our school.
-          </p>
-        </div>
+      <SectionHeader
+          badge="Behind the Scenes"
+          title="Support Staff"
+          description="Meet the dedicated professionals who ensure the smooth functioning of our school."
+        />
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {supportStaffData.map((staff, index) => (
             <Card key={index}>

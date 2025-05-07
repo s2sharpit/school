@@ -37,7 +37,7 @@ const SubjectList: React.FC<Section> = ({ title, subjects }) => (
 );
 
 export const CurriculumSection: React.FC<CurriculumProps> = ({ badge, title, description, sections }) => (
-  <section className="py-16 md:py-24 bg-muted/50">
+  <section className="py-16 md:py-24 odd:bg-muted/50">
     <div className="container mx-auto px-4">
       <SectionHeader badge={badge} title={title} description={description} />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

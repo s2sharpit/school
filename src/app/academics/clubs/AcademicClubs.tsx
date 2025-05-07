@@ -62,7 +62,7 @@ const ClubCard = ({ name, description, image, activities }: (typeof clubs)[0]) =
 
 export default function AcademicClubs() {
   return (
-    <section className="py-16 md:py-24 bg-muted/50">
+    <section className="py-16 md:py-24 odd:bg-muted/50">
       <div className="container mx-auto px-4">
         <SectionHeader
           badge="Academic Enrichment"

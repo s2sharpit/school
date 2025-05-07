@@ -1,6 +1,5 @@
 import DepartmentHeads from "./DepartmentHeads";
 import { CTASection, HeroSection, OverviewSection } from "@/components";
-import FacultySection from "./FacultySection";
 
 export default function FacultyPage() {
   return (
@@ -23,7 +22,7 @@ export default function FacultyPage() {
 
       {/* <Leadership /> */}
       <DepartmentHeads />
-      <FacultySection />
+      {/* <FacultySection /> */}
       {/* <SupportStaff /> */}
 
       <CTASection

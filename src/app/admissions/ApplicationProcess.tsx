@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import { FeatureCard } from "@/components/feature-card";
+import { SectionHeader } from "@/components/ui/section-header";
 
 const steps = [
   {
@@ -36,17 +36,12 @@ export default function ApplicationProcess() {
   return (
     <section id="application-process" className="py-16 md:py-24 bg-muted/50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <Badge size={"lg"} className="bg-primary/10 text-primary mb-4">
-            How to Apply
-          </Badge>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-            Application Process
-          </h2>
-          <p className="mx-auto mt-4 max-w-[700px] text-muted-foreground">
-            Follow these steps to apply for admission to B. S. Sr. Sec. School.
-          </p>
-        </div>
+        <SectionHeader
+          badge="How to Apply"
+          title="Application Process"
+          description="Follow these steps to apply for admission to B. S. Sr. Sec. School."
+        />
+
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {steps.map(({ step, title, description }) => (
             <FeatureCard

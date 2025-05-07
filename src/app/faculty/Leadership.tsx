@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
 import Image from "next/image";
 import React from "react";
+import { SectionHeader } from "@/components/ui/section-header";
 
 export default function Leadership() {
   const team = [
@@ -31,17 +31,12 @@ export default function Leadership() {
   return (
     <section className="py-16 md:py-24 bg-muted/50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <Badge className="bg-primary/10 text-primary mb-4" size="lg">
-            School Leadership
-          </Badge>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-            Administrative Team
-          </h2>
-          <p className="mx-auto mt-4 max-w-[700px] text-muted-foreground">
-            Meet the leaders who guide our institution towards excellence.
-          </p>
-        </div>
+      <SectionHeader
+          badge="School Leadership"
+          title="Administrative Team"
+          description="Meet the leaders who guide our institution towards excellence."
+        />
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {team.map((member, index) => (
             <Card key={index} className="overflow-hidden pt-0">
