@@ -9,6 +9,7 @@ const galleryImages = [
   { src: "/gallery/1.jpg", alt: "Classroom" },
   { src: "/gallery/2.jpg", alt: "Science Lab" },
   { src: "/gallery/3.jpg", alt: "Annual Day" },
+  { src: "/gallery/4.jpg", alt: "Annual Day" },
 ]
 
 export function GallerySection() {
@@ -24,7 +25,7 @@ export function GallerySection() {
           {galleryImages.map((image, index) => (
             <div
               key={index}
-              className="relative aspect-square overflow-hidden rounded-lg hover:opacity-90 transition-opacity"
+              className="relative aspect-square overflow-hidden rounded-lg hover:opacity-90 transition-opacity md:last:hidden"
             >
               <Image src={image.src || "/placeholder.svg"} alt={image.alt} fill className="object-cover" />
             </div>
