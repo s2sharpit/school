@@ -57,7 +57,7 @@ export default function DepartmentHeads() {
         />
 
         <div className="overflow-x-auto">
-          <Table className=" w-3xl mx-auto border text-center">
+          <Table className="max-w-3xl mx-auto border text-center">
             <TableHeader className="bg-muted">
               <TableRow>
                 {["Name", "Subject"].map((item) => (
