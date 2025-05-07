@@ -8,9 +8,9 @@ import { HeroSection } from "@/components"
 const documents = {
   mandatory: [
     { name: "CBSE Affiliation Certificate", file: "cbse-affiliation.pdf" },
-    { name: "Society Certificate", file: "society-certificate.pdf" },
-    { name: "School NOC from State Government", file: "school-noc.pdf" },
-    { name: "Recognition Certificate under RTE Act", file: "rte-certificate.pdf" },
+    // { name: "Society Certificate", file: "society-certificate.pdf" },
+    // { name: "School NOC from State Government", file: "school-noc.pdf" }, // no need
+    // { name: "Recognition Certificate under RTE Act", file: "rte-certificate.pdf" },
     { name: "Building Safety Certificate", file: "building-safety.pdf" },
     { name: "Fire Safety Certificate", file: "fire-safety.pdf" },
     { name: "Self Certification", file: "self-certification.pdf" },
@@ -21,7 +21,6 @@ const documents = {
     { name: "Academic Calendar", file: "academic-calender.pdf" },
     { name: "School Management Committee (SMC)", file: "smc.pdf" },
     { name: "Parents Teachers Association (PTA)", file: "pta.pdf" },
-    { name: "Previous Year Results", file: "previous-results.pdf" },
     { name: "Last Three-Year Academic Result", file: "result.pdf" },
   ],
 }
@@ -48,12 +47,12 @@ export default function PublicDisclosurePage() {
       />
 
       {/* Academic Documents Section */}
-      <DocumentsSection
+      {/* <DocumentsSection
         badge="Academic Information"
         title="Academic Documents"
         description="Important academic information and documents for parents and students."
         documents={documents.academic}
-      />
+      /> */}
 
       {/* Additional Information Section */}
       <InfrastructureSection />

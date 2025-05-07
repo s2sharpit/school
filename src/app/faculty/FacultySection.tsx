@@ -8,9 +8,9 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { UserCircle } from "lucide-react";
+import { SectionHeader } from "@/components/ui/section-header";
 
-export default function FacultyTable() {
+export default function FacultySection() {
   // Sample faculty data
   const facultyMembers = [
     {
@@ -39,24 +39,17 @@ export default function FacultyTable() {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-muted/50">
+    <section className="py-16 md:py-24 odd:bg-muted/50">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <Badge className="bg-primary/10 text-primary mb-4" size="lg">
-            Our Educators
-          </Badge>
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
-            Teaching Faculty
-          </h2>
-          <p className="mx-auto mt-4 max-w-[700px] text-muted-foreground">
-            Meet our dedicated teachers who inspire and guide our students every
-            day.
-          </p>
-        </div>
+        <SectionHeader
+          badge="Our Educators"
+          title="Teaching Faculty"
+          description="Meet our dedicated teachers who inspire and guide our students every day."
+        />
 
         <div className="overflow-x-auto">
           <Table className=" w-3xl mx-auto border text-center">
-            <TableHeader>
+            <TableHeader className="bg-muted">
               <TableRow>
                 {["Name", "Subject", "Experience"].map((item) => (
                   <TableHead key={item} className="text-center">
@@ -67,7 +60,7 @@ export default function FacultyTable() {
             </TableHeader>
             <TableBody>
               {facultyMembers.map((teacher) => (
-                <TableRow key={teacher.id}>
+                <TableRow key={teacher.id} className="even:bg-muted/30">
                   <TableCell className="font-medium">{teacher.name}</TableCell>
                   <TableCell>{teacher.subject}</TableCell>
                   <TableCell>{teacher.experience}</TableCell>

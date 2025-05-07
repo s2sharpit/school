@@ -4,7 +4,7 @@ import React from "react";
 
 export default function Principal() {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-white to-muted/30">
+    <section className="py-16 md:py-24 bg-muted/50">
     <div className="container mx-auto px-4">
       <SectionHeader badge="From the Principal's Desk" title="Principal's Message" />
       <div className="grid md:grid-cols-3 gap-12 items-start">
@@ -21,8 +21,8 @@ export default function Principal() {
             <h3 className="text-xl font-bold text-gray-900">Smt. Shashi Bala</h3>
             <p className="text-primary font-medium">Principal</p>
             <div className="mt-3 pt-3 border-t border-gray-100">
-              <p className="text-sm text-muted-foreground">Ph.D. in Education</p>
-              <p className="text-sm text-muted-foreground">25+ Years of Experience</p>
+              <p className="text-sm text-muted-foreground">MA, B.Ed.</p>
+              <p className="text-sm text-muted-foreground">20+ Years of Experience</p>
             </div>
           </div>
         </div>

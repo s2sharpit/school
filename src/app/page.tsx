@@ -1,5 +1,4 @@
 import Programs from "@/components/landing/Programs";
-import Testimonials from "@/components/landing/Testimonials";
 import { CTASection, OverviewSection } from "@/components";
 import {GallerySection, LandingHeroSection} from "@/components/landing";
 
@@ -27,7 +26,7 @@ export default function HomePage() {
 
       <Programs />
       <GallerySection />
-      <Testimonials />
+      {/* <Testimonials /> */}
       {/* <NewsEvents /> */}
 
       <CTASection

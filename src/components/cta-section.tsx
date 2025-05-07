@@ -24,7 +24,7 @@ export function CTASection({
   imageSrc = "/img/campus.jpg",
 }: CTASectionProps) {
   return (
-    <section className="py-16 md:py-24">
+    <section className="py-16 md:py-24 odd:bg-muted/50">
       <div className="container mx-auto px-4">
         <div className="bg-primary rounded-lg p-8 md:p-12">
           <div className="grid md:grid-cols-2 gap-8 items-center">

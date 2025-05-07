@@ -2,12 +2,11 @@ import MissionVission from "./MissionVission";
 import Principal from "./Principal";
 import History from "./History";
 import CoreValues from "./CoreValues";
-import Leadership from "./Leadership";
 import {HeroSection, CTASection} from "@/components";
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col even:bg-red-600">
       <HeroSection
         title="About Our School"
         description="Learn about our history, mission, vision, and the values that guide us."
@@ -17,7 +16,7 @@ export default function AboutPage() {
       <Principal />
       <History />
       <CoreValues />
-      <Leadership />
+      {/* <Leadership /> */}
 
       <CTASection
         title="Visit Our Campus"

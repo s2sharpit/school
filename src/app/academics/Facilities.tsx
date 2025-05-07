@@ -2,11 +2,11 @@ import { FeatureCard } from "@/components/feature-card";
 import { SectionHeader } from "@/components/ui/section-header";
 
 const facilities = [
-  {
-    title: "Well-Equipped Classrooms",
-    description: "Spacious, well-lit classrooms with essential learning resources.",
-    imageSrc: "/placeholder.svg?height=400&width=600",
-  },
+  // {
+  //   title: "Well-Equipped Classrooms",
+  //   description: "Spacious, well-lit classrooms with essential learning resources.",
+  //   imageSrc: "/placeholder.svg?height=400&width=600",
+  // },
   {
     title: "Physics Laboratory",
     description: "Equipped for hands-on experiments in mechanics, electricity, and optics.",
@@ -27,16 +27,16 @@ const facilities = [
   //   description: "Latest hardware and software for digital literacy",
   //   imageSrc: "/placeholder.svg?height=400&width=600",
   // },
-  {
-    title: "Library",
-    description: "Diverse collection of books for academic and recreational reading.",
-    imageSrc: "/placeholder.svg?height=400&width=600",
-  },
-  {
-    title: "Sports Facilities",
-    description: "Expansive playground for athletics and team sports activities.",
-    imageSrc: "/placeholder.svg?height=400&width=600",
-  },
+  // {
+  //   title: "Library",
+  //   description: "Diverse collection of books for academic and recreational reading.",
+  //   imageSrc: "/placeholder.svg?height=400&width=600",
+  // },
+  // {
+  //   title: "Sports Facilities",
+  //   description: "Expansive playground for athletics and team sports activities.",
+  //   imageSrc: "/placeholder.svg?height=400&width=600",
+  // },
   // {
   //   title: "Auditorium",
   //   description: "For school events, assemblies, and performances",

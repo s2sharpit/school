@@ -1,7 +1,6 @@
 import { CTASection, HeroSection, OverviewSection } from "@/components";
 import Stream from "./stream-section";
 import careerFeatures from "./careerFeatures.json";
-import Academic from "./academic";
 import { ImageTextFeatureSection } from "@/components/image-text-feature-section";
 
 export default function SeniorSecondaryPage() {
@@ -34,7 +33,7 @@ export default function SeniorSecondaryPage() {
         features={careerFeatures}
       />
       
-      <Academic />
+      {/* <Academic /> */}
 
       <CTASection
         title="Join Our Senior Secondary Program"
