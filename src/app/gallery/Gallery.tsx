@@ -15,22 +15,22 @@ const categories = [
   ]  
 
 const galleryImages = [
-    { id: 1, src: "/gallery/1.jpg?height=600&width=800", alt: "School Building", category: "campus" },
-    { id: 2, src: "/gallery/2.jpg?height=600&width=800", alt: "Classroom", category: "campus" },
-    { id: 3, src: "/gallery/3.jpg?height=600&width=800", alt: "Library", category: "campus" },
-    { id: 4, src: "/gallery/4.jpg?height=600&width=800", alt: "Computer Lab", category: "campus" },
-    { id: 5, src: "/gallery/5.jpg?height=600&width=800", alt: "Annual Day", category: "events" },
-    { id: 6, src: "/gallery/6.jpg?height=600&width=800", alt: "Science Exhibition", category: "events" },
-    { id: 7, src: "/gallery/7.jpg?height=600&width=800", alt: "Cultural Program", category: "events" },
-    { id: 8, src: "/gallery/8.jpg?height=600&width=800", alt: "Sports Day", category: "sports" },
-    { id: 9, src: "/gallery/9.jpg?height=600&width=800", alt: "Cricket Match", category: "sports" },
-    { id: 10, src: "/gallery/10.jpg?height=600&width=800", alt: "Basketball Game", category: "sports" },
-    { id: 11, src: "/gallery/11.jpg?height=600&width=800", alt: "Art Class", category: "activities" },
-    { id: 12, src: "/gallery/12.jpg?height=600&width=800", alt: "Music Class", category: "activities" },
-    { id: 13, src: "/gallery/13.jpg?height=600&width=800", alt: "Dance Performance", category: "activities" },
-    { id: 14, src: "/gallery/14.jpg?height=600&width=800", alt: "Award Ceremony", category: "achievements" },
-    { id: 15, src: "/gallery/15.jpg?height=600&width=800", alt: "Student Achievement", category: "achievements" },
-    { id: 16, src: "/gallery/16.jpg?height=600&width=800", alt: "Academic Excellence", category: "achievements" },
+    { id: 1, src: "/gallery/1.jpg", alt: "School Building", category: "campus" },
+    { id: 2, src: "/gallery/2.jpg", alt: "Classroom", category: "campus" },
+    { id: 3, src: "/gallery/3.jpg", alt: "Library", category: "campus" },
+    { id: 4, src: "/gallery/4.jpg", alt: "Computer Lab", category: "campus" },
+    { id: 5, src: "/gallery/5.jpg", alt: "Annual Day", category: "events" },
+    { id: 6, src: "/gallery/6.jpg", alt: "Science Exhibition", category: "events" },
+    { id: 7, src: "/gallery/7.jpg", alt: "Cultural Program", category: "events" },
+    { id: 8, src: "/gallery/8.jpg", alt: "Sports Day", category: "sports" },
+    { id: 9, src: "/gallery/9.jpg", alt: "Cricket Match", category: "sports" },
+    { id: 10, src: "/gallery/10.jpg", alt: "Basketball Game", category: "sports" },
+    { id: 11, src: "/gallery/11.jpg", alt: "Art Class", category: "activities" },
+    { id: 12, src: "/gallery/12.jpg", alt: "Music Class", category: "activities" },
+    { id: 13, src: "/gallery/13.jpg", alt: "Dance Performance", category: "activities" },
+    { id: 14, src: "/gallery/14.jpg", alt: "Award Ceremony", category: "achievements" },
+    { id: 15, src: "/gallery/15.jpg", alt: "Student Achievement", category: "achievements" },
+    { id: 16, src: "/gallery/16.jpg", alt: "Academic Excellence", category: "achievements" },
   ]
   
   

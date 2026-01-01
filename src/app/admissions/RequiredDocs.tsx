@@ -42,9 +42,9 @@ export default function RequiredDocs() {
         />
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="relative h-[400px] w-full rounded-lg overflow-hidden">
+          <div className="relative h-100 w-full rounded-lg overflow-hidden">
             <Image
-              src="/img/campus.jpg?height=800&width=600"
+              src="/img/campus.jpg"
               alt="Required Documents"
               fill
               className="object-cover"

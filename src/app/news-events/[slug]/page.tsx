@@ -15,7 +15,7 @@ const getEventBySlug = (slug: string) => {
     date: "March 15, 2025",
     time: "9:00 AM - 2:00 PM",
     location: "School Auditorium",
-    image: "/placeholder.svg?height=800&width=1200",
+    image: "/placeholder.svg",
     content: `
       <p>We are excited to announce our Annual Day Celebration, a showcase of talent, creativity, and achievement. This year's theme is "Unity in Diversity," celebrating the rich cultural heritage of our nation.</p>
       

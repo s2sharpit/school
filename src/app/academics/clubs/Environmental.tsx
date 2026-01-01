@@ -51,7 +51,7 @@ const ClubCard = ({ icon, title, description, imageAlt, activities }: (typeof cl
     <h3 className="text-xl font-bold mb-2">{title}</h3>
     <p className="text-muted-foreground mb-4">{description}</p>
     <div className="relative h-48 w-full rounded-md overflow-hidden mb-4">
-      <Image src="/placeholder.svg?height=400&width=600" alt={imageAlt} fill className="object-cover" />
+      <Image src="/placeholder.svg" alt={imageAlt} fill className="object-cover" />
     </div>
     <ul className="space-y-2 text-muted-foreground mb-4">
       {activities.map((activity, index) => (

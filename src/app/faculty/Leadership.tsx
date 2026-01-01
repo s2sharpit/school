@@ -8,21 +8,21 @@ export default function Leadership() {
     {
       name: "Dr. Rajiv Sharma",
       role: "Principal",
-      image: "/img/principal.jpg?height=400&width=300",
+      image: "/img/principal.jpg",
       description:
         "Ph.D. in Education with over 25 years of experience in educational leadership. Dr. Sharma is dedicated to fostering academic excellence and holistic development.",
     },
     {
       name: "Mrs. Anita Gupta",
       role: "Vice Principal",
-      image: "/img/principal.jpg?height=400&width=300",
+      image: "/img/principal.jpg",
       description:
         "M.Ed. with 20 years of teaching and administrative experience. Mrs. Gupta oversees academic affairs and ensures the highest standards of teaching and learning.",
     },
     {
       name: "Mr. Sunil Verma",
       role: "Administrative Officer",
-      image: "/img/principal.jpg?height=400&width=300",
+      image: "/img/principal.jpg",
       description:
         "MBA with 15 years of experience in educational administration. Mr. Verma manages the administrative functions of the school, ensuring smooth operations.",
     },

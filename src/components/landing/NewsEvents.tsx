@@ -41,7 +41,7 @@ export default function NewsEvents() {
           <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl">
             Latest News & Events
           </h2>
-          <p className="mx-auto mt-4 max-w-[700px] text-muted-foreground">
+          <p className="mx-auto mt-4 max-w-175 text-muted-foreground">
             Keep up with the latest happenings at B. S. Sr. Sec. School.
           </p>
         </div>
@@ -50,7 +50,7 @@ export default function NewsEvents() {
             <Card key={title} className="overflow-hidden pt-0">
             <div className="relative h-48 w-full">
               <Image
-                src={`${imgSrc}?height=400&width=600`}
+                src={`${imgSrc}`}
                 alt={title}
                 fill
                 className="object-cover"

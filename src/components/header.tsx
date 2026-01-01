@@ -17,7 +17,7 @@ export function Header() {
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-3">
             <span className="sr-only">B. S. Sr. Sec. School</span>
             <div className="relative h-10 w-10 overflow-hidden rounded-full">
-              <Image src="/school_logo.png?height=100&width=100" alt="School Logo" fill className="object-cover" />
+              <Image src="/school_logo.png" alt="School Logo" fill className="object-cover" />
             </div>
             <div className="block">
               <p className="font-bold text-lg leading-tight tracking-wide">B. S. Sr. Sec. School</p>
@@ -66,7 +66,7 @@ export function Header() {
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2" onClick={() => setMobileMenuOpen(false)}>
               <span className="sr-only">B. S. Sr. Sec. School</span>
               <div className="relative h-10 w-10 overflow-hidden rounded-full">
-                <Image src="/school_logo.png?height=100&width=100" alt="School Logo" fill className="object-cover" />
+                <Image src="/school_logo.png" alt="School Logo" fill className="object-cover" />
               </div>
               <div>
                 <p className="font-bold text-lg leading-tight tracking-wide">B. S. Sr. Sec. School</p>

@@ -9,13 +9,13 @@ export function LandingHeroSection() {
     <section className="relative w-full py-16 md:py-24 lg:py-32 xl:py48 overflow-hidden">
     <div className="absolute inset-0 z-0">
       <Image
-        src="/img/school_building.jpg?height=1080&width=1920"
+        src="/img/school_building.jpg"
         alt="School Building"
         fill
         className="object-cover brightness-[0.5]"
         priority
       />
-      <div className="absolute inset-0 bg-gradient-to-r from-primary/40 to-transparent mix-blend-multiply"></div>
+      <div className="absolute inset-0 bg-linear-to-r from-primary/40 to-transparent mix-blend-multiply"></div>
     </div>
     <div className="container relative z-10 mx-auto px-4 text-center text-white">
       <div className="mx-auto max-w-3xl space-y-6">
@@ -26,7 +26,7 @@ export function LandingHeroSection() {
           B. S. Sr. Sec. School
         </h1>
         <h2 className="text-xl md:text-2xl font-medium text-white/90">Salempur Khadar, Yamunanagar</h2>
-        <p className="mx-auto max-w-[700px] text-lg md:text-xl text-white/80">
+        <p className="mx-auto max-w-175 text-lg md:text-xl text-white/80">
           Empowering minds, building futures. Nurturing excellence through quality education and holistic
           development.
         </p>
@@ -45,7 +45,7 @@ export function LandingHeroSection() {
         </div>
       </div>
     </div>
-    <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-black/20 to-transparent"></div>
+    <div className="absolute bottom-0 left-0 right-0 h-16 bg-linear-to-t from-black/20 to-transparent"></div>
   </section>
 
   )

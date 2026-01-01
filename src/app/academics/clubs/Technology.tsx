@@ -50,8 +50,8 @@ export default function Technology() {
               <ClubCard key={index} {...club} />
             ))}
           </div>
-          <div className="relative h-[500px] w-full rounded-lg overflow-hidden">
-            <Image src="/placeholder.svg?height=800&width=600" alt="Technology Clubs" fill className="object-cover" />
+          <div className="relative h-125 w-full rounded-lg overflow-hidden">
+            <Image src="/placeholder.svg" alt="Technology Clubs" fill className="object-cover" />
           </div>
         </div>
       </div>

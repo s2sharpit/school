@@ -5,7 +5,7 @@ const facilities = [
   // {
   //   title: "Well-Equipped Classrooms",
   //   description: "Spacious, well-lit classrooms with essential learning resources.",
-  //   imageSrc: "/placeholder.svg?height=400&width=600",
+  //   imageSrc: "/placeholder.svg",
   // },
   {
     title: "Physics Laboratory",
@@ -25,22 +25,22 @@ const facilities = [
   // {
   //   title: "Computer Lab",
   //   description: "Latest hardware and software for digital literacy",
-  //   imageSrc: "/placeholder.svg?height=400&width=600",
+  //   imageSrc: "/placeholder.svg",
   // },
   // {
   //   title: "Library",
   //   description: "Diverse collection of books for academic and recreational reading.",
-  //   imageSrc: "/placeholder.svg?height=400&width=600",
+  //   imageSrc: "/placeholder.svg",
   // },
   // {
   //   title: "Sports Facilities",
   //   description: "Expansive playground for athletics and team sports activities.",
-  //   imageSrc: "/placeholder.svg?height=400&width=600",
+  //   imageSrc: "/placeholder.svg",
   // },
   // {
   //   title: "Auditorium",
   //   description: "For school events, assemblies, and performances",
-  //   imageSrc: "/placeholder.svg?height=400&width=600",
+  //   imageSrc: "/placeholder.svg",
   // },
 ]
 

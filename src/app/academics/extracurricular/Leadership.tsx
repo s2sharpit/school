@@ -42,9 +42,9 @@ export default function Leadership() {
           description="Developing responsible citizens and future leaders through service and leadership opportunities."
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="relative h-[400px] w-full rounded-lg overflow-hidden">
+          <div className="relative h-100 w-full rounded-lg overflow-hidden">
             <Image
-              src="/placeholder.svg?height=800&width=600"
+              src="/placeholder.svg"
               alt="Leadership Activities"
               fill
               className="object-cover"

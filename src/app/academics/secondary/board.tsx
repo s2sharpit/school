@@ -42,9 +42,9 @@ export default function Board() {
           description="Our comprehensive approach ensures students are well-prepared for their first board examination."
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="relative h-[400px] w-full rounded-lg overflow-hidden">
+          <div className="relative h-100 w-full rounded-lg overflow-hidden">
             <Image
-              src="/placeholder.svg?height=800&width=600"
+              src="/placeholder.svg"
               alt="Students Studying"
               fill
               className="object-cover"

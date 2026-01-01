@@ -8,7 +8,7 @@ const clubs = [
     name: "Science Club",
     description:
       "Experiments, projects, and discussions that foster scientific inquiry and innovation. Members participate in science exhibitions and competitions.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/placeholder.svg",
     activities: [
       "Weekly experiments and demonstrations",
       "Science quizzes and competitions",
@@ -20,7 +20,7 @@ const clubs = [
     name: "Mathematics Club",
     description:
       "Problem-solving sessions, mathematical games, and puzzles that develop logical thinking and analytical skills. Members participate in math olympiads and competitions.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/placeholder.svg",
     activities: [
       "Math puzzle sessions",
       "Preparation for math olympiads",
@@ -32,7 +32,7 @@ const clubs = [
     name: "Literary Club",
     description:
       "Creative writing, debates, elocution, and reading activities that enhance language skills and literary appreciation. Members contribute to the school magazine and participate in literary competitions.",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/placeholder.svg",
     activities: [
       "Creative writing workshops",
       "Book discussions and reviews",

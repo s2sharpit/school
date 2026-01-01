@@ -59,9 +59,9 @@ export default function MissionVission() {
               </div>
             </div> */}
           </div>
-          <div className="relative h-[400px] w-full rounded-lg overflow-hidden">
+          <div className="relative h-100 w-full rounded-lg overflow-hidden">
             <Image
-              src="/img/campus.jpg?height=800&width=600"
+              src="/img/campus.jpg"
               alt="Students in Classroom"
               fill
               className="object-cover"

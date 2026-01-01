@@ -12,21 +12,21 @@ const leadershipTeam = [
     role: "Principal",
     description:
       "With over 20 years of experience in education, Smt. Shashi Bala leads our institution with vision and dedication.",
-    imageSrc: "/img/principal.jpg?height=400&width=300",
+    imageSrc: "/img/principal.jpg",
   },
   {
     name: "Mrs. Anita Gupta",
     role: "Vice Principal",
     description:
       "Mrs. Gupta oversees academic affairs and ensures the highest standards of teaching and learning.",
-    imageSrc: "/img/principal.jpg?height=400&width=300",
+    imageSrc: "/img/principal.jpg",
   },
   {
     name: "Mr. Sunil Verma",
     role: "Administrative Officer",
     description:
       "Mr. Verma manages the administrative functions of the school, ensuring smooth operations.",
-    imageSrc: "/img/principal.jpg?height=400&width=300",
+    imageSrc: "/img/principal.jpg",
   },
 ];
 
