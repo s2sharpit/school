@@ -128,6 +128,8 @@ export function Footer() {
             <span>Developed by </span>
             <Link
               href="https://s2sharpit.dev"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-white transition-colors"
             >
               @s2sharpit
