@@ -127,7 +127,7 @@ export function Footer() {
           <div>
             <span>Developed by </span>
             <Link
-              href="https://s2sharpit.tech"
+              href="https://s2sharpit.dev"
               className="hover:text-white transition-colors"
             >
               @s2sharpit
