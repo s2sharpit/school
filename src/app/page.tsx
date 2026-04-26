@@ -1,12 +1,10 @@
 import Programs from "@/components/landing/Programs";
 import { CTASection, OverviewSection } from "@/components";
-import {GallerySection, LandingHeroSection} from "@/components/landing";
-import { ResultsDialog } from "@/components/results-dialog";
+import { GallerySection, LandingHeroSection } from "@/components/landing";
 
 export default function HomePage() {
   return (
     <div className="flex flex-col">
-      <ResultsDialog />
       <LandingHeroSection />
       {/* <QuickINfo /> */}
 
