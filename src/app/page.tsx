@@ -1,6 +1,6 @@
 import Programs from "@/components/landing/Programs";
 import { CTASection, OverviewSection } from "@/components";
-import {GallerySection, LandingHeroSection} from "@/components/landing";
+import { GallerySection, LandingHeroSection } from "@/components/landing";
 
 export default function HomePage() {
   return (
