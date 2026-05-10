@@ -71,7 +71,7 @@ export default function Gallery() {
             <Image
               src={image.src || "/placeholder.svg"}
               alt={image.alt}
-              fill
+              fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               className="object-cover"
             />
           </div>
@@ -95,7 +95,7 @@ export default function Gallery() {
               <Image
                 src={selectedImage.src || "/gallery/1.jpg"}
                 alt={selectedImage.alt}
-                fill
+                fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-contain"
               />
             </div>

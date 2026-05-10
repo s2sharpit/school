@@ -11,7 +11,7 @@ export function LandingHeroSection() {
       <Image
         src="/img/school_building.jpg"
         alt="School Building"
-        fill
+        fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         className="object-cover brightness-[0.5]"
         priority
       />

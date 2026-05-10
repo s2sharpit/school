@@ -52,7 +52,7 @@ export default async function EventDetailPage({
           <Image
             src={event.image || "/placeholder.svg"}
             alt={event.title}
-            fill
+            fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover brightness-[0.6]"
             priority
           />

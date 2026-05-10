@@ -17,7 +17,7 @@ export default function NewsEvents() {
                 <Image
                   src={item.image || "/placeholder.svg"}
                   alt={item.title}
-                  fill
+                  fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-cover"
                 />
                 <Badge className="absolute top-4 right-4 uppercase">

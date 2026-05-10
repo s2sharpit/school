@@ -38,7 +38,7 @@ export default function History() {
       />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="relative h-[400px] w-full rounded-lg overflow-hidden">
-          <Image src="/img/schoolPhoto1.jpg" alt="School History" fill className="object-cover" />
+          <Image src="/img/schoolPhoto1.jpg" alt="School History" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
         </div>
         <div className="space-y-6">
           {historyTimeline.map((item, index) => (
