@@ -47,7 +47,7 @@ export default function Leadership() {
                   <Image
                     src={imageSrc}
                     alt={role}
-                    fill
+                    fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover"
                   />
                 </div>

@@ -50,7 +50,7 @@ const ClubCard = ({ name, description, image, activities }: (typeof clubs)[0]) =
     <h3 className="text-xl font-bold mb-2">{name}</h3>
     <p className="text-muted-foreground mb-4">{description}</p>
     <div className="relative h-48 w-full rounded-md overflow-hidden mb-4">
-      <Image src={image} alt={name} fill className="object-cover" />
+      <Image src={image} alt={name} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
     </div>
     <ul className="space-y-2 text-muted-foreground mb-4">
       {activities.map((activity, index) => (

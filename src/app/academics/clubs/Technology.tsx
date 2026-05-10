@@ -51,7 +51,7 @@ export default function Technology() {
             ))}
           </div>
           <div className="relative h-125 w-full rounded-lg overflow-hidden">
-            <Image src="/placeholder.svg" alt="Technology Clubs" fill className="object-cover" />
+            <Image src="/placeholder.svg" alt="Technology Clubs" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
           </div>
         </div>
       </div>

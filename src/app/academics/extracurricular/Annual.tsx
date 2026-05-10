@@ -26,7 +26,7 @@ const events = [
 const EventCard = ({ title, description, image }: (typeof events)[0]) => (
   <div className="bg-white p-6 rounded-lg shadow-sm">
     <div className="relative h-48 w-full rounded-md overflow-hidden mb-4">
-      <Image src={image} alt={title} fill className="object-cover" />
+      <Image src={image} alt={title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
     </div>
     <h3 className="text-xl font-bold mb-2">{title}</h3>
     <p className="text-muted-foreground">{description}</p>

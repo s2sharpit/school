@@ -15,7 +15,7 @@ This is the official web application for **B. S. Sr. Sec. School**, Salempur Kha
 
 Ensure you have the following installed before starting development:
 - [Node.js](https://nodejs.org/en/) (v18 or higher recommended)
-- A package manager (npm, yarn, pnpm, or bun)
+- A package manager (pnpm recommended)
 
 ## 🛠️ Getting Started
 
@@ -27,24 +27,12 @@ Ensure you have the following installed before starting development:
 
 2. **Install dependencies**:
    ```bash
-   npm install
-   # or
-   yarn install
-   # or
    pnpm install
-   # or
-   bun install
    ```
 
 3. **Run the development server**:
    ```bash
-   npm run dev
-   # or
-   yarn dev
-   # or
    pnpm dev
-   # or
-   bun dev
    ```
 
 4. **Open the application**:
@@ -63,10 +51,10 @@ For a more detailed technical breakdown, please refer to the [`ARCHITECTURE.md`]
 
 ## 📜 Available Commands
 
-- `npm run dev`: Starts the development server using Turbopack for faster compilation.
-- `npm run build`: Creates an optimized production build of your application.
-- `npm run start`: Starts a Node.js server to serve the production build.
-- `npm run lint`: Runs ESLint to catch and fix potential issues in the codebase.
+- `pnpm run dev`: Starts the development server using Turbopack for faster compilation.
+- `pnpm run build`: Creates an optimized production build of your application.
+- `pnpm run start`: Starts a Node.js server to serve the production build.
+- `pnpm run lint`: Runs ESLint to catch and fix potential issues in the codebase.
 
 ## 🌐 Deployment
 

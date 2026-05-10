@@ -57,7 +57,7 @@ export function OverviewSection({
           )}
         </div>
         <div className="relative h-[400px] w-full rounded-lg overflow-hidden">
-          <Image src={imageSrc} alt="Students Learning" fill className="object-cover" />
+          <Image src={imageSrc} alt="Students Learning" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
         </div>
       </div>
     </section>

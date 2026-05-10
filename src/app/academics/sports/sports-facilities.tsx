@@ -26,7 +26,7 @@ const facilities = [
 const FacilityCard = ({ title, description, image }: (typeof facilities)[0]) => (
   <div className="bg-white rounded-lg shadow-sm overflow-hidden">
     <div className="relative h-48 w-full">
-      <Image src={image} alt={title} fill className="object-cover" />
+      <Image src={image} alt={title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
     </div>
     <div className="p-6">
       <h3 className="text-xl font-bold mb-2">{title}</h3>

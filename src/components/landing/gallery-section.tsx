@@ -27,7 +27,7 @@ export function GallerySection() {
               key={index}
               className="relative aspect-square overflow-hidden rounded-lg hover:opacity-90 transition-opacity md:last:hidden"
             >
-              <Image src={image.src || "/placeholder.svg"} alt={image.alt} fill className="object-cover" />
+              <Image src={image.src || "/placeholder.svg"} alt={image.alt} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
             </div>
           ))}
         </div>

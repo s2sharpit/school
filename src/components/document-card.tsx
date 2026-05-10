@@ -24,7 +24,7 @@ export function DocumentCard({ name, file }: DocumentCardProps) {
           className="flex-1"
         >
           <Link
-            href={`/documents/${file}`}
+            href={`/mpd_documents/${file}`}
             target="_blank"
             aria-label={`View ${name}`}
           >
