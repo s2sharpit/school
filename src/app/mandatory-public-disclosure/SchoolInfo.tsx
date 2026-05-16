@@ -10,13 +10,13 @@ import {
 import { SectionHeader } from "@/components/ui/section-header";
 
 const generalInfoData = [
-  { slNo: 1, info: "NAME OF THE SCHOOL", details: "B. S. Senior Secondary School, Salempur Khadar" },
-  { slNo: 2, info: "AFFILIATION NO.(IF APPLICABLE)", details: "531917" },
-  { slNo: 3, info: "SCHOOL CODE (IF APPLICABLE)", details: "41917" },
-  { slNo: 4, info: "COMPLETE ADDRESS WITH PIN CODE", details: "Vill.- Salempur Khadar, P.O. Ledi, Darpur Road, Tehsil- Chhachhrauli, Distt.- Yamunanagar, Haryana - 135103" },
-  { slNo: 5, info: "PRINCIPAL NAME & QUALIFICATION:", details: "Smt. Shashi Bala (MA, B.Ed.)" },
-  { slNo: 6, info: "SCHOOL EMAIL ID", details: "bsmschoolsalempur@gmail.com" },
-  { slNo: 7, info: "CONTACT DETAILS (LANDLINE/MOBILE)", details: "+91 89014 37877" },
+  { slNo: 1, info: "Name of the School", details: "B. S. Senior Secondary School, Salempur Khadar" },
+  { slNo: 2, info: "Affiliation No. (if applicable)", details: "531917" },
+  { slNo: 3, info: "School Code (if applicable)", details: "41917" },
+  { slNo: 4, info: "Complete Address with PIN Code", details: "Vill.- Salempur Khadar, P.O. Ledi, Darpur Road, Tehsil- Chhachhrauli, Distt.- Yamunanagar, Haryana - 135103" },
+  { slNo: 5, info: "Principal Name & Qualification", details: "Smt. Shashi Bala (MA, B.Ed.)" },
+  { slNo: 6, info: "School Email ID", details: "bsmschoolsalempur@gmail.com" },
+  { slNo: 7, info: "Contact Details (Landline/Mobile)", details: "+91 89014 37877" },
 ];
 
 export function SchoolInfoSection() {
@@ -35,9 +35,9 @@ export function SchoolInfoSection() {
           <Table className=" min-w-[600px]">
             <TableHeader>
               <TableRow className="bg-[#cce0ef] hover:bg-[#cce0ef] border-b border-gray-400">
-                <TableHead className="w-[80px] font-bold text-gray-900 border-r border-gray-400 text-center align-middle">SL NO.</TableHead>
-                <TableHead className="w-[50%] sm:w-[60%] font-bold text-gray-900 border-r border-gray-400 text-center align-middle">INFORMATION</TableHead>
-                <TableHead className="font-bold text-gray-900 text-center align-middle">DETAILS</TableHead>
+                <TableHead className="w-[80px] font-bold text-gray-900 border-r border-gray-400 text-center align-middle">Sl. No.</TableHead>
+                <TableHead className="w-[50%] sm:w-[60%] font-bold text-gray-900 border-r border-gray-400 text-center align-middle">Information</TableHead>
+                <TableHead className="font-bold text-gray-900 text-center align-middle">Details</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
