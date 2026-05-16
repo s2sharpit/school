@@ -14,7 +14,7 @@ import Link from "next/link";
 
 const academicDocuments = [
     { name: "Fee Structure of the School", file: "1-fee-structure-of-the-school.pdf", available: true },
-    { name: "Annual Academic Calendar", file: "academic-calendar.pdf", available: false },
+    { name: "Annual Academic Calendar", file: "2-annual-academic-calendar.pdf", available: true },
     { name: "List of School Management Committee (SMC)", file: "3-list-of-smc.pdf", available: true },
     { name: "List of Parents Teachers Association (PTA) Members", file: "4-list-of-pta.pdf", available: true },
     { name: "Last three-year result of the Board Examination (as per applicability)", file: "5-last-3year-board-result.pdf", available: true },

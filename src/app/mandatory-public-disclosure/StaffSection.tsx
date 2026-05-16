@@ -31,8 +31,8 @@ const staffData: StaffRow[] = [
   {
     sNo: 2,
     information: "Vice Principal",
-    numberStrength: "—",
-    nameAndQualifications: "—",
+    numberStrength: "1",
+    nameAndQualifications: "Smt. Rajinder Kaur (MA, B.Ed.)",
   },
   {
     sNo: 3,
@@ -71,7 +71,7 @@ const staffData: StaffRow[] = [
   {
     sNo: 5,
     information: "Teachers Section Ratio",
-    numberStrength: "—",
+    numberStrength: "1.16:1",
     nameAndQualifications: "—",
   },
   {
@@ -84,7 +84,7 @@ const staffData: StaffRow[] = [
     sNo: 7,
     information: "Details of Counsellor & Wellness Teacher",
     numberStrength: "1",
-    nameAndQualifications: "—",
+    nameAndQualifications: "Smt. Ritu Raj Bahmani",
   },
 ];
 
